@@ -709,7 +709,7 @@ public class PanelPortfolio {
 
             webData.portfolio.get(nr).get(i).rank = coin.rank;
             webData.portfolio.get(nr).get(i).price = coin.price;
-            webData.portfolio.get(nr).get(i).price_btc = coin.price_btc;
+            //webData.portfolio.get(nr).get(i).price_btc = coin.price_btc;
             webData.portfolio.get(nr).get(i)._24h_volume = coin._24h_volume;
             webData.portfolio.get(nr).get(i).market_cap = coin.market_cap;
             webData.portfolio.get(nr).get(i).available_supply = coin.available_supply;

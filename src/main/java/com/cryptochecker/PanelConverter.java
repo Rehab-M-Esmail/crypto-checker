@@ -268,6 +268,15 @@ public class PanelConverter {
         retrieveText(1, infoCurrency1);
         retrieveText(2, infoCurrency2);
     }
+
+    public JTextField get_fieldCurrency1()
+    {
+        return fieldCurrency1;
+    }
+    public JTextField get_fieldCurrency2()
+    {
+        return fieldCurrency2;
+    }
     
     public void reCreate() {
         calculateGlobal();
