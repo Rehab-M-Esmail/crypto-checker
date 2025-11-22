@@ -22,7 +22,7 @@ public class WebData {
         }
     }
 
-    String fetchJson(String urlString) throws IOException, InterruptedException {
+    public String fetchJson(String urlString) throws IOException, InterruptedException {
         int attempts = 0;
         while (attempts < 3) { // retry up to 3 times
             URL url = new URL(urlString);
@@ -132,7 +132,7 @@ public class WebData {
     }
 
     @SuppressWarnings("unchecked") // coin = (ArrayList<Coin> in.readObject()) supressing
-    private void deserialize() throws Exception {
+    public void deserialize() throws Exception {
         if (!(new File(Main.dataSerLocation).canRead())) {
             Debug.log("ERROR: Couldn't find "+Main.dataSerLocation+".. fetching from API.");
             this.fetch();

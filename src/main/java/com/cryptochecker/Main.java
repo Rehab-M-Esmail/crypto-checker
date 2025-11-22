@@ -35,7 +35,7 @@ public class Main {
     public static final Dimension tableIntercellSpacing = new Dimension(5, 5);
 
     public static final String folderLocation = System.getProperty("user.home")+"/.crypto-checker/";
-    public static final String dataSerLocation = folderLocation+"data.ser";
+    public static String dataSerLocation = folderLocation+"data.ser";
     public static final String portfolioSerLocation = folderLocation+"portfolio.ser";
     public static final String settingsSerLocation = folderLocation+"settings.ser";
     public static final String converterSerLocation = folderLocation+"converter.ser";

@@ -178,7 +178,7 @@ public class PanelCoin {
         
     }
 
-    private class TableModel extends AbstractTableModel {
+    public class TableModel extends AbstractTableModel {
         private static final long serialVersionUID = 1L;
         private String[] columnNames = {"#", "Name", "Value", "1h", "24h", "7d", "Market Cap"};
         public ArrayList<WebData.Coin> list = Main.gui.webData.coin;
