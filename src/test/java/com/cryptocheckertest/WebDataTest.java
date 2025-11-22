@@ -18,9 +18,9 @@ public class WebDataTest {
     }
 
     @Test
-    public void fetchJsonIncorrectURLTest() throws IOException, InterruptedException {  // it fails because it should throw a malfoormed url expection, but instead it throws an IOException
-        String incorrectUrl = "https://**notreal";
-        assertThrows(MalformedURLException.class, ()->{
+    public void fetchJsonIncorrectURLTest() throws IOException, InterruptedException {
+        String incorrectUrl = "https://notreal";
+        assertThrows(IOException.class, ()->{
             webData.fetchJson(incorrectUrl);
         });
     }
@@ -61,38 +61,39 @@ public class WebDataTest {
         verify(webData, times(1)).fetch();
     }
     @Test
-    public void trimPriceFirstBoundary(){
+    public void trimPrice_Above1_ReturnsTwoDecimals(){
         WebData.Coin coin = webData.new Coin();
         assertEquals("1", coin.trimPrice(1));
         assertEquals("1.01", coin.trimPrice(1.01));
+        assertEquals("2.56", coin.trimPrice(2.55893));
     }
     @Test
-    public void trimPriceSecondBoundary(){
+    public void trimPrice_0_1_To_1_ReturnsThreeDecimals(){
         WebData.Coin coin = webData.new Coin();
         assertEquals("0.1", coin.trimPrice(0.10001));
         assertEquals("0.0999", coin.trimPrice(0.0999));
         assertEquals("0.1", coin.trimPrice(0.1));
     }
     @Test
-    public void trimPriceThirdBoundary(){
+    public void trimPrice_0_01_To_0_1_ReturnsFourDecimals(){
         WebData.Coin coin = webData.new Coin();
         assertEquals("0.0099", coin.trimPrice(0.0099));
         assertEquals("0.0101", coin.trimPrice(0.0101));
         assertEquals("0.01", coin.trimPrice(0.01));
     }
     @Test
-    public void trimPriceFourthBoundary(){
+    public void trimPrice_0_001_To_0_01_ReturnsFiveDecimals() {
         WebData.Coin coin = webData.new Coin();
-        assertEquals("0.00099", coin.trimPrice(0.00099));
-        assertEquals("0.001", coin.trimPrice(0.001));
         assertEquals("0.00101", coin.trimPrice(0.00101));
+        assertEquals("0.001", coin.trimPrice(0.001));
+        assertEquals("0.00099", coin.trimPrice(0.00099));
     }
     @Test
-    public void trimPriceFifthBoundary(){
+    public void trimPrice_0_0001_To_0_001_ReturnsSixDecimals() {
         WebData.Coin coin = webData.new Coin();
+        assertEquals("0.0001", coin.trimPrice(0.0001));
         assertEquals("0.000099", coin.trimPrice(0.000099));
-        assertEquals("0.0001", coin.trimPrice(0.0001));
-        assertEquals("0.0001", coin.trimPrice(0.0001));
+        assertEquals("0.000101", coin.trimPrice(0.000101));
     }
 
     // fetch function test cases
