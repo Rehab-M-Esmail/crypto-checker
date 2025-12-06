@@ -34,13 +34,13 @@ public class Main {
     public static final Dimension tableHeaderSize = new Dimension(25, 25);
     public static final Dimension tableIntercellSpacing = new Dimension(5, 5);
 
-    public static final String folderLocation = System.getProperty("user.home")+"/.crypto-checker/";
+    public static String folderLocation = System.getProperty("user.home")+"/.crypto-checker/";
     public static String dataSerLocation = folderLocation+"data.ser";
     public static final String portfolioSerLocation = folderLocation+"portfolio.ser";
     public static final String settingsSerLocation = folderLocation+"settings.ser";
     public static String converterSerLocation = folderLocation+"converter.ser";
     public static final String imageLocation = folderLocation+"icon.png";
-    public static final String logLocation = folderLocation+"log.txt";
+    public static String logLocation = folderLocation+"log.txt";
 
     public static void main(String[] args) {
         if (!(new File(folderLocation).exists())) {

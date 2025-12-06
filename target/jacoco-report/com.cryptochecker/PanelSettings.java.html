@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PanelSettings.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">crypto-checker</a> &gt; <a href="index.source.html" class="el_package">com.cryptochecker</a> &gt; <span class="el_source">PanelSettings.java</span></div><h1>PanelSettings.java</h1><pre class="source lang-java linenums">package com.cryptochecker;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class PanelSettings {
+    public JPanel panel;
+
+    private JButton bTheme;
+    private JButton bCurrency;
+    private JButton bDebug;
+
+    private JFrame colorFrame;
+    private JColorChooser colorChooser;
+    private colorChangeListener changeListener;
+    private JButton bColor4;
+    private JButton bColor5;
+    private JButton bColor6;
+    private JButton bColor7;
+    private JButton bColor8;
+    private JButton bColor9;
+
+    private JPanel topFilling;
+    private JPanel bottomFilling;
+    private JPanel middle;
+    private JPanel middleContent;
+    private JPanel content_1;
+    private JPanel content1Filling;
+    private JPanel content_2;
+    private JPanel content2Filling;
+    private JPanel content_3;
+
+    private JTextField header1;
+    private JTextField content1field;
+    private JTextField content2field;
+    private JTextField content3field;
+    private JTextField header2;
+    private JTextField content4field;
+    private JTextField content5field;
+    private JTextField content6field;
+    private JTextField content7field;
+    private JTextField content8field;
+    private JTextField content9field;
+
+<span class="nc" id="L49">    public PanelSettings() {</span>
+<span class="nc" id="L50">        panel = new JPanel();</span>
+<span class="nc" id="L51">        panel.setVisible(false);</span>
+<span class="nc" id="L52">        panel.setBackground(Color.WHITE);</span>
+<span class="nc" id="L53">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
+
+        // color chooser
+<span class="nc" id="L56">        colorChooser = new JColorChooser();</span>
+<span class="nc" id="L57">        colorChooser.setPreviewPanel(new JPanel());</span>
+
+        // create color chooser frame
+<span class="nc" id="L60">        colorFrame = new JFrame(&quot;Color Chooser&quot;);</span>
+<span class="nc" id="L61">        colorFrame.add(colorChooser);</span>
+<span class="nc" id="L62">        colorFrame.setVisible(false);</span>
+<span class="nc" id="L63">        colorFrame.setSize(650, 250);</span>
+<span class="nc" id="L64">        colorFrame.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L66">        topFilling = new JPanel();</span>
+<span class="nc" id="L67">        topFilling.setLayout(new BorderLayout());</span>
+
+<span class="nc" id="L69">        bottomFilling = new JPanel();</span>
+<span class="nc" id="L70">        bottomFilling.setLayout(new BorderLayout());</span>
+
+<span class="nc" id="L72">        middle = new JPanel();</span>
+<span class="nc" id="L73">        middle.setLayout(new FlowLayout());</span>
+
+<span class="nc" id="L75">        middleContent = new JPanel();</span>
+<span class="nc" id="L76">        middleContent.setLayout(new BoxLayout(middleContent, BoxLayout.Y_AXIS));</span>
+
+<span class="nc" id="L78">        content_1 = new JPanel();</span>
+<span class="nc" id="L79">        content_1.setLayout(new BoxLayout(content_1, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L80">        content_1.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+
+<span class="nc" id="L82">        content1Filling = new JPanel();</span>
+<span class="nc" id="L83">        content1Filling.setPreferredSize(new Dimension(0, 25));</span>
+
+<span class="nc" id="L85">        content_2 = new JPanel();</span>
+<span class="nc" id="L86">        content_2.setLayout(new BoxLayout(content_2, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L87">        content_2.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+
+<span class="nc" id="L89">        content2Filling = new JPanel();</span>
+<span class="nc" id="L90">        content2Filling.setPreferredSize(new Dimension(0, 25));</span>
+
+<span class="nc" id="L92">        content_3 = new JPanel();</span>
+<span class="nc" id="L93">        content_3.setLayout(new BoxLayout(content_3, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L94">        content_3.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+
+        // content header
+<span class="nc" id="L97">        header1 = getFieldTemplate(&quot;Settings&quot;);</span>
+<span class="nc" id="L98">        header1.setHorizontalAlignment(JTextField.CENTER);</span>
+<span class="nc" id="L99">        header1.setFont(new Font(&quot;Helvetica&quot;, Font.BOLD, 15));</span>
+<span class="nc" id="L100">        header1.setPreferredSize(new Dimension(350, 30));</span>
+<span class="nc" id="L101">        header1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));</span>
+
+<span class="nc" id="L103">        content_1.add(header1);</span>
+
+        // content 1 - theme
+<span class="nc" id="L106">        JPanel content1 = getPanelTemplate();</span>
+        
+<span class="nc" id="L108">        content1field = getFieldTemplate(&quot;Theme&quot;);</span>
+
+<span class="nc" id="L110">        JPanel content1button = getButtonPanelTemplate();</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">        if (Main.theme.currentTheme == Main.themes.DARK) {</span>
+<span class="nc" id="L112">            bTheme = getButtonTemplate(&quot;Dark&quot;);</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">        } else if (Main.theme.currentTheme == Main.themes.LIGHT) {</span>
+<span class="nc" id="L114">            bTheme = getButtonTemplate(&quot;Light&quot;);</span>
+        } else {
+<span class="nc" id="L116">            bTheme = getButtonTemplate(&quot;Custom&quot;);</span>
+        }
+<span class="nc" id="L118">        bTheme.addActionListener(new bThemeListener());</span>
+<span class="nc" id="L119">        content1button.add(bTheme);</span>
+
+<span class="nc" id="L121">        content1.add(content1field);</span>
+<span class="nc" id="L122">        content1.add(content1button);</span>
+<span class="nc" id="L123">        content_1.add(content1);</span>
+        
+        // content 2 - currency
+<span class="nc" id="L126">        JPanel content2 = getPanelTemplate();</span>
+        
+<span class="nc" id="L128">        content2field = getFieldTemplate(&quot;Currency&quot;);</span>
+
+<span class="nc" id="L130">        JPanel content2button = getButtonPanelTemplate();</span>
+<span class="nc" id="L131">        bCurrency = getButtonTemplate(Main.currency);</span>
+<span class="nc" id="L132">        bCurrency.addActionListener(new bCurrencyListener());</span>
+<span class="nc" id="L133">        content2button.add(bCurrency);</span>
+
+<span class="nc" id="L135">        content2.add(content2field);</span>
+<span class="nc" id="L136">        content2.add(content2button);</span>
+<span class="nc" id="L137">        content_1.add(content2);</span>
+
+        // content 3 - debug mode
+<span class="nc" id="L140">        JPanel content3 = getPanelTemplate();</span>
+        
+<span class="nc" id="L142">        content3field = getFieldTemplate(&quot;Debug Mode&quot;);</span>
+
+<span class="nc" id="L144">        JPanel content3button = getButtonPanelTemplate();</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">        if (Debug.mode) {</span>
+<span class="nc" id="L146">            bDebug = getButtonTemplate(&quot;On&quot;);</span>
+        } else {
+<span class="nc" id="L148">            bDebug = getButtonTemplate(&quot;Off&quot;);</span>
+        }
+<span class="nc" id="L150">        bDebug.addActionListener(new bDebugListener());</span>
+<span class="nc" id="L151">        content3button.add(bDebug);</span>
+
+<span class="nc" id="L153">        content3.add(content3field);</span>
+<span class="nc" id="L154">        content3.add(content3button);</span>
+<span class="nc" id="L155">        content_1.add(content3);</span>
+
+                // custom theme header
+<span class="nc" id="L158">                header2 = getFieldTemplate(&quot;Custom Theme&quot;);</span>
+<span class="nc" id="L159">                header2.setHorizontalAlignment(JTextField.CENTER);</span>
+<span class="nc" id="L160">                header2.setFont(new Font(&quot;Helvetica&quot;, Font.BOLD, 15));</span>
+<span class="nc" id="L161">                header2.setPreferredSize(new Dimension(350, 30));</span>
+<span class="nc" id="L162">                header2.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));</span>
+        
+<span class="nc" id="L164">                content_2.add(header2);</span>
+
+                // content 4 - color background
+<span class="nc" id="L167">                JPanel content4 = getPanelTemplate();</span>
+        
+<span class="nc" id="L169">                content4field = getFieldTemplate(&quot;Background&quot;);</span>
+        
+<span class="nc" id="L171">                JPanel content4button = getButtonPanelTemplate();</span>
+<span class="nc" id="L172">                bColor4 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L173">                bColor4.setBackground(Main.theme.customBackground);</span>
+<span class="nc" id="L174">                bColor4.addActionListener(new colorListener(4));</span>
+<span class="nc" id="L175">                content4button.add(bColor4);</span>
+        
+<span class="nc" id="L177">                content4.add(content4field);</span>
+<span class="nc" id="L178">                content4.add(content4button);</span>
+<span class="nc" id="L179">                content_2.add(content4);</span>
+                
+                // content 5 - color foreground
+<span class="nc" id="L182">                JPanel content5 = getPanelTemplate();</span>
+                
+<span class="nc" id="L184">                content5field = getFieldTemplate(&quot;Font&quot;);</span>
+        
+<span class="nc" id="L186">                JPanel content5button = getButtonPanelTemplate();</span>
+<span class="nc" id="L187">                bColor5 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L188">                bColor5.setBackground(Main.theme.customForeground);</span>
+<span class="nc" id="L189">                bColor5.addActionListener(new colorListener(5));</span>
+<span class="nc" id="L190">                content5button.add(bColor5);</span>
+        
+<span class="nc" id="L192">                content5.add(content5field);</span>
+<span class="nc" id="L193">                content5.add(content5button);</span>
+<span class="nc" id="L194">                content_2.add(content5);</span>
+        
+                // content 6 - color green
+<span class="nc" id="L197">                JPanel content6 = getPanelTemplate();</span>
+                
+<span class="nc" id="L199">                content6field = getFieldTemplate(&quot;Positive Font&quot;);</span>
+        
+<span class="nc" id="L201">                JPanel content6button = getButtonPanelTemplate();</span>
+<span class="nc" id="L202">                bColor6 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L203">                bColor6.setBackground(Main.theme.customGreen);</span>
+<span class="nc" id="L204">                bColor6.addActionListener(new colorListener(6));</span>
+<span class="nc" id="L205">                content6button.add(bColor6);</span>
+        
+<span class="nc" id="L207">                content6.add(content6field);</span>
+<span class="nc" id="L208">                content6.add(content6button);</span>
+<span class="nc" id="L209">                content_2.add(content6);</span>
+
+                // content 7 - color red
+<span class="nc" id="L212">                JPanel content7 = getPanelTemplate();</span>
+        
+<span class="nc" id="L214">                content7field = getFieldTemplate(&quot;Negative Font&quot;);</span>
+        
+<span class="nc" id="L216">                JPanel content7button = getButtonPanelTemplate();</span>
+<span class="nc" id="L217">                bColor7 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L218">                bColor7.setBackground(Main.theme.customRed);</span>
+<span class="nc" id="L219">                bColor7.addActionListener(new colorListener(7));</span>
+<span class="nc" id="L220">                content7button.add(bColor7);</span>
+        
+<span class="nc" id="L222">                content7.add(content7field);</span>
+<span class="nc" id="L223">                content7.add(content7button);</span>
+<span class="nc" id="L224">                content_2.add(content7);</span>
+                
+                // content 8 - color selection
+<span class="nc" id="L227">                JPanel content8 = getPanelTemplate();</span>
+                
+<span class="nc" id="L229">                content8field = getFieldTemplate(&quot;Pressing Coin Font&quot;);</span>
+        
+<span class="nc" id="L231">                JPanel content8button = getButtonPanelTemplate();</span>
+<span class="nc" id="L232">                bColor8 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L233">                bColor8.setBackground(Main.theme.customSelection);</span>
+<span class="nc" id="L234">                bColor8.addActionListener(new colorListener(8));</span>
+<span class="nc" id="L235">                content8button.add(bColor8);</span>
+        
+<span class="nc" id="L237">                content8.add(content8field);</span>
+<span class="nc" id="L238">                content8.add(content8button);</span>
+<span class="nc" id="L239">                content_2.add(content8);</span>
+        
+                // content 9 - color pane
+<span class="nc" id="L242">                JPanel content9 = getPanelTemplate();</span>
+                
+<span class="nc" id="L244">                content9field = getFieldTemplate(&quot;Empty Background&quot;);</span>
+        
+<span class="nc" id="L246">                JPanel content9button = getButtonPanelTemplate();</span>
+<span class="nc" id="L247">                bColor9 = getButtonTemplate(&quot;&quot;);</span>
+<span class="nc" id="L248">                bColor9.setBackground(Main.theme.customEmptyBackground);</span>
+<span class="nc" id="L249">                bColor9.addActionListener(new colorListener(9));</span>
+<span class="nc" id="L250">                content9button.add(bColor9);</span>
+        
+<span class="nc" id="L252">                content9.add(content9field);</span>
+<span class="nc" id="L253">                content9.add(content9button);</span>
+<span class="nc" id="L254">                content_2.add(content9);</span>
+
+                // content X1 - view logs
+<span class="nc" id="L257">                JPanel content10 = getPanelTemplate();</span>
+
+<span class="nc" id="L259">                JPanel content10button = getButtonPanelTemplate();</span>
+<span class="nc" id="L260">                content10button.setLayout(new BorderLayout());</span>
+<span class="nc" id="L261">                JButton bColorApply = getButtonTemplate(&quot;Apply &amp; Select&quot;);</span>
+<span class="nc" id="L262">                bColorApply.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L263">                bColorApply.addActionListener(new bColorApplyListener());</span>
+<span class="nc" id="L264">                content10button.add(bColorApply);</span>
+
+<span class="nc" id="L266">                content10.add(content10button);</span>
+<span class="nc" id="L267">                content_2.add(content10);</span>
+
+        // content X1 - view logs
+<span class="nc" id="L270">        JPanel contentX1 = getPanelTemplate();</span>
+
+<span class="nc" id="L272">        JPanel contentX1button = getButtonPanelTemplate();</span>
+<span class="nc" id="L273">        contentX1button.setLayout(new BorderLayout());</span>
+<span class="nc" id="L274">        JButton bView = getButtonTemplate(&quot;View Logs&quot;);</span>
+<span class="nc" id="L275">        bView.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L276">        bView.addActionListener(new bViewListener());</span>
+<span class="nc" id="L277">        contentX1button.add(bView);</span>
+
+<span class="nc" id="L279">        contentX1.add(contentX1button);</span>
+<span class="nc" id="L280">        content_3.add(contentX1);</span>
+
+        // content X2 - reset settings
+<span class="nc" id="L283">        JPanel contentX2 = getPanelTemplate();</span>
+
+<span class="nc" id="L285">        JPanel contentX2button = getButtonPanelTemplate();</span>
+<span class="nc" id="L286">        contentX2button.setLayout(new BorderLayout());</span>
+<span class="nc" id="L287">        JButton bReset = getButtonTemplate(&quot;Reset Settings&quot;);</span>
+<span class="nc" id="L288">        bReset.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L289">        bReset.addActionListener(new bResetListener());</span>
+<span class="nc" id="L290">        contentX2button.add(bReset);</span>
+
+<span class="nc" id="L292">        contentX2.add(contentX2button);</span>
+<span class="nc" id="L293">        content_3.add(contentX2);</span>
+
+        // content X3 - delete
+<span class="nc" id="L296">        JPanel contentX3 = getPanelTemplate();</span>
+
+<span class="nc" id="L298">        JPanel contentX3button = getButtonPanelTemplate();</span>
+<span class="nc" id="L299">        contentX3button.setLayout(new BorderLayout());</span>
+<span class="nc" id="L300">        JButton bDelete = getButtonTemplate(&quot;Delete Data&quot;);</span>
+<span class="nc" id="L301">        bDelete.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L302">        bDelete.addActionListener(new bDeleteListener());</span>
+<span class="nc" id="L303">        contentX3button.add(bDelete);</span>
+
+<span class="nc" id="L305">        contentX3.add(contentX3button);</span>
+<span class="nc" id="L306">        content_3.add(contentX3);</span>
+
+        // finale
+<span class="nc" id="L309">        middleContent.add(content_1);</span>
+<span class="nc" id="L310">        middleContent.add(content1Filling);</span>
+<span class="nc" id="L311">        middleContent.add(content_2);</span>
+<span class="nc" id="L312">        middleContent.add(content2Filling);</span>
+<span class="nc" id="L313">        middleContent.add(content_3);</span>
+
+<span class="nc" id="L315">        middle.add(middleContent);</span>
+
+<span class="nc" id="L317">        panel.add(topFilling);</span>
+<span class="nc" id="L318">        panel.add(middle);</span>
+<span class="nc" id="L319">        panel.add(bottomFilling);</span>
+
+<span class="nc" id="L321">        themeSwitch();</span>
+<span class="nc" id="L322">    }</span>
+
+    private JButton getButtonTemplate(String s) {
+<span class="nc" id="L325">        JButton template = new JButton(s);</span>
+<span class="nc" id="L326">        template.setBackground(Color.GRAY);</span>
+<span class="nc" id="L327">        template.setForeground(Color.WHITE);</span>
+<span class="nc" id="L328">        template.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L329">        template.setMinimumSize(new Dimension(75, 30));</span>
+<span class="nc" id="L330">        template.setMaximumSize(new Dimension(75, 30));</span>
+<span class="nc" id="L331">        template.setFocusable(false);</span>
+        
+<span class="nc" id="L333">        return template;</span>
+    }
+
+    private JPanel getButtonPanelTemplate() {
+<span class="nc" id="L337">        JPanel template = new JPanel();</span>
+<span class="nc" id="L338">        template.setLayout(new BoxLayout(template, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L339">        template.setPreferredSize(new Dimension(75, 30));</span>
+        
+<span class="nc" id="L341">        return template;</span>
+    }
+
+    private JTextField getFieldTemplate(String s) {
+<span class="nc" id="L345">        JTextField template = new JTextField(s);</span>
+<span class="nc" id="L346">        template.setEditable(false);</span>
+<span class="nc" id="L347">        template.setBackground(Color.WHITE);</span>
+<span class="nc" id="L348">        template.setHorizontalAlignment(JTextField.LEFT);</span>
+<span class="nc" id="L349">        template.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));</span>
+<span class="nc" id="L350">        template.setFont(new Font(&quot;Helvetica&quot;, Font.PLAIN, 14));</span>
+        
+<span class="nc" id="L352">        return template;</span>
+    }
+
+    private JPanel getPanelTemplate() {
+<span class="nc" id="L356">        JPanel template = new JPanel();</span>
+<span class="nc" id="L357">        template.setLayout(new BoxLayout(template, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L358">        template.setPreferredSize(new Dimension(350, 30));</span>
+<span class="nc" id="L359">        template.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L360">        template.setBackground(Color.GRAY);</span>
+
+<span class="nc" id="L362">        return template;</span>
+    }
+
+    public void themeSwitch() {
+<span class="nc" id="L366">        topFilling.setBackground(Main.theme.emptyBackground);</span>
+<span class="nc" id="L367">        bottomFilling.setBackground(Main.theme.emptyBackground);</span>
+<span class="nc" id="L368">        middle.setBackground(Main.theme.emptyBackground);</span>
+<span class="nc" id="L369">        content1Filling.setBackground(Main.theme.emptyBackground);</span>
+<span class="nc" id="L370">        content2Filling.setBackground(Main.theme.emptyBackground);</span>
+
+<span class="nc" id="L372">        header1.setBackground(Main.theme.background);</span>
+<span class="nc" id="L373">        header1.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L374">        content1field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L375">        content1field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L376">        content2field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L377">        content2field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L378">        content3field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L379">        content3field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L380">        header2.setBackground(Main.theme.background);</span>
+<span class="nc" id="L381">        header2.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L382">        content4field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L383">        content4field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L384">        content5field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L385">        content5field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L386">        content6field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L387">        content6field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L388">        content7field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L389">        content7field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L390">        content8field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L391">        content8field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L392">        content9field.setBackground(Main.theme.background);</span>
+<span class="nc" id="L393">        content9field.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L394">    }</span>
+
+    private void serialize() {
+        try { // save settings to data
+<span class="nc" id="L398">            FileOutputStream file = new FileOutputStream(Main.settingsSerLocation);</span>
+<span class="nc" id="L399">            BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
+<span class="nc" id="L400">            ObjectOutputStream out = new ObjectOutputStream(buffer);</span>
+<span class="nc" id="L401">            out.writeObject(Debug.mode);</span>
+<span class="nc" id="L402">            out.writeObject(Main.theme);</span>
+<span class="nc" id="L403">            out.writeObject(Main.currency);</span>
+<span class="nc" id="L404">            out.writeObject(Main.currencyChar);</span>
+<span class="nc" id="L405">            out.close();</span>
+<span class="nc" id="L406">            Debug.log(&quot;Serialized Settings To &quot; + Main.settingsSerLocation);</span>
+<span class="nc" id="L407">        } catch(Exception ex) {</span>
+<span class="nc" id="L408">            Debug.log(&quot;EXCEPTION: PanelSettings.java - serialize()&quot;);</span>
+<span class="nc" id="L409">            ex.printStackTrace();</span>
+<span class="nc" id="L410">        }</span>
+<span class="nc" id="L411">    }</span>
+
+<span class="nc" id="L413">    private class bThemeListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L415">            Debug.log(&quot;Button Theme Clicked&quot;);</span>
+
+<span class="nc bnc" id="L417" title="All 4 branches missed.">            switch (Main.theme.currentTheme) {</span>
+                case LIGHT: // light -&gt; dark
+<span class="nc" id="L419">                    Debug.log(&quot;-- Switching to dark mode&quot;);</span>
+<span class="nc" id="L420">                    bTheme.setText(&quot;Dark&quot;);</span>
+<span class="nc" id="L421">                    Main.theme.change(Main.themes.DARK);</span>
+<span class="nc" id="L422">                    break;</span>
+                case DARK: // dark -&gt; custom
+<span class="nc" id="L424">                    Debug.log(&quot;-- Switching to custom mode&quot;);</span>
+<span class="nc" id="L425">                    bTheme.setText(&quot;Custom&quot;);</span>
+<span class="nc" id="L426">                    Main.theme.change(Main.themes.CUSTOM);</span>
+<span class="nc" id="L427">                    break;</span>
+                case CUSTOM: // custom -&gt; light
+<span class="nc" id="L429">                    Debug.log(&quot;-- Switching to light mode&quot;);</span>
+<span class="nc" id="L430">                    bTheme.setText(&quot;Light&quot;);</span>
+<span class="nc" id="L431">                    Main.theme.change(Main.themes.LIGHT);</span>
+                    break;
+            }
+
+<span class="nc" id="L435">            UIManager.put(&quot;OptionPane.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L436">            UIManager.put(&quot;Panel.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L437">            UIManager.put(&quot;OptionPane.messageForeground&quot;,Main.theme.foreground);</span>
+
+<span class="nc" id="L439">            Main.gui.panelSettings.themeSwitch(); // finish page you are on first</span>
+<span class="nc" id="L440">            Main.gui.panelCoin.themeSwitch();</span>
+<span class="nc" id="L441">            Main.gui.panelPortfolio.themeSwitch();</span>
+<span class="nc" id="L442">            Main.gui.panelConverter.themeSwitch();</span>
+
+<span class="nc" id="L444">            serialize();</span>
+<span class="nc" id="L445">        }</span>
+    }
+
+<span class="nc" id="L448">    private class bCurrencyListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L450">            Debug.log(&quot;Button Currency Pressed&quot;);</span>
+<span class="nc" id="L451">            Debug.log(&quot;-- Changing currency&quot;);</span>
+
+<span class="nc" id="L453">            String options[] = { &quot;USD&quot;, &quot;EUR&quot;, &quot;GBP&quot;, &quot;SEK&quot;, &quot;AUD&quot;, &quot;BRL&quot;, &quot;CAD&quot;, &quot;CHF&quot;, &quot;CLP&quot;, &quot;CNY&quot;, &quot;CZK&quot;, &quot;DKK&quot;, &quot;HKD&quot;, &quot;HUF&quot;, &quot;IDR&quot;, &quot;ILS&quot;, &quot;INR&quot;, &quot;KRW&quot;, &quot;JPY&quot;, &quot;MXN&quot;, &quot;MYR&quot;, &quot;NOK&quot;, &quot;NZD&quot;, &quot;PHP&quot;, &quot;PKR&quot;, &quot;PLN&quot;, &quot;RUB&quot;, &quot;SGD&quot;, &quot;THB&quot;, &quot;TRY&quot;, &quot;TWD&quot;, &quot;ZAR&quot; };</span>
+<span class="nc" id="L454">            String selectedValue = (String) JOptionPane.showInputDialog(Main.frame, &quot;Select currency to use&quot;, &quot;Currency&quot;, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);</span>
+
+<span class="nc bnc" id="L456" title="All 2 branches missed.">            if (selectedValue == null) {</span>
+<span class="nc" id="L457">                Debug.log(&quot;-- cancel&quot;);</span>
+<span class="nc" id="L458">                return;</span>
+            } else {
+<span class="nc" id="L460">                Debug.log(&quot;-- &quot;+selectedValue);</span>
+            }
+
+<span class="nc" id="L463">            bCurrency.setText(selectedValue);</span>
+
+<span class="nc bnc" id="L465" title="All 2 branches missed.">            if (selectedValue == &quot;USD&quot;) {</span>
+<span class="nc" id="L466">                Main.currencyChar = &quot;$&quot;;</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">            } else if (selectedValue == &quot;EUR&quot;) {</span>
+<span class="nc" id="L468">                Main.currencyChar = &quot;€&quot;;</span>
+<span class="nc bnc" id="L469" title="All 2 branches missed.">            } else if (selectedValue == &quot;GBP&quot;) {</span>
+<span class="nc" id="L470">                Main.currencyChar = &quot;£&quot;;</span>
+            } else {
+<span class="nc" id="L472">                Main.currencyChar = &quot;&quot;;</span>
+            }
+
+<span class="nc" id="L475">            Main.currency = selectedValue;</span>
+
+<span class="nc" id="L477">            new WebData.RefreshCoins(); // refresh the coins</span>
+
+<span class="nc" id="L479">            serialize();</span>
+<span class="nc" id="L480">        }</span>
+    }
+
+    public void debugFunction() {
+<span class="nc" id="L484">        Debug.log(&quot;Button Debug Pressed&quot;);</span>
+<span class="nc bnc" id="L485" title="All 2 branches missed.">        if (Debug.mode) {</span>
+<span class="nc" id="L486">            Debug.mode = false;</span>
+<span class="nc" id="L487">            Debug.frame.setVisible(false);</span>
+<span class="nc" id="L488">            Debug.log(&quot;-- Disabling Debug Mode&quot;);</span>
+<span class="nc" id="L489">            bDebug.setText(&quot;Off&quot;);</span>
+        } else {
+<span class="nc" id="L491">            Debug.mode = true;</span>
+<span class="nc" id="L492">            Debug.frame.setVisible(true);</span>
+<span class="nc" id="L493">            Debug.log(&quot;-- Enabling Debug Mode&quot;);</span>
+<span class="nc" id="L494">            bDebug.setText(&quot;On&quot;);</span>
+        }
+
+<span class="nc" id="L497">        serialize();</span>
+<span class="nc" id="L498">    }</span>
+
+<span class="nc" id="L500">    public class bDebugListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L502">            debugFunction();</span>
+<span class="nc" id="L503">        }</span>
+    }
+
+<span class="nc" id="L506">    private class bViewListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L508">            Debug.log(&quot;Button View Logs Pressed&quot;);</span>
+
+            try {
+<span class="nc" id="L511">                Desktop.getDesktop().open(new File(Main.logLocation));</span>
+<span class="nc" id="L512">            } catch(Exception ex) {</span>
+<span class="nc" id="L513">                Debug.log(&quot;EXCEPTION: PanelSettings.java - bViewListener.actionPerformed()&quot;);</span>
+<span class="nc" id="L514">                ex.printStackTrace();</span>
+<span class="nc" id="L515">            }</span>
+<span class="nc" id="L516">        }</span>
+    }
+
+<span class="nc" id="L519">    private class bResetListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L521">            Debug.log(&quot;Button Reset Settings Pressed&quot;);</span>
+
+            // currency
+<span class="nc" id="L524">            Main.currency = &quot;USD&quot;;</span>
+<span class="nc" id="L525">            Main.currencyChar = &quot;$&quot;;</span>
+<span class="nc" id="L526">            bCurrency.setText(Main.currency);</span>
+<span class="nc" id="L527">            new WebData.RefreshCoins(); // refresh the coins</span>
+
+            // debug mode
+<span class="nc" id="L530">            Debug.mode = false;</span>
+<span class="nc" id="L531">            Debug.frame.setVisible(false);</span>
+<span class="nc" id="L532">            bDebug.setText(&quot;Off&quot;);</span>
+
+            // light mode
+<span class="nc" id="L535">            bTheme.setText(&quot;Light&quot;);</span>
+<span class="nc" id="L536">            Main.theme.change(Main.themes.LIGHT);</span>
+
+<span class="nc" id="L538">            UIManager.put(&quot;OptionPane.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L539">            UIManager.put(&quot;Panel.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L540">            UIManager.put(&quot;OptionPane.messageForeground&quot;,Main.theme.foreground);</span>
+
+<span class="nc" id="L542">            Main.theme.resetCustom(); // reset custom</span>
+
+<span class="nc" id="L544">            bColor4.setBackground(Main.theme.customBackground);</span>
+<span class="nc" id="L545">            bColor5.setBackground(Main.theme.customForeground);</span>
+<span class="nc" id="L546">            bColor6.setBackground(Main.theme.customGreen);</span>
+<span class="nc" id="L547">            bColor7.setBackground(Main.theme.customRed);</span>
+<span class="nc" id="L548">            bColor8.setBackground(Main.theme.customSelection);</span>
+<span class="nc" id="L549">            bColor9.setBackground(Main.theme.customEmptyBackground);</span>
+
+<span class="nc" id="L551">            Main.gui.panelSettings.themeSwitch(); // finish page you are on first</span>
+<span class="nc" id="L552">            Main.gui.panelCoin.themeSwitch();</span>
+<span class="nc" id="L553">            Main.gui.panelPortfolio.themeSwitch();</span>
+<span class="nc" id="L554">            Main.gui.panelConverter.themeSwitch();</span>
+
+<span class="nc" id="L556">            serialize();</span>
+<span class="nc" id="L557">        }</span>
+    }
+
+<span class="nc" id="L560">    private class bDeleteListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L562">            Debug.log(&quot;Button Delete Data Pressed&quot;);</span>
+<span class="nc" id="L563">            ArrayList&lt;JCheckBox&gt; deleteList = new ArrayList&lt;JCheckBox&gt;();</span>
+<span class="nc" id="L564">            deleteList.add(new JCheckBox(&quot;Delete Coin Data&quot;));</span>
+<span class="nc" id="L565">            deleteList.add(new JCheckBox(&quot;Delete Portfolio Data&quot;));</span>
+<span class="nc" id="L566">            deleteList.add(new JCheckBox(&quot;Delete Settings Data&quot;));</span>
+<span class="nc" id="L567">            deleteList.add(new JCheckBox(&quot;Delete Converter Data&quot;));</span>
+<span class="nc" id="L568">            deleteList.add(new JCheckBox(&quot;Delete Logs&quot;));</span>
+
+<span class="nc" id="L570">            Object[] list = (Object[]) deleteList.toArray(new Object[deleteList.size()]);</span>
+<span class="nc" id="L571">            JOptionPane.showMessageDialog(Main.frame, list, &quot;Select Data&quot;, JOptionPane.PLAIN_MESSAGE);</span>
+
+<span class="nc" id="L573">            JCheckBox cb1 = (JCheckBox) list[0];</span>
+<span class="nc" id="L574">            JCheckBox cb2 = (JCheckBox) list[1];</span>
+<span class="nc" id="L575">            JCheckBox cb3 = (JCheckBox) list[2];</span>
+<span class="nc" id="L576">            JCheckBox cb4 = (JCheckBox) list[3];</span>
+<span class="nc" id="L577">            JCheckBox cb5 = (JCheckBox) list[4];</span>
+
+<span class="nc bnc" id="L579" title="All 10 branches missed.">            if (!cb1.isSelected() &amp;&amp; !cb2.isSelected() &amp;&amp; !cb3.isSelected() &amp;&amp; !cb4.isSelected() &amp;&amp; !cb5.isSelected()) { // nothing was selected, return</span>
+<span class="nc" id="L580">                Debug.log(&quot;-- nothing was selected, cancelling&quot;);</span>
+<span class="nc" id="L581">                return;</span>
+            }
+
+            File deleteFile;
+
+<span class="nc bnc" id="L586" title="All 2 branches missed.">            if (cb1.isSelected()) { // delete coin data</span>
+<span class="nc" id="L587">                Debug.log(&quot;-- deleting coin data&quot;);</span>
+<span class="nc" id="L588">                deleteFile = new File(Main.dataSerLocation);</span>
+<span class="nc" id="L589">                deleteFile.delete();</span>
+            }
+
+<span class="nc bnc" id="L592" title="All 2 branches missed.">            if (cb2.isSelected()) { // delete portfolio data</span>
+<span class="nc" id="L593">                Debug.log(&quot;-- deleting portfolio data&quot;);</span>
+<span class="nc" id="L594">                deleteFile = new File(Main.portfolioSerLocation);</span>
+<span class="nc" id="L595">                deleteFile.delete();</span>
+            }
+
+<span class="nc bnc" id="L598" title="All 2 branches missed.">            if (cb3.isSelected()) { // delete settings data</span>
+<span class="nc" id="L599">                Debug.log(&quot;-- deleting settings data&quot;);</span>
+<span class="nc" id="L600">                deleteFile = new File(Main.settingsSerLocation);</span>
+<span class="nc" id="L601">                deleteFile.delete();</span>
+            }
+
+<span class="nc bnc" id="L604" title="All 2 branches missed.">            if (cb4.isSelected()) { // delete converter data</span>
+<span class="nc" id="L605">                Debug.log(&quot;-- deleting converter data&quot;);</span>
+<span class="nc" id="L606">                deleteFile = new File(Main.converterSerLocation);</span>
+<span class="nc" id="L607">                deleteFile.delete();</span>
+            }
+
+<span class="nc bnc" id="L610" title="All 2 branches missed.">            if (cb5.isSelected()) { // delete logs</span>
+<span class="nc" id="L611">                Debug.log(&quot;-- deleting logs&quot;);</span>
+<span class="nc" id="L612">                deleteFile = new File(Main.logLocation);</span>
+<span class="nc" id="L613">                deleteFile.delete();</span>
+            }
+
+<span class="nc bnc" id="L616" title="All 8 branches missed.">            if (cb1.isSelected() || cb2.isSelected() || cb3.isSelected() || cb4.isSelected()) {</span>
+<span class="nc" id="L617">                JOptionPane.showMessageDialog(Main.frame, &quot;You must restart the application!&quot;, &quot;Warning!&quot;, JOptionPane.WARNING_MESSAGE);</span>
+            }
+<span class="nc" id="L619">        }</span>
+    }
+
+    private class colorListener implements ActionListener {
+        private int number;
+
+<span class="nc" id="L625">        public colorListener(int number) {</span>
+<span class="nc" id="L626">            this.number = number;</span>
+<span class="nc" id="L627">        }</span>
+
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L630">            Debug.log(&quot;Button Color &quot; + number + &quot; Pressed&quot;);</span>
+
+<span class="nc" id="L632">            colorChooser.getSelectionModel().removeChangeListener(changeListener);</span>
+
+<span class="nc" id="L634">            changeListener = new colorChangeListener(number);</span>
+<span class="nc" id="L635">            colorChooser.getSelectionModel().addChangeListener(changeListener);</span>
+<span class="nc" id="L636">            colorFrame.setVisible(true);</span>
+
+<span class="nc bnc" id="L638" title="All 7 branches missed.">            switch (number) {</span>
+                case 4:
+<span class="nc" id="L640">                    colorChooser.setColor(bColor4.getBackground());</span>
+<span class="nc" id="L641">                    colorFrame.setTitle(&quot;Color Chooser - Background&quot;);</span>
+<span class="nc" id="L642">                    break;</span>
+                case 5:
+<span class="nc" id="L644">                    colorChooser.setColor(bColor5.getBackground());</span>
+<span class="nc" id="L645">                    colorFrame.setTitle(&quot;Color Chooser - Font&quot;);</span>
+<span class="nc" id="L646">                    break;</span>
+                case 6:
+<span class="nc" id="L648">                    colorChooser.setColor(bColor6.getBackground());</span>
+<span class="nc" id="L649">                    colorFrame.setTitle(&quot;Color Chooser - Positive Font&quot;);</span>
+<span class="nc" id="L650">                    break;</span>
+                case 7:
+<span class="nc" id="L652">                    colorChooser.setColor(bColor7.getBackground());</span>
+<span class="nc" id="L653">                    colorFrame.setTitle(&quot;Color Chooser - Negative Font&quot;);</span>
+<span class="nc" id="L654">                    break;</span>
+                case 8:
+<span class="nc" id="L656">                    colorChooser.setColor(bColor8.getBackground());</span>
+<span class="nc" id="L657">                    colorFrame.setTitle(&quot;Color Chooser - Pressing Coin Font&quot;);</span>
+<span class="nc" id="L658">                    break;</span>
+                case 9:
+<span class="nc" id="L660">                    colorChooser.setColor(bColor9.getBackground());</span>
+<span class="nc" id="L661">                    colorFrame.setTitle(&quot;Color Chooser - Empty Background&quot;);</span>
+                    break;
+            }
+<span class="nc" id="L664">        }</span>
+    }
+
+    private class colorChangeListener implements ChangeListener {
+        private int number;
+
+        public void stateChanged(ChangeEvent e) {
+<span class="nc" id="L671">            Color newColor = colorChooser.getColor();</span>
+            
+<span class="nc bnc" id="L673" title="All 7 branches missed.">            switch (number) {</span>
+                case 4:
+<span class="nc" id="L675">                    bColor4.setBackground(newColor);</span>
+<span class="nc" id="L676">                    break;</span>
+                case 5:
+<span class="nc" id="L678">                    bColor5.setBackground(newColor);</span>
+<span class="nc" id="L679">                    break;</span>
+                case 6:
+<span class="nc" id="L681">                    bColor6.setBackground(newColor);</span>
+<span class="nc" id="L682">                    break;</span>
+                case 7:
+<span class="nc" id="L684">                    bColor7.setBackground(newColor);</span>
+<span class="nc" id="L685">                    break;</span>
+                case 8:
+<span class="nc" id="L687">                    bColor8.setBackground(newColor);</span>
+<span class="nc" id="L688">                    break;</span>
+                case 9:
+<span class="nc" id="L690">                    bColor9.setBackground(newColor);</span>
+                    break;
+            }
+<span class="nc" id="L693">        }</span>
+
+<span class="nc" id="L695">        public colorChangeListener(int number) {</span>
+<span class="nc" id="L696">            this.number = number;</span>
+<span class="nc" id="L697">        }</span>
+    }
+
+<span class="nc" id="L700">    private class bColorApplyListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L702">            Debug.log(&quot;Button Color Apply Pressed&quot;);</span>
+
+<span class="nc" id="L704">            Main.theme.customBackground = bColor4.getBackground();</span>
+<span class="nc" id="L705">            Main.theme.customForeground = bColor5.getBackground();</span>
+<span class="nc" id="L706">            Main.theme.customGreen = bColor6.getBackground();</span>
+<span class="nc" id="L707">            Main.theme.customRed = bColor7.getBackground();</span>
+<span class="nc" id="L708">            Main.theme.customSelection = bColor8.getBackground();</span>
+<span class="nc" id="L709">            Main.theme.customEmptyBackground = bColor9.getBackground();</span>
+
+<span class="nc" id="L711">            Debug.log(&quot;-- Switching to custom mode&quot;);</span>
+<span class="nc" id="L712">            bTheme.setText(&quot;Custom&quot;);</span>
+<span class="nc" id="L713">            Main.theme.change(Main.themes.CUSTOM);</span>
+
+<span class="nc" id="L715">            UIManager.put(&quot;OptionPane.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L716">            UIManager.put(&quot;Panel.background&quot;,Main.theme.emptyBackground);</span>
+<span class="nc" id="L717">            UIManager.put(&quot;OptionPane.messageForeground&quot;,Main.theme.foreground);</span>
+
+<span class="nc" id="L719">            Main.gui.panelSettings.themeSwitch(); // finish page you are on first</span>
+<span class="nc" id="L720">            Main.gui.panelCoin.themeSwitch();</span>
+<span class="nc" id="L721">            Main.gui.panelPortfolio.themeSwitch();</span>
+<span class="nc" id="L722">            Main.gui.panelConverter.themeSwitch();</span>
+
+<span class="nc" id="L724">            serialize();</span>
+<span class="nc" id="L725">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -25,8 +25,11 @@ public class DebugTest {
 
     @BeforeAll
     static void setUpBeforeAll() throws Exception {
-        testLogLocation = new File(Main.logLocation).toPath();
-        if (!(new File(Main.folderLocation).exists())) new File(Main.folderLocation).mkdirs();
+        Path logFile = tempDir.resolve("log.txt");
+        Main.logLocation = logFile.toString();
+        Main.folderLocation = tempDir.toString();
+        testLogLocation = logFile;
+        new File(Main.folderLocation).mkdirs();
         testMain = new Main();
         Main.gui = testMain;
     }

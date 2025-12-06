@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WebData.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">crypto-checker</a> &gt; <a href="index.source.html" class="el_package">com.cryptochecker</a> &gt; <span class="el_source">WebData.java</span></div><h1>WebData.java</h1><pre class="source lang-java linenums">package com.cryptochecker;
+
+import java.io.*;
+import java.net.URL;
+import java.text.DecimalFormat;
+import java.util.*;
+import javax.swing.JOptionPane;
+import com.google.gson.Gson; // fetching json data
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
+
+public class WebData {
+    public ArrayList&lt;Coin&gt; coin;
+    public ArrayList&lt;ArrayList&lt;Coin&gt;&gt; portfolio;
+<span class="fc" id="L15">    public ArrayList&lt;String&gt; portfolio_names = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L16">    public int portfolio_nr = 0;</span>
+    public Global_Data global_data;
+
+<span class="fc" id="L19">    public WebData() throws Exception {</span>
+<span class="pc bpc" id="L20" title="2 of 4 branches missed.">        if (coin == null &amp;&amp; global_data == null) {</span>
+<span class="fc" id="L21">            this.deserialize();</span>
+        }
+<span class="fc" id="L23">    }</span>
+
+    public String fetchJson(String urlString) throws IOException, InterruptedException {
+<span class="nc" id="L26">        int attempts = 0;</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        while (attempts &lt; 3) { // retry up to 3 times</span>
+<span class="nc" id="L28">            URL url = new URL(urlString);</span>
+<span class="nc" id="L29">            javax.net.ssl.HttpsURLConnection conn = (javax.net.ssl.HttpsURLConnection) url.openConnection();</span>
+<span class="nc" id="L30">            conn.setRequestProperty(&quot;User-Agent&quot;, &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&quot;);</span>
+<span class="nc" id="L31">            conn.setConnectTimeout(8000);</span>
+<span class="nc" id="L32">            conn.setReadTimeout(8000);</span>
+
+<span class="nc" id="L34">            int responseCode = conn.getResponseCode();</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">            if (responseCode == 429) {</span>
+<span class="nc" id="L36">                System.err.println(&quot;⚠️  Rate limit hit (HTTP 429). Waiting before retry...&quot;);</span>
+<span class="nc" id="L37">                Thread.sleep(5000); // wait 5 seconds before retry</span>
+<span class="nc" id="L38">                attempts++;</span>
+<span class="nc" id="L39">                continue;</span>
+            }
+<span class="nc bnc" id="L41" title="All 2 branches missed.">            if (responseCode != 200) {</span>
+<span class="nc" id="L42">                throw new IOException(&quot;Unexpected response code: &quot; + responseCode);</span>
+            }
+
+<span class="nc" id="L45">            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {</span>
+<span class="nc" id="L46">                StringBuilder sb = new StringBuilder();</span>
+                String line;
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                while ((line = reader.readLine()) != null) sb.append(line);</span>
+<span class="nc" id="L49">                return sb.toString();</span>
+            }
+        }
+<span class="nc" id="L52">        throw new IOException(&quot;Failed after 3 attempts due to rate limiting or network issues.&quot;);</span>
+    }
+    public void fetch() throws Exception {
+        try {
+            // Helper function to fetch from URL with retry and headers
+
+
+            // ----------------------------
+            // 1️⃣ Fetch Coin Data
+            // ----------------------------
+<span class="nc" id="L62">            String coinJson = fetchJson(&quot;https://api.coingecko.com/api/v3/coins/markets?vs_currency=&quot;</span>
+<span class="nc" id="L63">                    + Main.currency.toLowerCase());</span>
+<span class="nc" id="L64">            coin = new Gson().fromJson(coinJson, new TypeToken&lt;ArrayList&lt;Coin&gt;&gt;(){}.getType());</span>
+<span class="nc bnc" id="L65" title="All 4 branches missed.">            if (coin == null || coin.isEmpty()) {</span>
+<span class="nc" id="L66">                throw new IOException(&quot;Empty or invalid coin data returned from API.&quot;);</span>
+            }
+
+            // ----------------------------
+            // 2️⃣ Fetch Global Data
+            // ----------------------------
+<span class="nc" id="L72">            String globalJson = fetchJson(&quot;https://api.coingecko.com/api/v3/global&quot;);</span>
+<span class="nc" id="L73">            global_data = new Gson().fromJson(globalJson, Global_Data.class);</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">            if (global_data == null) {</span>
+<span class="nc" id="L75">                throw new IOException(&quot;Empty or invalid global data returned from API.&quot;);</span>
+            }
+
+<span class="nc" id="L78">            Debug.log(&quot;✅ Successfully fetched and parsed data from CoinGecko.&quot;);</span>
+
+<span class="nc" id="L80">        } catch (Exception ex) {</span>
+<span class="nc" id="L81">            ex.printStackTrace();</span>
+<span class="nc" id="L82">            JOptionPane.showMessageDialog(Main.frame,</span>
+                    &quot;⚠️ Unable to connect or fetch from API.\nPlease check your internet or try again later.&quot;);
+<span class="nc bnc" id="L84" title="All 2 branches missed.">            if (coin == null) coin = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">            if (global_data == null) global_data = new Global_Data();</span>
+<span class="nc" id="L86">            Debug.log(&quot;ERROR: Failed to fetch data from API&quot;);</span>
+<span class="nc" id="L87">        }</span>
+
+        // ----------------------------
+        // 3️⃣ Serialize fetched data
+        // ----------------------------
+<span class="nc" id="L92">        try (FileOutputStream file = new FileOutputStream(Main.dataSerLocation);</span>
+<span class="nc" id="L93">             BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
+<span class="nc" id="L94">             ObjectOutputStream out = new ObjectOutputStream(buffer)) {</span>
+
+<span class="nc" id="L96">            out.writeObject(global_data);</span>
+<span class="nc" id="L97">            out.writeObject(coin);</span>
+<span class="nc" id="L98">            Debug.log(&quot;💾 Serialized Data To &quot; + Main.dataSerLocation);</span>
+
+<span class="nc" id="L100">        } catch (IOException i) {</span>
+<span class="nc" id="L101">            Debug.log(&quot;EXCEPTION: WebData.java - fetch()&quot;);</span>
+<span class="nc" id="L102">            i.printStackTrace();</span>
+<span class="nc" id="L103">        }</span>
+<span class="nc" id="L104">    }</span>
+    public static class RefreshCoins implements Runnable { // manuaully refresh with online API
+<span class="nc" id="L106">        public RefreshCoins() {</span>
+<span class="nc" id="L107">            Thread t = new Thread(this, &quot;Refresh Thread&quot;); // create a separate thread that refreshes the coins</span>
+<span class="nc" id="L108">            t.start();</span>
+<span class="nc" id="L109">        }</span>
+
+        public void run() {
+            try {
+<span class="nc" id="L113">                long timerStart = System.nanoTime(); // TIMER START</span>
+<span class="nc" id="L114">                Main.gui.webData.fetch();</span>
+<span class="nc" id="L115">                long timerEnd = System.nanoTime(); // TIMER STOP</span>
+<span class="nc" id="L116">                Debug.log(&quot;TIMER - Main.gui.webData.fetch() took\n--seconds: &quot;+(timerEnd - timerStart)/1000000000.0+&quot;\n--milliseconds: &quot;+((timerEnd-timerStart)/1000000.0)+&quot;\n--nanoseconds: &quot;+(timerEnd-timerStart));</span>
+    
+<span class="nc" id="L118">                Main.gui.panelPortfolio.refreshPortfolio();</span>
+<span class="nc" id="L119">                Main.gui.panelPortfolio.serializePortfolio();</span>
+    
+<span class="nc" id="L121">                Main.gui.panelCoin.reCreate();</span>
+<span class="nc" id="L122">                Main.gui.panelConverter.reCreate();</span>
+<span class="nc" id="L123">                Main.gui.panelPortfolio.reCreate();</span>
+<span class="nc" id="L124">            } catch(NoClassDefFoundError ex) {</span>
+<span class="nc" id="L125">                Debug.log(&quot;EXCEPTION: Missing Gson dependency!&quot;);</span>
+<span class="nc" id="L126">                JOptionPane.showMessageDialog(Main.frame, &quot;Missing Gson dependency!\nDownload and use the default \&quot;crypto-checker.jar\&quot; instead of \&quot;crypto-checker-no-dependencies.jar\&quot;&quot;);</span>
+<span class="nc" id="L127">            } catch(Exception ex) {</span>
+<span class="nc" id="L128">                Debug.log(&quot;EXCEPTION: WebData.java - RefreshCoins().run()&quot;);</span>
+<span class="nc" id="L129">                ex.printStackTrace();</span>
+<span class="nc" id="L130">            }</span>
+<span class="nc" id="L131">        }</span>
+    }
+
+    @SuppressWarnings(&quot;unchecked&quot;) // coin = (ArrayList&lt;Coin&gt; in.readObject()) supressing
+    public void deserialize() throws Exception {
+<span class="pc bpc" id="L136" title="1 of 2 branches missed.">        if (!(new File(Main.dataSerLocation).canRead())) {</span>
+<span class="nc" id="L137">            Debug.log(&quot;ERROR: Couldn't find &quot;+Main.dataSerLocation+&quot;.. fetching from API.&quot;);</span>
+<span class="nc" id="L138">            this.fetch();</span>
+<span class="nc" id="L139">            Debug.log(&quot;-- Fetched file&quot;);</span>
+<span class="nc" id="L140">            return;</span>
+        }
+
+        try {
+<span class="fc" id="L144">            FileInputStream file = new FileInputStream(Main.dataSerLocation);</span>
+<span class="fc" id="L145">            BufferedInputStream buffer = new BufferedInputStream(file);</span>
+<span class="fc" id="L146">            ObjectInputStream in = new ObjectInputStream(buffer);</span>
+
+<span class="fc" id="L148">            global_data = (Global_Data) in.readObject();</span>
+<span class="fc" id="L149">            coin = (ArrayList&lt;Coin&gt;) in.readObject();</span>
+<span class="fc" id="L150">            Debug.log(&quot;Deserialized Data From &quot; + Main.dataSerLocation);</span>
+<span class="fc" id="L151">            in.close();</span>
+<span class="nc" id="L152">        } catch(Exception ex) {</span>
+<span class="nc" id="L153">            Debug.log(&quot;ERROR: WebData.deserialize(), deleting &quot; + Main.dataSerLocation);</span>
+<span class="nc" id="L154">            File deleteFile = new File(Main.dataSerLocation);</span>
+<span class="nc" id="L155">            deleteFile.delete();</span>
+
+<span class="nc" id="L157">            this.fetch();</span>
+<span class="fc" id="L158">        }</span>
+<span class="fc" id="L159">    }</span>
+
+<span class="nc" id="L161">    public class Global_Data implements Serializable { // global data API</span>
+        private static final long serialVersionUID = 1L;
+
+        @SerializedName(value=&quot;total_market_cap_usd&quot;, alternate={&quot;total_market_cap_sek&quot;, &quot;total_market_cap_eur&quot;, &quot;total_market_cap_aud&quot;, &quot;total_market_cap_brl&quot;, &quot;total_market_cap_cad&quot;, &quot;total_market_cap_chf&quot;, &quot;total_market_cap_clp&quot;, &quot;total_market_cap_cny&quot;, &quot;total_market_cap_czk&quot;,
+        &quot;total_market_cap_dkk&quot;, &quot;total_market_cap_gbp&quot;, &quot;total_market_cap_hkd&quot;, &quot;total_market_cap_huf&quot;, &quot;total_market_cap_idr&quot;, &quot;total_market_cap_ils&quot;, &quot;total_market_cap_inr&quot;, &quot;total_market_cap_jpy&quot;, &quot;total_market_cap_krw&quot;, &quot;total_market_cap_mxn&quot;, &quot;total_market_cap_myr&quot;,
+        &quot;total_market_cap_nok&quot;, &quot;total_market_cap_nzd&quot;, &quot;total_market_cap_php&quot;, &quot;total_market_cap_pkr&quot;, &quot;total_market_cap_pln&quot;, &quot;total_market_cap_rub&quot;, &quot;total_market_cap_sgd&quot;, &quot;total_market_cap_thb&quot;, &quot;total_market_cap_try&quot;, &quot;total_market_cap_twd&quot;, &quot;total_market_cap_zar&quot;})
+        long total_market_cap;
+        
+        @SerializedName(value=&quot;total_24h_volume_usd&quot;, alternate={&quot;total_24h_volume_sek&quot;, &quot;total_24h_volume_eur&quot;, &quot;total_24h_volume_aud&quot;, &quot;total_24h_volume_brl&quot;, &quot;total_24h_volume_cad&quot;, &quot;total_24h_volume_chf&quot;, &quot;total_24h_volume_clp&quot;, &quot;total_24h_volume_cny&quot;, &quot;total_24h_volume_czk&quot;,
+        &quot;total_24h_volume_dkk&quot;, &quot;total_24h_volume_gbp&quot;, &quot;total_24h_volume_hkd&quot;, &quot;total_24h_volume_huf&quot;, &quot;total_24h_volume_idr&quot;, &quot;total_24h_volume_ils&quot;, &quot;total_24h_volume_inr&quot;, &quot;total_24h_volume_jpy&quot;, &quot;total_24h_volume_krw&quot;, &quot;total_24h_volume_mxn&quot;, &quot;total_24h_volume_myr&quot;,
+        &quot;total_24h_volume_nok&quot;, &quot;total_24h_volume_nzd&quot;, &quot;total_24h_volume_php&quot;, &quot;total_24h_volume_pkr&quot;, &quot;total_24h_volume_pln&quot;, &quot;total_24h_volume_rub&quot;, &quot;total_24h_volume_sgd&quot;, &quot;total_24h_volume_thb&quot;, &quot;total_24h_volume_try&quot;, &quot;total_24h_volume_twd&quot;, &quot;total_24h_volume_zar&quot;})
+        long total_24h_volume;
+        
+        double bitcoin_percentage_of_market_cap;
+        int active_currencies;
+        int active_assets;
+        int active_markets;
+        long last_updated;
+
+        public String toString() { // for global data button
+<span class="nc" id="L181">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
+<span class="nc" id="L182">            return &quot;Total Market Cap: &quot; + df.format(total_market_cap)</span>
+<span class="nc" id="L183">            + &quot;\nTotal 24 Hour Volume: &quot; + df.format(total_24h_volume)</span>
+            + &quot;\nBitcoin Dominance: &quot; + bitcoin_percentage_of_market_cap + &quot;%&quot;
+            + &quot;\nActive Currencies: &quot; + active_currencies
+            + &quot;\nActive Assets: &quot; + active_assets
+            + &quot;\nActive Markets: &quot; + active_markets
+            + &quot;\nLast Updated: &quot; + last_updated;
+        }
+    }
+
+    public Coin getCoin() {
+<span class="nc" id="L193">        return new Coin();</span>
+    }
+
+<span class="fc" id="L196">    public class Coin implements Serializable, Cloneable {</span>
+        private static final long serialVersionUID = 1L;
+
+        String id;
+        String name;
+        String symbol;
+
+        @SerializedName(&quot;market_cap_rank&quot;)
+        int rank;
+
+        @SerializedName(&quot;current_price&quot;)
+        double price;
+
+        @SerializedName(&quot;market_cap&quot;)
+        double market_cap;
+
+        @SerializedName(&quot;total_volume&quot;)
+        double _24h_volume;
+
+        @SerializedName(&quot;circulating_supply&quot;)
+        double available_supply;
+
+        @SerializedName(&quot;total_supply&quot;)
+        double total_supply;
+
+        @SerializedName(&quot;max_supply&quot;)
+        double max_supply;
+
+        @SerializedName(&quot;price_change_percentage_1h_in_currency&quot;)
+        double percent_change_1h;
+
+        @SerializedName(&quot;price_change_percentage_24h&quot;)
+        double percent_change_24h;
+
+        @SerializedName(&quot;price_change_percentage_7d_in_currency&quot;)
+        double percent_change_7d;
+
+        String last_updated;
+
+        // portfolio data
+        double portfolio_amount;
+        double portfolio_price;
+        double portfolio_value;
+        double portfolio_gains;
+        String portfolio_currency;
+        double portfolio_price_start;
+        double portfolio_value_start;
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+<span class="fc" id="L246">            return super.clone();</span>
+        }
+
+        public Object copy() {
+            try {
+<span class="fc" id="L251">                return clone();</span>
+<span class="nc" id="L252">            } catch (Exception ex) {</span>
+<span class="nc" id="L253">                ex.printStackTrace();</span>
+            }
+<span class="nc" id="L255">            return new Object();</span>
+        }
+
+        public String trimPrice(double trimPrice) {
+            DecimalFormat df;
+<span class="pc bpc" id="L260" title="1 of 2 branches missed.">            if (trimPrice &gt; 1) df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="nc bnc" id="L261" title="All 2 branches missed.">            else if (trimPrice &gt; 0.1) df = new DecimalFormat(&quot;#.###&quot;);</span>
+<span class="nc bnc" id="L262" title="All 2 branches missed.">            else if (trimPrice &gt; 0.01) df = new DecimalFormat(&quot;#.####&quot;);</span>
+<span class="nc bnc" id="L263" title="All 2 branches missed.">            else if (trimPrice &gt; 0.001) df = new DecimalFormat(&quot;#.#####&quot;);</span>
+<span class="nc bnc" id="L264" title="All 2 branches missed.">            else if (trimPrice &gt; 0.0001) df = new DecimalFormat(&quot;#.######&quot;);</span>
+<span class="nc" id="L265">            else df = new DecimalFormat(&quot;#.############&quot;);</span>
+<span class="fc" id="L266">            return df.format(trimPrice);</span>
+        }
+
+        public String getInfo() {
+<span class="fc" id="L270">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
+<span class="fc" id="L271">            return &quot;Rank: &quot; + rank</span>
+                    + &quot;\nID: &quot; + id
+                    + &quot;\nName: &quot; + name
+                    + &quot;\nSymbol: &quot; + symbol
+<span class="fc" id="L275">                    + &quot;\nPrice &quot; + Main.currency + &quot;: &quot; + trimPrice(price)</span>
+<span class="fc" id="L276">                    + &quot;\nMarket Cap: &quot; + df.format(market_cap)</span>
+<span class="fc" id="L277">                    + &quot;\n24 Hour Volume: &quot; + df.format(_24h_volume)</span>
+<span class="fc" id="L278">                    + &quot;\nAvailable Supply: &quot; + df.format(available_supply)</span>
+<span class="fc" id="L279">                    + &quot;\nTotal Supply: &quot; + df.format(total_supply)</span>
+<span class="fc" id="L280">                    + &quot;\nMax Supply: &quot; + df.format(max_supply)</span>
+                    + &quot;\nPercent 1 Hour: &quot; + percent_change_1h + &quot;%&quot;
+                    + &quot;\nPercent 24 Hour: &quot; + percent_change_24h + &quot;%&quot;
+                    + &quot;\nPercent 7 Days: &quot; + percent_change_7d + &quot;%&quot;
+                    + &quot;\nLast Updated: &quot; + last_updated;
+        }
+
+        public String getPortfolio() {
+<span class="nc" id="L288">            DecimalFormat df = new DecimalFormat(&quot;###,###.##&quot;);</span>
+<span class="nc" id="L289">            return getInfo()</span>
+<span class="nc" id="L290">                    + &quot;\n\nPortfolio Amount: &quot; + trimPrice(portfolio_amount)</span>
+<span class="nc" id="L291">                    + &quot;\nPortfolio Value: &quot; + df.format(portfolio_value)</span>
+<span class="nc" id="L292">                    + &quot;\nPortfolio Gains: &quot; + df.format(portfolio_gains)</span>
+                    + &quot;\n\nPortfolio Currency: &quot; + portfolio_currency
+<span class="nc" id="L294">                    + &quot;\nPortfolio Price Start: &quot; + df.format(portfolio_price_start)</span>
+<span class="nc" id="L295">                    + &quot;\nPortfolio Value Start: &quot; + df.format(portfolio_value_start);</span>
+        }
+
+        @Override
+        public String toString() {
+<span class="fc" id="L300">            return name;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

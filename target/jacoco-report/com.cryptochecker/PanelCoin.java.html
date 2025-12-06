@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PanelCoin.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">crypto-checker</a> &gt; <a href="index.source.html" class="el_package">com.cryptochecker</a> &gt; <span class="el_source">PanelCoin.java</span></div><h1>PanelCoin.java</h1><pre class="source lang-java linenums">package com.cryptochecker;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.*;
+import javax.swing.*; 
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.table.*;
+
+public class PanelCoin {
+    public JPanel panel;
+
+    private JTable table;
+    private TableRenderer renderer;
+    private DefaultTableCellRenderer headerRenderer;
+    private TableModel model;
+    private JScrollPane pane;
+
+    private TableRowSorter&lt;TableModel&gt; rowSorter;
+    private JTextField headerSearchField;
+
+<span class="nc" id="L26">    private final int rowHeight = 40;</span>
+<span class="nc" id="L27">    private final int amountHeaderButtons = 1;</span>
+<span class="nc" id="L28">    private final int rightHeaderFilling = 50;</span>
+<span class="nc" id="L29">    private final int headerSearchSize = 15;</span>
+<span class="nc" id="L30">    private final Dimension searchFieldSize = new Dimension(Main.panelWidth*2, Main.panelHeight-10);</span>
+
+<span class="nc" id="L32">    public PanelCoin() {</span>
+<span class="nc" id="L33">        panel = new JPanel();</span>
+<span class="nc" id="L34">        panel.setBackground(Color.WHITE);</span>
+<span class="nc" id="L35">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
+
+<span class="nc" id="L37">        model = new TableModel(); // table model</span>
+
+        // rendering columns+rows
+<span class="nc" id="L40">        renderer = new TableRenderer();</span>
+<span class="nc" id="L41">        renderer.setHorizontalAlignment(JLabel.LEFT);</span>
+
+<span class="nc" id="L43">        table = new JTable(model); // create table with data</span>
+<span class="nc" id="L44">        table.setDefaultRenderer(Integer.class, renderer);</span>
+<span class="nc" id="L45">        table.setDefaultRenderer(Double.class, renderer);</span>
+<span class="nc" id="L46">        table.setDefaultRenderer(Short.class, renderer);</span>
+
+        // render header        
+<span class="nc" id="L49">        headerRenderer = new DefaultTableCellRenderer();</span>
+<span class="nc" id="L50">        headerRenderer.setHorizontalAlignment(JLabel.CENTER);</span>
+<span class="nc" id="L51">        table.getTableHeader().setReorderingAllowed(false);</span>
+<span class="nc" id="L52">        table.getTableHeader().setPreferredSize(Main.tableHeaderSize);</span>
+<span class="nc" id="L53">        table.getTableHeader().setBorder(BorderFactory.createMatteBorder(0, 0, 1, 1, Color.GRAY));</span>
+<span class="nc" id="L54">        table.getTableHeader().setDefaultRenderer(headerRenderer);</span>
+
+        // table settings
+<span class="nc" id="L57">        table.setRowHeight(rowHeight);</span>
+<span class="nc" id="L58">        table.getColumnModel().getColumn(0).setMaxWidth(50); // rank</span>
+<span class="nc" id="L59">        table.getColumnModel().getColumn(3).setMaxWidth(100); // 1h</span>
+<span class="nc" id="L60">        table.getColumnModel().getColumn(4).setMaxWidth(100); // 24h</span>
+<span class="nc" id="L61">        table.getColumnModel().getColumn(5).setMaxWidth(100); // 7d</span>
+
+<span class="nc" id="L63">        table.setFont(Main.tableFont);</span>
+<span class="nc" id="L64">        table.setShowVerticalLines(false);</span>
+<span class="nc" id="L65">        table.setIntercellSpacing(Main.tableIntercellSpacing);</span>
+<span class="nc" id="L66">        table.setFocusable(false);</span>
+
+<span class="nc" id="L68">        table.setDefaultRenderer(Object.class, renderer); // add renderer</span>
+<span class="nc" id="L69">        table.addMouseListener(new TableMouseListener()); // Mouse Listener</span>
+        
+        // TOP HEADER
+<span class="nc" id="L72">        JPanel headerTop = new JPanel();</span>
+<span class="nc" id="L73">        headerTop.setBackground(Color.GRAY);</span>
+<span class="nc" id="L74">        headerTop.setLayout(new BoxLayout(headerTop, BoxLayout.X_AXIS));</span>
+
+        // BUTTONS HEADER
+<span class="nc" id="L77">        JPanel headerButtons = new JPanel();</span>
+<span class="nc" id="L78">        headerButtons.setLayout(new BoxLayout(headerButtons, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L79">        headerButtons.setPreferredSize(new Dimension(Main.panelWidth*amountHeaderButtons, Main.panelHeight-1));</span>
+
+<span class="nc" id="L81">        JButton bRefresh = Main.gui.getButtonTemplate(&quot;Refresh&quot;);</span>
+<span class="nc" id="L82">        bRefresh.addActionListener(new bRefreshListener());</span>
+<span class="nc" id="L83">        bRefresh.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L84">        bRefresh.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+
+<span class="nc" id="L86">        headerButtons.add(bRefresh);</span>
+
+        // HEADER FILLING
+<span class="nc" id="L89">        JPanel headerFilling1 = new JPanel();</span>
+<span class="nc" id="L90">        headerFilling1.setLayout(new BorderLayout());</span>
+<span class="nc" id="L91">        headerFilling1.setMaximumSize(new Dimension((int) Main.screenResolution.getWidth(), Main.panelHeight-1));</span>
+<span class="nc" id="L92">        headerFilling1.setBackground(Color.GRAY);</span>
+
+<span class="nc" id="L94">        JPanel headerFilling2 = new JPanel();</span>
+<span class="nc" id="L95">        headerFilling2.setLayout(new BorderLayout());</span>
+<span class="nc" id="L96">        headerFilling2.setMaximumSize(new Dimension(rightHeaderFilling, Main.panelHeight-1));</span>
+<span class="nc" id="L97">        headerFilling2.setBackground(Color.GRAY);</span>
+
+        // SEARCH HEADER
+<span class="nc" id="L100">        JPanel headerSearch = new JPanel();</span>
+<span class="nc" id="L101">        headerSearch.setLayout(new BoxLayout(headerSearch, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L102">        headerSearch.setMaximumSize(searchFieldSize);</span>
+<span class="nc" id="L103">        headerSearch.setBackground(Color.GRAY);</span>
+
+<span class="nc" id="L105">        headerSearchField = new JTextField(&quot;&quot;, headerSearchSize);</span>
+<span class="nc" id="L106">        headerSearch.add(headerSearchField);</span>
+
+        // sorting
+<span class="nc" id="L109">        rowSorter = new TableRowSorter&lt;TableModel&gt;(model);</span>
+<span class="nc" id="L110">        table.setRowSorter(rowSorter);</span>
+        
+<span class="nc" id="L112">        headerSearchField.getDocument().addDocumentListener(new SearchDocumentListener());</span>
+
+        // add headers together
+<span class="nc" id="L115">        headerTop.add(headerButtons);</span>
+<span class="nc" id="L116">        headerTop.add(headerFilling1);</span>
+<span class="nc" id="L117">        headerTop.add(headerSearch);</span>
+<span class="nc" id="L118">        headerTop.add(headerFilling2);</span>
+
+        // scrolling pane, add JScrollPane to JPanel
+<span class="nc" id="L121">        pane = new JScrollPane(table);</span>
+<span class="nc" id="L122">        pane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);</span>
+<span class="nc" id="L123">        panel.add(headerTop);</span>
+<span class="nc" id="L124">        panel.add(pane);</span>
+
+<span class="nc" id="L126">        themeSwitch(); // select theme color</span>
+<span class="nc" id="L127">    }</span>
+
+    public void reCreate() {
+<span class="nc" id="L130">        model.list = Main.gui.webData.coin;</span>
+
+<span class="nc" id="L132">        Main.frame.getContentPane().revalidate();</span>
+<span class="nc" id="L133">        Main.frame.getContentPane().repaint();</span>
+<span class="nc" id="L134">    }</span>
+
+<span class="nc" id="L136">    private class SearchDocumentListener implements DocumentListener {</span>
+        public void insertUpdate(DocumentEvent e) {
+<span class="nc" id="L138">            String text = headerSearchField.getText();</span>
+
+<span class="nc bnc" id="L140" title="All 2 branches missed.">            if (text.trim().length() == 0) {</span>
+<span class="nc" id="L141">                rowSorter.setRowFilter(null);</span>
+            } else {
+<span class="nc" id="L143">                rowSorter.setRowFilter(RowFilter.regexFilter(&quot;(?i)&quot; + text));</span>
+            }
+<span class="nc" id="L145">        }</span>
+
+        public void removeUpdate(DocumentEvent e) {
+<span class="nc" id="L148">            String text = headerSearchField.getText();</span>
+
+<span class="nc bnc" id="L150" title="All 2 branches missed.">            if (text.trim().length() == 0) {</span>
+<span class="nc" id="L151">                rowSorter.setRowFilter(null);</span>
+            } else {
+<span class="nc" id="L153">                rowSorter.setRowFilter(RowFilter.regexFilter(&quot;(?i)&quot; + text));</span>
+            }
+<span class="nc" id="L155">        }</span>
+
+        public void changedUpdate(DocumentEvent e) {
+<span class="nc" id="L158">            throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);</span>
+        }
+    }
+
+<span class="nc" id="L162">    private class TableMouseListener implements MouseListener {</span>
+        public void mousePressed(MouseEvent e) {
+<span class="nc bnc" id="L164" title="All 4 branches missed.">            if (table.getSelectedColumn() &lt; 0 || table.getSelectedRow() &lt; 0) // if nothing is selected or if user right clicks</span>
+<span class="nc" id="L165">                return;</span>
+
+<span class="nc" id="L167">            int columnNr = table.convertColumnIndexToModel(table.getSelectedColumn());</span>
+<span class="nc" id="L168">            int rowNr = table.convertRowIndexToModel(table.getSelectedRow());</span>
+<span class="nc" id="L169">            Debug.log(&quot;Table Coin, Row &quot; + rowNr + &quot;, Column &quot; + columnNr);</span>
+<span class="nc" id="L170">            JOptionPane.showMessageDialog(Main.frame, Main.gui.webData.coin.get(rowNr).getInfo(), Main.gui.webData.coin.get(rowNr).toString(), JOptionPane.PLAIN_MESSAGE);</span>
+<span class="nc" id="L171">            table.clearSelection();</span>
+<span class="nc" id="L172">        }</span>
+
+<span class="nc" id="L174">        public void mouseExited(MouseEvent e) { }</span>
+<span class="nc" id="L175">        public void mouseEntered(MouseEvent ev) { }</span>
+<span class="nc" id="L176">        public void mouseReleased(MouseEvent ev) { }</span>
+<span class="nc" id="L177">        public void mouseClicked(MouseEvent ev) { }</span>
+        
+    }
+
+<span class="nc" id="L181">    public class TableModel extends AbstractTableModel {</span>
+        private static final long serialVersionUID = 1L;
+<span class="nc" id="L183">        private String[] columnNames = {&quot;#&quot;, &quot;Name&quot;, &quot;Value&quot;, &quot;1h&quot;, &quot;24h&quot;, &quot;7d&quot;, &quot;Market Cap&quot;};</span>
+<span class="nc" id="L184">        public ArrayList&lt;WebData.Coin&gt; list = Main.gui.webData.coin;</span>
+
+        public int getColumnCount() {
+<span class="nc" id="L187">            return columnNames.length;</span>
+        }
+    
+        public int getRowCount() {
+<span class="nc" id="L191">            return list.size();</span>
+        }
+    
+        public String getColumnName(int col) {
+<span class="nc" id="L195">            return columnNames[col];</span>
+        }
+
+        public Class&lt;?&gt; getColumnClass(int column) { // for sorting
+<span class="nc bnc" id="L199" title="All 8 branches missed.">            switch (column) {</span>
+                case 0:
+<span class="nc" id="L201">                    return Short.class;</span>
+                case 1:
+<span class="nc" id="L203">                    return String.class;</span>
+                case 2:
+<span class="nc" id="L205">                    return Double.class;</span>
+                case 3:
+<span class="nc" id="L207">                    return Double.class;</span>
+                case 4:
+<span class="nc" id="L209">                    return Double.class;</span>
+                case 5:
+<span class="nc" id="L211">                    return Double.class;</span>
+                case 6:
+<span class="nc" id="L213">                    return Integer.class;</span>
+                default:
+<span class="nc" id="L215">                    return String.class;</span>
+            }
+        }
+        
+        public Object getValueAt(int row, int col) {
+<span class="nc" id="L220">            Object value = null;</span>
+<span class="nc bnc" id="L221" title="All 8 branches missed.">            switch (col) {</span>
+                case 0:
+<span class="nc" id="L223">                    value = list.get(row).rank;</span>
+<span class="nc" id="L224">                    break;</span>
+                case 1:
+<span class="nc" id="L226">                    value = list.get(row).name;</span>
+<span class="nc" id="L227">                    break;</span>
+                case 2:
+<span class="nc" id="L229">                    value = list.get(row).price;</span>
+<span class="nc" id="L230">                    break;</span>
+                case 3:
+<span class="nc" id="L232">                    value = list.get(row).percent_change_1h;</span>
+<span class="nc" id="L233">                    break;</span>
+                case 4:
+<span class="nc" id="L235">                    value = list.get(row).percent_change_24h;</span>
+<span class="nc" id="L236">                    break;</span>
+                case 5:
+<span class="nc" id="L238">                    value = list.get(row).percent_change_7d;</span>
+<span class="nc" id="L239">                    break;</span>
+                case 6:
+<span class="nc" id="L241">                    value = list.get(row).market_cap;</span>
+                    break;
+            }
+<span class="nc" id="L244">            return value;</span>
+        }
+    }
+
+<span class="nc" id="L248">    private class TableRenderer extends DefaultTableCellRenderer {</span>
+        private static final long serialVersionUID = 1L;
+<span class="nc" id="L250">        private NumberFormat nf = NumberFormat.getCurrencyInstance();</span>
+<span class="nc" id="L251">        private DecimalFormatSymbols decimalFormatSymbols = ((DecimalFormat) nf).getDecimalFormatSymbols();</span>
+
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+<span class="nc" id="L254">            super.setBackground(Main.theme.background);</span>
+<span class="nc" id="L255">            super.setForeground(Main.theme.foreground);</span>
+
+<span class="nc bnc" id="L257" title="All 2 branches missed.">            if (column == 2) {</span>
+<span class="nc" id="L258">                decimalFormatSymbols.setCurrencySymbol(Main.currencyChar);</span>
+<span class="nc" id="L259">                ((DecimalFormat) nf).setDecimalFormatSymbols(decimalFormatSymbols);</span>
+<span class="nc" id="L260">                value = nf.format(value).trim();</span>
+            }
+
+<span class="nc bnc" id="L263" title="All 6 branches missed.">            if (column == 3 || column == 4 || column == 5) {</span>
+<span class="nc bnc" id="L264" title="All 2 branches missed.">                if (0 &lt;= (Double) table.getValueAt(row,column)) {</span>
+<span class="nc" id="L265">                    super.setForeground(Main.theme.green);</span>
+                }
+<span class="nc bnc" id="L267" title="All 2 branches missed.">                else if (0 &gt; (Double) table.getValueAt(row,column)) {</span>
+<span class="nc" id="L268">                    super.setForeground(Main.theme.red);</span>
+                }
+
+<span class="nc" id="L271">                value = value+&quot;%&quot;;</span>
+            }
+
+<span class="nc bnc" id="L274" title="All 2 branches missed.">            if (column == 6) {</span>
+<span class="nc" id="L275">                value = NumberFormat.getNumberInstance().format(value);</span>
+            }
+
+<span class="nc" id="L278">            return super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);</span>
+        }
+    }
+
+    public void themeSwitch() {
+<span class="nc" id="L283">        pane.getViewport().setBackground(Main.theme.emptyBackground);</span>
+
+<span class="nc" id="L285">        table.setSelectionForeground(Main.theme.selection);</span>
+<span class="nc" id="L286">        table.setSelectionBackground(Main.theme.background);</span>
+<span class="nc" id="L287">        table.setBackground(Main.theme.background);</span>
+        
+<span class="nc" id="L289">        table.getTableHeader().setBackground(Main.theme.background);</span>
+<span class="nc" id="L290">        headerRenderer.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L291">    }</span>
+
+<span class="nc" id="L293">    private class bRefreshListener implements ActionListener {</span>
+        public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L295">            Debug.log(&quot;Button Refresh Clicked&quot;);</span>
+<span class="nc" id="L296">            new WebData.RefreshCoins();</span>
+<span class="nc" id="L297">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
