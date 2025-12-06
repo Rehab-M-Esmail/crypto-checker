@@ -410,7 +410,7 @@ public class PanelSettings {
 <span class="nc" id="L410">        }</span>
 <span class="nc" id="L411">    }</span>
 
-<span class="fc" id="L413">    private class bThemeListener implements ActionListener {</span>
+<span class="nc" id="L413">    private class bThemeListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L415">            Debug.log(&quot;Button Theme Clicked&quot;);</span>
 
@@ -445,7 +445,7 @@ public class PanelSettings {
 <span class="nc" id="L445">        }</span>
     }
 
-<span class="fc" id="L448">    private class bCurrencyListener implements ActionListener {</span>
+<span class="nc" id="L448">    private class bCurrencyListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L450">            Debug.log(&quot;Button Currency Pressed&quot;);</span>
 <span class="nc" id="L451">            Debug.log(&quot;-- Changing currency&quot;);</span>
@@ -497,13 +497,13 @@ public class PanelSettings {
 <span class="nc" id="L497">        serialize();</span>
 <span class="nc" id="L498">    }</span>
 
-<span class="fc" id="L500">    public class bDebugListener implements ActionListener {</span>
+<span class="nc" id="L500">    public class bDebugListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L502">            debugFunction();</span>
 <span class="nc" id="L503">        }</span>
     }
 
-<span class="fc" id="L506">    private class bViewListener implements ActionListener {</span>
+<span class="nc" id="L506">    private class bViewListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L508">            Debug.log(&quot;Button View Logs Pressed&quot;);</span>
 
@@ -516,7 +516,7 @@ public class PanelSettings {
 <span class="nc" id="L516">        }</span>
     }
 
-<span class="fc" id="L519">    private class bResetListener implements ActionListener {</span>
+<span class="nc" id="L519">    private class bResetListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L521">            Debug.log(&quot;Button Reset Settings Pressed&quot;);</span>
 
@@ -557,7 +557,7 @@ public class PanelSettings {
 <span class="nc" id="L557">        }</span>
     }
 
-<span class="fc" id="L560">    private class bDeleteListener implements ActionListener {</span>
+<span class="nc" id="L560">    private class bDeleteListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L562">            Debug.log(&quot;Button Delete Data Pressed&quot;);</span>
 <span class="nc" id="L563">            ArrayList&lt;JCheckBox&gt; deleteList = new ArrayList&lt;JCheckBox&gt;();</span>
@@ -622,9 +622,9 @@ public class PanelSettings {
     private class colorListener implements ActionListener {
         private int number;
 
-<span class="fc" id="L625">        public colorListener(int number) {</span>
-<span class="fc" id="L626">            this.number = number;</span>
-<span class="fc" id="L627">        }</span>
+<span class="nc" id="L625">        public colorListener(int number) {</span>
+<span class="nc" id="L626">            this.number = number;</span>
+<span class="nc" id="L627">        }</span>
 
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L630">            Debug.log(&quot;Button Color &quot; + number + &quot; Pressed&quot;);</span>
@@ -697,7 +697,7 @@ public class PanelSettings {
 <span class="nc" id="L697">        }</span>
     }
 
-<span class="fc" id="L700">    private class bColorApplyListener implements ActionListener {</span>
+<span class="nc" id="L700">    private class bColorApplyListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L702">            Debug.log(&quot;Button Color Apply Pressed&quot;);</span>
 

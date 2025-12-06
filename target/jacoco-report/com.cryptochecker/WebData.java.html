@@ -193,7 +193,7 @@ public class WebData {
 <span class="nc" id="L193">        return new Coin();</span>
     }
 
-<span class="nc" id="L196">    public class Coin implements Serializable, Cloneable {</span>
+<span class="fc" id="L196">    public class Coin implements Serializable, Cloneable {</span>
         private static final long serialVersionUID = 1L;
 
         String id;
@@ -243,12 +243,12 @@ public class WebData {
 
         @Override
         public Object clone() throws CloneNotSupportedException {
-<span class="nc" id="L246">            return super.clone();</span>
+<span class="fc" id="L246">            return super.clone();</span>
         }
 
         public Object copy() {
             try {
-<span class="nc" id="L251">                return clone();</span>
+<span class="fc" id="L251">                return clone();</span>
 <span class="nc" id="L252">            } catch (Exception ex) {</span>
 <span class="nc" id="L253">                ex.printStackTrace();</span>
             }
@@ -257,27 +257,27 @@ public class WebData {
 
         public String trimPrice(double trimPrice) {
             DecimalFormat df;
-<span class="nc bnc" id="L260" title="All 2 branches missed.">            if (trimPrice &gt; 1) df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="pc bpc" id="L260" title="1 of 2 branches missed.">            if (trimPrice &gt; 1) df = new DecimalFormat(&quot;#.##&quot;);</span>
 <span class="nc bnc" id="L261" title="All 2 branches missed.">            else if (trimPrice &gt; 0.1) df = new DecimalFormat(&quot;#.###&quot;);</span>
 <span class="nc bnc" id="L262" title="All 2 branches missed.">            else if (trimPrice &gt; 0.01) df = new DecimalFormat(&quot;#.####&quot;);</span>
 <span class="nc bnc" id="L263" title="All 2 branches missed.">            else if (trimPrice &gt; 0.001) df = new DecimalFormat(&quot;#.#####&quot;);</span>
 <span class="nc bnc" id="L264" title="All 2 branches missed.">            else if (trimPrice &gt; 0.0001) df = new DecimalFormat(&quot;#.######&quot;);</span>
 <span class="nc" id="L265">            else df = new DecimalFormat(&quot;#.############&quot;);</span>
-<span class="nc" id="L266">            return df.format(trimPrice);</span>
+<span class="fc" id="L266">            return df.format(trimPrice);</span>
         }
 
         public String getInfo() {
-<span class="nc" id="L270">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
-<span class="nc" id="L271">            return &quot;Rank: &quot; + rank</span>
+<span class="fc" id="L270">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
+<span class="fc" id="L271">            return &quot;Rank: &quot; + rank</span>
                     + &quot;\nID: &quot; + id
                     + &quot;\nName: &quot; + name
                     + &quot;\nSymbol: &quot; + symbol
-<span class="nc" id="L275">                    + &quot;\nPrice &quot; + Main.currency + &quot;: &quot; + trimPrice(price)</span>
-<span class="nc" id="L276">                    + &quot;\nMarket Cap: &quot; + df.format(market_cap)</span>
-<span class="nc" id="L277">                    + &quot;\n24 Hour Volume: &quot; + df.format(_24h_volume)</span>
-<span class="nc" id="L278">                    + &quot;\nAvailable Supply: &quot; + df.format(available_supply)</span>
-<span class="nc" id="L279">                    + &quot;\nTotal Supply: &quot; + df.format(total_supply)</span>
-<span class="nc" id="L280">                    + &quot;\nMax Supply: &quot; + df.format(max_supply)</span>
+<span class="fc" id="L275">                    + &quot;\nPrice &quot; + Main.currency + &quot;: &quot; + trimPrice(price)</span>
+<span class="fc" id="L276">                    + &quot;\nMarket Cap: &quot; + df.format(market_cap)</span>
+<span class="fc" id="L277">                    + &quot;\n24 Hour Volume: &quot; + df.format(_24h_volume)</span>
+<span class="fc" id="L278">                    + &quot;\nAvailable Supply: &quot; + df.format(available_supply)</span>
+<span class="fc" id="L279">                    + &quot;\nTotal Supply: &quot; + df.format(total_supply)</span>
+<span class="fc" id="L280">                    + &quot;\nMax Supply: &quot; + df.format(max_supply)</span>
                     + &quot;\nPercent 1 Hour: &quot; + percent_change_1h + &quot;%&quot;
                     + &quot;\nPercent 24 Hour: &quot; + percent_change_24h + &quot;%&quot;
                     + &quot;\nPercent 7 Days: &quot; + percent_change_7d + &quot;%&quot;
@@ -297,7 +297,7 @@ public class WebData {
 
         @Override
         public String toString() {
-<span class="nc" id="L300">            return name;</span>
+<span class="fc" id="L300">            return name;</span>
         }
     }
 }
