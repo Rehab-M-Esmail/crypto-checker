@@ -1,5 +1,8 @@
-package com.cryptochecker;
+package com.cryptocheckertest;
 
+import com.cryptochecker.Debug;
+import com.cryptochecker.Main;
+import com.cryptochecker.WebData;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
