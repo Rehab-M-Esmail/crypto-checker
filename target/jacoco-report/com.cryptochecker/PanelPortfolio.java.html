@@ -13,8 +13,8 @@ import javax.swing.table.*;
 public class PanelPortfolio {
     public JPanel panel;
     public WebData webData;
-<span class="fc" id="L16">    public int nr = Main.gui.webData.portfolio_nr;</span>
-<span class="fc" id="L17">    public ArrayList&lt;String&gt; names = Main.gui.webData.portfolio_names;</span>
+<span class="nc" id="L16">    public int nr = Main.gui.webData.portfolio_nr;</span>
+<span class="nc" id="L17">    public ArrayList&lt;String&gt; names = Main.gui.webData.portfolio_names;</span>
 
     private JTable table;
     private TableRenderer renderer;
@@ -23,128 +23,128 @@ public class PanelPortfolio {
     private JScrollPane pane;
     private JScrollPane contentPane;
 
-<span class="fc" id="L26">    private final int rowHeight = 40;</span>
-<span class="fc" id="L27">    private final int leftAmountHeaderButtons = 3;</span>
-<span class="fc" id="L28">    private final int rightAmountHeaderButtons = 2;</span>
-<span class="fc" id="L29">    private final int headerSearchSize = 14;</span>
-<span class="fc" id="L30">    private final Dimension searchFieldSize = new Dimension(Main.panelWidth*2, Main.panelHeight-10);</span>
+<span class="nc" id="L26">    private final int rowHeight = 40;</span>
+<span class="nc" id="L27">    private final int leftAmountHeaderButtons = 3;</span>
+<span class="nc" id="L28">    private final int rightAmountHeaderButtons = 2;</span>
+<span class="nc" id="L29">    private final int headerSearchSize = 14;</span>
+<span class="nc" id="L30">    private final Dimension searchFieldSize = new Dimension(Main.panelWidth*2, Main.panelHeight-10);</span>
 
     private JPanel content;
     private JPanel overview;
     private JEditorPane overviewText;
 
-<span class="fc" id="L36">    public PanelPortfolio() {</span>
-<span class="fc" id="L37">        panel = new JPanel();</span>
-<span class="fc" id="L38">        panel.setVisible(false); // visible to false at startup</span>
-<span class="fc" id="L39">        panel.setBackground(Color.WHITE);</span>
-<span class="fc" id="L40">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L36">    public PanelPortfolio() {</span>
+<span class="nc" id="L37">        panel = new JPanel();</span>
+<span class="nc" id="L38">        panel.setVisible(false); // visible to false at startup</span>
+<span class="nc" id="L39">        panel.setBackground(Color.WHITE);</span>
+<span class="nc" id="L40">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
 
-<span class="fc" id="L42">        webData = Main.gui.webData;</span>
-<span class="fc" id="L43">        model = new TableModel(); // table model</span>
+<span class="nc" id="L42">        webData = Main.gui.webData;</span>
+<span class="nc" id="L43">        model = new TableModel(); // table model</span>
 
         // rendering columns+rows
-<span class="fc" id="L46">        renderer = new TableRenderer();</span>
-<span class="fc" id="L47">        renderer.setHorizontalAlignment(JLabel.LEFT);</span>
+<span class="nc" id="L46">        renderer = new TableRenderer();</span>
+<span class="nc" id="L47">        renderer.setHorizontalAlignment(JLabel.LEFT);</span>
 
-<span class="fc" id="L49">        JPanel headerTop = new JPanel();</span>
-<span class="fc" id="L50">        headerTop.setBackground(Color.GRAY);</span>
-<span class="fc" id="L51">        headerTop.setLayout(new BoxLayout(headerTop, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L49">        JPanel headerTop = new JPanel();</span>
+<span class="nc" id="L50">        headerTop.setBackground(Color.GRAY);</span>
+<span class="nc" id="L51">        headerTop.setLayout(new BoxLayout(headerTop, BoxLayout.X_AXIS));</span>
 
-<span class="fc" id="L53">        content = new JPanel();</span>
-<span class="fc" id="L54">        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));</span>
+<span class="nc" id="L53">        content = new JPanel();</span>
+<span class="nc" id="L54">        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));</span>
 
-<span class="fc" id="L56">        table = new JTable(model); // create table with data</span>
-<span class="fc" id="L57">        table.setDefaultRenderer(Integer.class, renderer);</span>
-<span class="fc" id="L58">        table.setDefaultRenderer(Double.class, renderer);</span>
-<span class="fc" id="L59">        table.setDefaultRenderer(Short.class, renderer);</span>
+<span class="nc" id="L56">        table = new JTable(model); // create table with data</span>
+<span class="nc" id="L57">        table.setDefaultRenderer(Integer.class, renderer);</span>
+<span class="nc" id="L58">        table.setDefaultRenderer(Double.class, renderer);</span>
+<span class="nc" id="L59">        table.setDefaultRenderer(Short.class, renderer);</span>
 
         // render header        
-<span class="fc" id="L62">        headerRenderer = new DefaultTableCellRenderer();</span>
-<span class="fc" id="L63">        headerRenderer.setHorizontalAlignment(JLabel.CENTER);</span>
-<span class="fc" id="L64">        table.getTableHeader().setReorderingAllowed(false);</span>
-<span class="fc" id="L65">        table.getTableHeader().setPreferredSize(Main.tableHeaderSize);</span>
-<span class="fc" id="L66">        table.getTableHeader().setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));</span>
-<span class="fc" id="L67">        table.getTableHeader().setDefaultRenderer(headerRenderer);</span>
+<span class="nc" id="L62">        headerRenderer = new DefaultTableCellRenderer();</span>
+<span class="nc" id="L63">        headerRenderer.setHorizontalAlignment(JLabel.CENTER);</span>
+<span class="nc" id="L64">        table.getTableHeader().setReorderingAllowed(false);</span>
+<span class="nc" id="L65">        table.getTableHeader().setPreferredSize(Main.tableHeaderSize);</span>
+<span class="nc" id="L66">        table.getTableHeader().setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));</span>
+<span class="nc" id="L67">        table.getTableHeader().setDefaultRenderer(headerRenderer);</span>
 
         // table settings
-<span class="fc" id="L70">        table.setRowHeight(rowHeight);</span>
-<span class="fc" id="L71">        table.getColumnModel().getColumn(4).setMaxWidth(100); // 1h</span>
-<span class="fc" id="L72">        table.getColumnModel().getColumn(5).setMaxWidth(100); // 24h</span>
-<span class="fc" id="L73">        table.getColumnModel().getColumn(6).setMaxWidth(100); // 7d</span>
+<span class="nc" id="L70">        table.setRowHeight(rowHeight);</span>
+<span class="nc" id="L71">        table.getColumnModel().getColumn(4).setMaxWidth(100); // 1h</span>
+<span class="nc" id="L72">        table.getColumnModel().getColumn(5).setMaxWidth(100); // 24h</span>
+<span class="nc" id="L73">        table.getColumnModel().getColumn(6).setMaxWidth(100); // 7d</span>
 
-<span class="fc" id="L75">        table.setFont(Main.tableFont);</span>
-<span class="fc" id="L76">        table.setShowHorizontalLines(true);</span>
-<span class="fc" id="L77">        table.setShowVerticalLines(false);</span>
-<span class="fc" id="L78">        table.setIntercellSpacing(Main.tableIntercellSpacing);</span>
-<span class="fc" id="L79">        table.setFocusable(false);</span>
+<span class="nc" id="L75">        table.setFont(Main.tableFont);</span>
+<span class="nc" id="L76">        table.setShowHorizontalLines(true);</span>
+<span class="nc" id="L77">        table.setShowVerticalLines(false);</span>
+<span class="nc" id="L78">        table.setIntercellSpacing(Main.tableIntercellSpacing);</span>
+<span class="nc" id="L79">        table.setFocusable(false);</span>
 
-<span class="fc" id="L81">        table.setDefaultRenderer(Object.class, renderer);</span>
-<span class="fc" id="L82">        table.addMouseListener(new TableMouseListener()); // Mouse Listener</span>
+<span class="nc" id="L81">        table.setDefaultRenderer(Object.class, renderer);</span>
+<span class="nc" id="L82">        table.addMouseListener(new TableMouseListener()); // Mouse Listener</span>
 
         // LEFT BUTTONS HEADER
-<span class="fc" id="L85">        JPanel leftHeaderButtons = new JPanel();</span>
-<span class="fc" id="L86">        leftHeaderButtons.setLayout(new BoxLayout(leftHeaderButtons, BoxLayout.X_AXIS));</span>
-<span class="fc" id="L87">        leftHeaderButtons.setPreferredSize(new Dimension(Main.panelWidth*leftAmountHeaderButtons, Main.panelHeight-1)); // times button</span>
+<span class="nc" id="L85">        JPanel leftHeaderButtons = new JPanel();</span>
+<span class="nc" id="L86">        leftHeaderButtons.setLayout(new BoxLayout(leftHeaderButtons, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L87">        leftHeaderButtons.setPreferredSize(new Dimension(Main.panelWidth*leftAmountHeaderButtons, Main.panelHeight-1)); // times button</span>
 
-<span class="fc" id="L89">        JButton bRefresh = Main.gui.getButtonTemplate(&quot;Refresh&quot;);</span>
-<span class="fc" id="L90">        bRefresh.addActionListener(new bRefreshListener());</span>
-<span class="fc" id="L91">        bRefresh.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.LIGHT_GRAY));</span>
-<span class="fc" id="L92">        bRefresh.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="nc" id="L89">        JButton bRefresh = Main.gui.getButtonTemplate(&quot;Refresh&quot;);</span>
+<span class="nc" id="L90">        bRefresh.addActionListener(new bRefreshListener());</span>
+<span class="nc" id="L91">        bRefresh.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L92">        bRefresh.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="fc" id="L94">        JButton bAddCoin = Main.gui.getButtonTemplate(&quot;Add Coin&quot;);</span>
-<span class="fc" id="L95">        bAddCoin.addActionListener(new bAddCoinListener());</span>
-<span class="fc" id="L96">        bAddCoin.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
-<span class="fc" id="L97">        bAddCoin.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="nc" id="L94">        JButton bAddCoin = Main.gui.getButtonTemplate(&quot;Add Coin&quot;);</span>
+<span class="nc" id="L95">        bAddCoin.addActionListener(new bAddCoinListener());</span>
+<span class="nc" id="L96">        bAddCoin.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L97">        bAddCoin.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="fc" id="L99">        JButton bRemoveCoin = Main.gui.getButtonTemplate(&quot;Remove Coin&quot;);</span>
-<span class="fc" id="L100">        bRemoveCoin.addActionListener(new bRemoveCoinListener());</span>
-<span class="fc" id="L101">        bRemoveCoin.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
-<span class="fc" id="L102">        bRemoveCoin.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="nc" id="L99">        JButton bRemoveCoin = Main.gui.getButtonTemplate(&quot;Remove Coin&quot;);</span>
+<span class="nc" id="L100">        bRemoveCoin.addActionListener(new bRemoveCoinListener());</span>
+<span class="nc" id="L101">        bRemoveCoin.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L102">        bRemoveCoin.setMinimumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="fc" id="L104">        leftHeaderButtons.add(bRefresh);</span>
-<span class="fc" id="L105">        leftHeaderButtons.add(bAddCoin);</span>
-<span class="fc" id="L106">        leftHeaderButtons.add(bRemoveCoin);</span>
+<span class="nc" id="L104">        leftHeaderButtons.add(bRefresh);</span>
+<span class="nc" id="L105">        leftHeaderButtons.add(bAddCoin);</span>
+<span class="nc" id="L106">        leftHeaderButtons.add(bRemoveCoin);</span>
 
         // RIGHT BUTTONS HEADER
-<span class="fc" id="L109">        JPanel rightHeaderButtons = new JPanel();</span>
-<span class="fc" id="L110">        rightHeaderButtons.setLayout(new BoxLayout(rightHeaderButtons, BoxLayout.X_AXIS));</span>
-<span class="fc" id="L111">        rightHeaderButtons.setPreferredSize(new Dimension(Main.panelWidth*rightAmountHeaderButtons, Main.panelHeight-1)); // times button</span>
+<span class="nc" id="L109">        JPanel rightHeaderButtons = new JPanel();</span>
+<span class="nc" id="L110">        rightHeaderButtons.setLayout(new BoxLayout(rightHeaderButtons, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L111">        rightHeaderButtons.setPreferredSize(new Dimension(Main.panelWidth*rightAmountHeaderButtons, Main.panelHeight-1)); // times button</span>
         
-<span class="fc" id="L113">        JButton bSwitchPortfolio = Main.gui.getButtonTemplate(&quot;Switch&quot;);</span>
-<span class="fc" id="L114">        bSwitchPortfolio.addActionListener(new bSwitchPortfolioListener());</span>
-<span class="fc" id="L115">        bSwitchPortfolio.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.LIGHT_GRAY));</span>
-<span class="fc" id="L116">        bSwitchPortfolio.setPreferredSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="nc" id="L113">        JButton bSwitchPortfolio = Main.gui.getButtonTemplate(&quot;Switch&quot;);</span>
+<span class="nc" id="L114">        bSwitchPortfolio.addActionListener(new bSwitchPortfolioListener());</span>
+<span class="nc" id="L115">        bSwitchPortfolio.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L116">        bSwitchPortfolio.setPreferredSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="fc" id="L118">        JButton bManagePortfolio = Main.gui.getButtonTemplate(&quot;Manage&quot;);</span>
-<span class="fc" id="L119">        bManagePortfolio.addActionListener(new bManagePortfolioListener());</span>
-<span class="fc" id="L120">        bManagePortfolio.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.LIGHT_GRAY));</span>
-<span class="fc" id="L121">        bManagePortfolio.setPreferredSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="nc" id="L118">        JButton bManagePortfolio = Main.gui.getButtonTemplate(&quot;Manage&quot;);</span>
+<span class="nc" id="L119">        bManagePortfolio.addActionListener(new bManagePortfolioListener());</span>
+<span class="nc" id="L120">        bManagePortfolio.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.LIGHT_GRAY));</span>
+<span class="nc" id="L121">        bManagePortfolio.setPreferredSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
         
-<span class="fc" id="L123">        rightHeaderButtons.add(bSwitchPortfolio);</span>
-<span class="fc" id="L124">        rightHeaderButtons.add(bManagePortfolio);</span>
+<span class="nc" id="L123">        rightHeaderButtons.add(bSwitchPortfolio);</span>
+<span class="nc" id="L124">        rightHeaderButtons.add(bManagePortfolio);</span>
 
         // HEADER FILLING
-<span class="fc" id="L127">        JPanel headerFilling = new JPanel();</span>
-<span class="fc" id="L128">        headerFilling.setLayout(new BorderLayout());</span>
-<span class="fc" id="L129">        headerFilling.setMaximumSize(new Dimension((int) Main.screenResolution.getWidth(), Main.panelHeight-1));</span>
-<span class="fc" id="L130">        headerFilling.setBackground(Color.GRAY);</span>
+<span class="nc" id="L127">        JPanel headerFilling = new JPanel();</span>
+<span class="nc" id="L128">        headerFilling.setLayout(new BorderLayout());</span>
+<span class="nc" id="L129">        headerFilling.setMaximumSize(new Dimension((int) Main.screenResolution.getWidth(), Main.panelHeight-1));</span>
+<span class="nc" id="L130">        headerFilling.setBackground(Color.GRAY);</span>
 
         // SEARCH HEADER
-<span class="fc" id="L133">        JPanel headerSearch = new JPanel();</span>
-<span class="fc" id="L134">        headerSearch.setLayout(new BoxLayout(headerSearch, BoxLayout.X_AXIS));</span>
-<span class="fc" id="L135">        headerSearch.setMaximumSize(searchFieldSize);</span>
-<span class="fc" id="L136">        headerSearch.setBackground(Color.GRAY);</span>
+<span class="nc" id="L133">        JPanel headerSearch = new JPanel();</span>
+<span class="nc" id="L134">        headerSearch.setLayout(new BoxLayout(headerSearch, BoxLayout.X_AXIS));</span>
+<span class="nc" id="L135">        headerSearch.setMaximumSize(searchFieldSize);</span>
+<span class="nc" id="L136">        headerSearch.setBackground(Color.GRAY);</span>
 
-<span class="fc" id="L138">        JTextField headerSearchField = new JTextField(&quot;&quot;, headerSearchSize);</span>
-<span class="fc" id="L139">        headerSearch.add(headerSearchField);</span>
+<span class="nc" id="L138">        JTextField headerSearchField = new JTextField(&quot;&quot;, headerSearchSize);</span>
+<span class="nc" id="L139">        headerSearch.add(headerSearchField);</span>
 
         // sorting
-<span class="fc" id="L142">        TableRowSorter&lt;TableModel&gt; rowSorter = new TableRowSorter&lt;TableModel&gt;(model);</span>
-<span class="fc" id="L143">        table.setRowSorter(rowSorter);</span>
+<span class="nc" id="L142">        TableRowSorter&lt;TableModel&gt; rowSorter = new TableRowSorter&lt;TableModel&gt;(model);</span>
+<span class="nc" id="L143">        table.setRowSorter(rowSorter);</span>
         
-<span class="fc" id="L145">        ArrayList&lt;RowSorter.SortKey&gt; sortKeys = new ArrayList&lt;RowSorter.SortKey&gt;(25);</span>
-<span class="fc" id="L146">        sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING));</span>
-<span class="fc" id="L147">        rowSorter.setSortKeys(sortKeys);</span>
+<span class="nc" id="L145">        ArrayList&lt;RowSorter.SortKey&gt; sortKeys = new ArrayList&lt;RowSorter.SortKey&gt;(25);</span>
+<span class="nc" id="L146">        sortKeys.add(new RowSorter.SortKey(2, SortOrder.DESCENDING));</span>
+<span class="nc" id="L147">        rowSorter.setSortKeys(sortKeys);</span>
 
         /*
         headerSearchField.getDocument().addDocumentListener(new DocumentListener() {
@@ -175,43 +175,43 @@ public class PanelPortfolio {
         */
 
         // add headers together
-<span class="fc" id="L178">        headerTop.add(leftHeaderButtons);</span>
-<span class="fc" id="L179">        headerTop.add(headerFilling);</span>
+<span class="nc" id="L178">        headerTop.add(leftHeaderButtons);</span>
+<span class="nc" id="L179">        headerTop.add(headerFilling);</span>
         //headerTop.add(headerSearch); // really needed?
         //headerTop.add(headerFilling2);
-<span class="fc" id="L182">        headerTop.add(rightHeaderButtons);        </span>
+<span class="nc" id="L182">        headerTop.add(rightHeaderButtons);        </span>
 
         // overview data
-<span class="fc" id="L185">        overview = new JPanel();</span>
-<span class="fc" id="L186">        overview.setLayout(new FlowLayout());</span>
-<span class="fc" id="L187">        overview.setMaximumSize(new Dimension(10000, 0));</span>
-<span class="fc" id="L188">        calculatePortfolio();</span>
-<span class="fc" id="L189">        overview.add(overviewText);</span>
+<span class="nc" id="L185">        overview = new JPanel();</span>
+<span class="nc" id="L186">        overview.setLayout(new FlowLayout());</span>
+<span class="nc" id="L187">        overview.setMaximumSize(new Dimension(10000, 0));</span>
+<span class="nc" id="L188">        calculatePortfolio();</span>
+<span class="nc" id="L189">        overview.add(overviewText);</span>
 
         // scrolling pane, add JScrollPane to JPanel
-<span class="fc" id="L192">        table.setPreferredScrollableViewportSize(table.getPreferredSize());</span>
-<span class="fc" id="L193">        pane = new JScrollPane(table);</span>
-<span class="fc" id="L194">        pane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);</span>
-<span class="fc" id="L195">        pane.setBorder(null);</span>
-<span class="fc" id="L196">        pane.setViewportBorder(null);</span>
-<span class="fc" id="L197">        pane.addMouseWheelListener(new contentPaneScroll());</span>
-<span class="fc" id="L198">        pane.getVerticalScrollBar().setUnitIncrement(5);</span>
-<span class="fc" id="L199">        pane.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, Color.GRAY));</span>
+<span class="nc" id="L192">        table.setPreferredScrollableViewportSize(table.getPreferredSize());</span>
+<span class="nc" id="L193">        pane = new JScrollPane(table);</span>
+<span class="nc" id="L194">        pane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);</span>
+<span class="nc" id="L195">        pane.setBorder(null);</span>
+<span class="nc" id="L196">        pane.setViewportBorder(null);</span>
+<span class="nc" id="L197">        pane.addMouseWheelListener(new contentPaneScroll());</span>
+<span class="nc" id="L198">        pane.getVerticalScrollBar().setUnitIncrement(5);</span>
+<span class="nc" id="L199">        pane.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, Color.GRAY));</span>
 
-<span class="fc" id="L201">        content.add(overview);</span>
-<span class="fc" id="L202">        content.add(pane);</span>
+<span class="nc" id="L201">        content.add(overview);</span>
+<span class="nc" id="L202">        content.add(pane);</span>
 
-<span class="fc" id="L204">        contentPane = new JScrollPane(content);</span>
+<span class="nc" id="L204">        contentPane = new JScrollPane(content);</span>
         //contentPane.setVerticalScrollBarPolicy(pane.VERTICAL_SCROLLBAR_ALWAYS);
-<span class="fc" id="L206">        contentPane.getVerticalScrollBar().setUnitIncrement(12);</span>
+<span class="nc" id="L206">        contentPane.getVerticalScrollBar().setUnitIncrement(12);</span>
 
-<span class="fc" id="L208">        panel.add(headerTop);</span>
-<span class="fc" id="L209">        panel.add(contentPane);</span>
+<span class="nc" id="L208">        panel.add(headerTop);</span>
+<span class="nc" id="L209">        panel.add(contentPane);</span>
 
-<span class="fc" id="L211">        themeSwitch(); // select theme color</span>
-<span class="fc" id="L212">    }</span>
+<span class="nc" id="L211">        themeSwitch(); // select theme color</span>
+<span class="nc" id="L212">    }</span>
 
-<span class="fc" id="L214">    public class contentPaneScroll implements MouseWheelListener {</span>
+<span class="nc" id="L214">    public class contentPaneScroll implements MouseWheelListener {</span>
         public void mouseWheelMoved(MouseWheelEvent e) {
 <span class="nc bnc" id="L216" title="All 2 branches missed.">            if (e.getWheelRotation() &lt; 0) {</span>
 <span class="nc" id="L217">                contentPane.getVerticalScrollBar().setValue(-e.getScrollAmount()*12+contentPane.getVerticalScrollBar().getValue());</span>
@@ -234,45 +234,45 @@ public class PanelPortfolio {
 <span class="nc" id="L234">    }</span>
 
     public void calculatePortfolio() {
-<span class="fc" id="L237">        double value = 0.0;</span>
-<span class="fc" id="L238">        double gains = 0.0;</span>
-<span class="fc bfc" id="L239" title="All 2 branches covered.">        for (int i = 0; i &lt; Main.gui.webData.portfolio.get(nr).size(); ++i) {</span>
-<span class="fc" id="L240">           value += Main.gui.webData.portfolio.get(nr).get(i).portfolio_value;</span>
-<span class="fc" id="L241">           gains += Main.gui.webData.portfolio.get(nr).get(i).portfolio_gains;</span>
+<span class="nc" id="L237">        double value = 0.0;</span>
+<span class="nc" id="L238">        double gains = 0.0;</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">        for (int i = 0; i &lt; Main.gui.webData.portfolio.get(nr).size(); ++i) {</span>
+<span class="nc" id="L240">           value += Main.gui.webData.portfolio.get(nr).get(i).portfolio_value;</span>
+<span class="nc" id="L241">           gains += Main.gui.webData.portfolio.get(nr).get(i).portfolio_gains;</span>
         }
         
-<span class="fc" id="L244">        DecimalFormat overviewFormat = new DecimalFormat(&quot;#,###.##&quot;);</span>
+<span class="nc" id="L244">        DecimalFormat overviewFormat = new DecimalFormat(&quot;#,###.##&quot;);</span>
 
-<span class="fc" id="L246">        NumberFormat decimalFormat = NumberFormat.getPercentInstance();</span>
-<span class="fc" id="L247">        decimalFormat.setMinimumFractionDigits(2);</span>
+<span class="nc" id="L246">        NumberFormat decimalFormat = NumberFormat.getPercentInstance();</span>
+<span class="nc" id="L247">        decimalFormat.setMinimumFractionDigits(2);</span>
 
-<span class="fc" id="L249">        String htmlFont = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.foreground.getRed()+&quot;, &quot;+Main.theme.foreground.getGreen()+&quot;, &quot;+Main.theme.foreground.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
-<span class="fc" id="L250">        String htmlGreen = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.green.getRed()+&quot;, &quot;+Main.theme.green.getGreen()+&quot;, &quot;+Main.theme.green.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
-<span class="fc" id="L251">        String htmlRed = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.red.getRed()+&quot;, &quot;+Main.theme.red.getGreen()+&quot;, &quot;+Main.theme.red.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
+<span class="nc" id="L249">        String htmlFont = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.foreground.getRed()+&quot;, &quot;+Main.theme.foreground.getGreen()+&quot;, &quot;+Main.theme.foreground.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
+<span class="nc" id="L250">        String htmlGreen = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.green.getRed()+&quot;, &quot;+Main.theme.green.getGreen()+&quot;, &quot;+Main.theme.green.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
+<span class="nc" id="L251">        String htmlRed = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.red.getRed()+&quot;, &quot;+Main.theme.red.getGreen()+&quot;, &quot;+Main.theme.red.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
 
         String htmlBottom;
 
-<span class="pc bpc" id="L255" title="1 of 2 branches missed.">        if (gains &gt;= 0) { htmlBottom = htmlGreen; }</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">        if (gains &gt;= 0) { htmlBottom = htmlGreen; }</span>
 <span class="nc" id="L256">        else { htmlBottom = htmlRed; }</span>
 
         String percentGains;
-<span class="fc bfc" id="L259" title="All 2 branches covered.">        if (value == 0) { percentGains = &quot;0.00%&quot;; }</span>
-<span class="fc" id="L260">        else { percentGains = decimalFormat.format(gains/(value-gains)); }</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">        if (value == 0) { percentGains = &quot;0.00%&quot;; }</span>
+<span class="nc" id="L260">        else { percentGains = decimalFormat.format(gains/(value-gains)); }</span>
 
-<span class="fc" id="L262">        String overviewHTML = htmlFont+&quot;&lt;font size=\&quot;6\&quot;&gt;&lt;font face=\&quot;helvetica\&quot;&gt;&quot;+&quot;&lt;center&gt;&quot;</span>
-<span class="fc" id="L263">        +&quot;{ &quot;+overviewFormat.format(value)+&quot; }&lt;br&gt;&quot;</span>
-<span class="fc" id="L264">        +&quot;&lt;font size=\&quot;5\&quot;&gt;&lt;b&gt;&quot;+htmlBottom+overviewFormat.format(gains)+&quot; (&quot;+percentGains+&quot;)&quot;+&quot;&lt;/b&gt;&lt;/center&gt;&quot;;</span>
+<span class="nc" id="L262">        String overviewHTML = htmlFont+&quot;&lt;font size=\&quot;6\&quot;&gt;&lt;font face=\&quot;helvetica\&quot;&gt;&quot;+&quot;&lt;center&gt;&quot;</span>
+<span class="nc" id="L263">        +&quot;{ &quot;+overviewFormat.format(value)+&quot; }&lt;br&gt;&quot;</span>
+<span class="nc" id="L264">        +&quot;&lt;font size=\&quot;5\&quot;&gt;&lt;b&gt;&quot;+htmlBottom+overviewFormat.format(gains)+&quot; (&quot;+percentGains+&quot;)&quot;+&quot;&lt;/b&gt;&lt;/center&gt;&quot;;</span>
 
         // set text
-<span class="fc bfc" id="L267" title="All 2 branches covered.">        if (overviewText != null) {</span>
-<span class="fc" id="L268">            overviewText.setText(overviewHTML);</span>
+<span class="nc bnc" id="L267" title="All 2 branches missed.">        if (overviewText != null) {</span>
+<span class="nc" id="L268">            overviewText.setText(overviewHTML);</span>
         } else {
-<span class="fc" id="L270">            overviewText = new JEditorPane(&quot;text/html&quot;, overviewHTML);</span>
-<span class="fc" id="L271">            overviewText.setEditable(false);</span>
+<span class="nc" id="L270">            overviewText = new JEditorPane(&quot;text/html&quot;, overviewHTML);</span>
+<span class="nc" id="L271">            overviewText.setEditable(false);</span>
         }
-<span class="fc" id="L273">    }</span>
+<span class="nc" id="L273">    }</span>
 
-<span class="fc" id="L275">    private class TableMouseListener implements MouseListener {</span>
+<span class="nc" id="L275">    private class TableMouseListener implements MouseListener {</span>
         public void mousePressed(MouseEvent e) {
 <span class="nc bnc" id="L277" title="All 4 branches missed.">            if (table.getSelectedColumn() &lt; 0 || table.getSelectedRow() &lt; 0) // if nothing is selected or if user right clicks</span>
 <span class="nc" id="L278">                return;</span>
@@ -291,39 +291,39 @@ public class PanelPortfolio {
         
     }
 
-<span class="fc" id="L294">    private class TableModel extends AbstractTableModel {</span>
+<span class="nc" id="L294">    private class TableModel extends AbstractTableModel {</span>
         private static final long serialVersionUID = 1L;
-<span class="fc" id="L296">        private String[] columnNames = {&quot;Name&quot;, &quot;Coin Value&quot;, &quot;Portfolio Value&quot;, &quot;Gains / Losses&quot;, &quot;1h&quot;, &quot;24h&quot;, &quot;7d&quot;};</span>
-<span class="fc" id="L297">        private ArrayList&lt;WebData.Coin&gt; list = webData.portfolio.get(nr); // PORTFOLIO</span>
+<span class="nc" id="L296">        private String[] columnNames = {&quot;Name&quot;, &quot;Coin Value&quot;, &quot;Portfolio Value&quot;, &quot;Gains / Losses&quot;, &quot;1h&quot;, &quot;24h&quot;, &quot;7d&quot;};</span>
+<span class="nc" id="L297">        private ArrayList&lt;WebData.Coin&gt; list = webData.portfolio.get(nr); // PORTFOLIO</span>
 
         public int getColumnCount() {
-<span class="fc" id="L300">            return columnNames.length;</span>
+<span class="nc" id="L300">            return columnNames.length;</span>
         }
     
         public int getRowCount() {
-<span class="fc" id="L304">            return list.size();</span>
+<span class="nc" id="L304">            return list.size();</span>
         }
     
         public String getColumnName(int col) {
-<span class="fc" id="L308">            return columnNames[col];</span>
+<span class="nc" id="L308">            return columnNames[col];</span>
         }
 
         public Class&lt;?&gt; getColumnClass(int column) { // for sorting
-<span class="pc bpc" id="L312" title="1 of 8 branches missed.">            switch (column) {</span>
+<span class="nc bnc" id="L312" title="All 8 branches missed.">            switch (column) {</span>
                 case 0:
-<span class="fc" id="L314">                    return String.class;</span>
+<span class="nc" id="L314">                    return String.class;</span>
                 case 1:
-<span class="fc" id="L316">                    return Double.class;</span>
+<span class="nc" id="L316">                    return Double.class;</span>
                 case 2:
-<span class="fc" id="L318">                    return Double.class;</span>
+<span class="nc" id="L318">                    return Double.class;</span>
                 case 3:
-<span class="fc" id="L320">                    return Double.class;</span>
+<span class="nc" id="L320">                    return Double.class;</span>
                 case 4:
-<span class="fc" id="L322">                    return Double.class;</span>
+<span class="nc" id="L322">                    return Double.class;</span>
                 case 5:
-<span class="fc" id="L324">                    return Double.class;</span>
+<span class="nc" id="L324">                    return Double.class;</span>
                 case 6:
-<span class="fc" id="L326">                    return Double.class;</span>
+<span class="nc" id="L326">                    return Double.class;</span>
                 default:
 <span class="nc" id="L328">                    return String.class;</span>
             }
@@ -358,10 +358,10 @@ public class PanelPortfolio {
         }
     }
 
-<span class="fc" id="L361">    private class TableRenderer extends DefaultTableCellRenderer {</span>
+<span class="nc" id="L361">    private class TableRenderer extends DefaultTableCellRenderer {</span>
         private static final long serialVersionUID = 1L;
-<span class="fc" id="L363">        private NumberFormat nf = NumberFormat.getCurrencyInstance();</span>
-<span class="fc" id="L364">        private DecimalFormatSymbols decimalFormatSymbols = ((DecimalFormat) nf).getDecimalFormatSymbols();</span>
+<span class="nc" id="L363">        private NumberFormat nf = NumberFormat.getCurrencyInstance();</span>
+<span class="nc" id="L364">        private DecimalFormatSymbols decimalFormatSymbols = ((DecimalFormat) nf).getDecimalFormatSymbols();</span>
 
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
 <span class="nc" id="L367">            super.setBackground(Main.theme.background);</span>
@@ -401,33 +401,33 @@ public class PanelPortfolio {
     }
 
     public void themeSwitch() {
-<span class="fc" id="L404">        pane.getViewport().setBackground(Main.theme.emptyBackground);</span>
+<span class="nc" id="L404">        pane.getViewport().setBackground(Main.theme.emptyBackground);</span>
 
-<span class="fc" id="L406">        overview.setBackground(Main.theme.background);</span>
-<span class="fc" id="L407">        overviewText.setBackground(Main.theme.background);</span>
-<span class="fc" id="L408">        overviewText.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L406">        overview.setBackground(Main.theme.background);</span>
+<span class="nc" id="L407">        overviewText.setBackground(Main.theme.background);</span>
+<span class="nc" id="L408">        overviewText.setForeground(Main.theme.foreground);</span>
 
-<span class="fc" id="L410">        table.setSelectionForeground(Main.theme.selection);</span>
-<span class="fc" id="L411">        table.setSelectionBackground(Main.theme.background);</span>
+<span class="nc" id="L410">        table.setSelectionForeground(Main.theme.selection);</span>
+<span class="nc" id="L411">        table.setSelectionBackground(Main.theme.background);</span>
 
-<span class="fc" id="L413">        table.setBackground(Main.theme.background);</span>
-<span class="fc" id="L414">        table.getTableHeader().setForeground(Main.theme.foreground);</span>
-<span class="fc" id="L415">        table.getTableHeader().setBackground(Main.theme.background);</span>
+<span class="nc" id="L413">        table.setBackground(Main.theme.background);</span>
+<span class="nc" id="L414">        table.getTableHeader().setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L415">        table.getTableHeader().setBackground(Main.theme.background);</span>
         
-<span class="fc" id="L417">        table.getTableHeader().setBackground(Main.theme.background);</span>
-<span class="fc" id="L418">        headerRenderer.setForeground(Main.theme.foreground);</span>
+<span class="nc" id="L417">        table.getTableHeader().setBackground(Main.theme.background);</span>
+<span class="nc" id="L418">        headerRenderer.setForeground(Main.theme.foreground);</span>
 
-<span class="fc" id="L420">        calculatePortfolio();</span>
-<span class="fc" id="L421">    }</span>
+<span class="nc" id="L420">        calculatePortfolio();</span>
+<span class="nc" id="L421">    }</span>
 
-<span class="fc" id="L423">    private class bRefreshListener implements ActionListener {</span>
+<span class="nc" id="L423">    private class bRefreshListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L425">            Debug.log(&quot;Button Refresh Clicked&quot;);</span>
 <span class="nc" id="L426">            new WebData.RefreshCoins();</span>
 <span class="nc" id="L427">        }</span>
     }
 
-<span class="fc" id="L430">    private class bAddCoinListener implements ActionListener {</span>
+<span class="nc" id="L430">    private class bAddCoinListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L432">            Debug.log(&quot;Button Add Coin Clicked&quot;);</span>
 
@@ -545,7 +545,7 @@ public class PanelPortfolio {
 <span class="nc" id="L545">        }</span>
     }
 
-<span class="fc" id="L548">    private class bRemoveCoinListener implements ActionListener {</span>
+<span class="nc" id="L548">    private class bRemoveCoinListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L550">            Debug.log(&quot;Button Remove Coin Clicked&quot;);</span>
 
@@ -570,7 +570,7 @@ public class PanelPortfolio {
 <span class="nc" id="L570">        }</span>
     }
 
-<span class="fc" id="L573">    private class bSwitchPortfolioListener implements ActionListener {</span>
+<span class="nc" id="L573">    private class bSwitchPortfolioListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L575">            Debug.log(&quot;Button Switch Portfolio Clicked&quot;);</span>
 <span class="nc" id="L576">            Object[] portfolios = names.toArray();</span>
@@ -592,7 +592,7 @@ public class PanelPortfolio {
 <span class="nc" id="L592">        }</span>
     }
 
-<span class="fc" id="L595">    private class bManagePortfolioListener implements ActionListener {</span>
+<span class="nc" id="L595">    private class bManagePortfolioListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L597">            Debug.log(&quot;Button Manage Portfolio Clicked&quot;);</span>
             
@@ -658,20 +658,20 @@ public class PanelPortfolio {
 
     public void serializePortfolio() {
         try {
-<span class="fc" id="L661">            FileOutputStream file = new FileOutputStream(Main.portfolioSerLocation);</span>
-<span class="fc" id="L662">            BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
-<span class="fc" id="L663">            ObjectOutputStream out = new ObjectOutputStream(buffer);</span>
-<span class="fc" id="L664">            out.writeObject(webData.portfolio);</span>
-<span class="fc" id="L665">            out.writeObject(names);</span>
-<span class="fc" id="L666">            out.writeObject(nr);</span>
-<span class="fc" id="L667">            out.close();</span>
-<span class="fc" id="L668">            Debug.log(&quot;Serialized Portfolio To &quot; + Main.portfolioSerLocation);</span>
+<span class="nc" id="L661">            FileOutputStream file = new FileOutputStream(Main.portfolioSerLocation);</span>
+<span class="nc" id="L662">            BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
+<span class="nc" id="L663">            ObjectOutputStream out = new ObjectOutputStream(buffer);</span>
+<span class="nc" id="L664">            out.writeObject(webData.portfolio);</span>
+<span class="nc" id="L665">            out.writeObject(names);</span>
+<span class="nc" id="L666">            out.writeObject(nr);</span>
+<span class="nc" id="L667">            out.close();</span>
+<span class="nc" id="L668">            Debug.log(&quot;Serialized Portfolio To &quot; + Main.portfolioSerLocation);</span>
 
 <span class="nc" id="L670">        } catch(Exception ex) {</span>
 <span class="nc" id="L671">            Debug.log(&quot;EXCEPTION: PanelPortfolio.java - serializePortfolio()&quot;);</span>
 <span class="nc" id="L672">            ex.printStackTrace();</span>
-<span class="fc" id="L673">        }</span>
-<span class="fc" id="L674">    }</span>
+<span class="nc" id="L673">        }</span>
+<span class="nc" id="L674">    }</span>
 
     private boolean findPortfolioName(String name) {
 <span class="nc bnc" id="L677" title="All 2 branches missed.">        for (int i = 0; i &lt; webData.portfolio.get(nr).size(); ++i) {</span>
@@ -684,9 +684,9 @@ public class PanelPortfolio {
     }
 
     private WebData.Coin getPortfolioName(String name) {
-<span class="pc bpc" id="L687" title="1 of 2 branches missed.">        for (int i = 0; i &lt; webData.coin.size(); ++i) {</span>
-<span class="pc bpc" id="L688" title="1 of 2 branches missed.">            if (webData.coin.get(i).name.equals(name)) {</span>
-<span class="fc" id="L689">                return webData.coin.get(i);</span>
+<span class="nc bnc" id="L687" title="All 2 branches missed.">        for (int i = 0; i &lt; webData.coin.size(); ++i) {</span>
+<span class="nc bnc" id="L688" title="All 2 branches missed.">            if (webData.coin.get(i).name.equals(name)) {</span>
+<span class="nc" id="L689">                return webData.coin.get(i);</span>
             }
         }
 
@@ -694,32 +694,32 @@ public class PanelPortfolio {
     }
 
     public void refreshPortfolio() {
-<span class="fc bfc" id="L697" title="All 2 branches covered.">        for (int i = 0; i &lt; webData.portfolio.get(nr).size(); ++i) {</span>
-<span class="fc" id="L698">            WebData.Coin coin = getPortfolioName(webData.portfolio.get(nr).get(i).name);</span>
+<span class="nc bnc" id="L697" title="All 2 branches missed.">        for (int i = 0; i &lt; webData.portfolio.get(nr).size(); ++i) {</span>
+<span class="nc" id="L698">            WebData.Coin coin = getPortfolioName(webData.portfolio.get(nr).get(i).name);</span>
 
-<span class="pc bpc" id="L700" title="1 of 2 branches missed.">            if (Main.currency.equals(webData.portfolio.get(nr).get(i).portfolio_currency)) {</span>
-<span class="fc" id="L701">                webData.portfolio.get(nr).get(i).portfolio_price = webData.portfolio.get(nr).get(i).portfolio_price_start;</span>
-<span class="fc" id="L702">                webData.portfolio.get(nr).get(i).portfolio_value = coin.price * webData.portfolio.get(nr).get(i).portfolio_amount;</span>
-<span class="fc" id="L703">                webData.portfolio.get(nr).get(i).portfolio_gains = webData.portfolio.get(nr).get(i).portfolio_value - webData.portfolio.get(nr).get(i).portfolio_value_start;</span>
+<span class="nc bnc" id="L700" title="All 2 branches missed.">            if (Main.currency.equals(webData.portfolio.get(nr).get(i).portfolio_currency)) {</span>
+<span class="nc" id="L701">                webData.portfolio.get(nr).get(i).portfolio_price = webData.portfolio.get(nr).get(i).portfolio_price_start;</span>
+<span class="nc" id="L702">                webData.portfolio.get(nr).get(i).portfolio_value = coin.price * webData.portfolio.get(nr).get(i).portfolio_amount;</span>
+<span class="nc" id="L703">                webData.portfolio.get(nr).get(i).portfolio_gains = webData.portfolio.get(nr).get(i).portfolio_value - webData.portfolio.get(nr).get(i).portfolio_value_start;</span>
             } else {
 <span class="nc" id="L705">                webData.portfolio.get(nr).get(i).portfolio_price *= (coin.price / webData.portfolio.get(nr).get(i).price); // convert portfolio_start_price to new currency</span>
 <span class="nc" id="L706">                webData.portfolio.get(nr).get(i).portfolio_value = coin.price * webData.portfolio.get(nr).get(i).portfolio_amount; // calculate current value of portfolio</span>
 <span class="nc" id="L707">                webData.portfolio.get(nr).get(i).portfolio_gains = webData.portfolio.get(nr).get(i).portfolio_value - (webData.portfolio.get(nr).get(i).portfolio_price * webData.portfolio.get(nr).get(i).portfolio_amount); // calculate gains</span>
             }
 
-<span class="fc" id="L710">            webData.portfolio.get(nr).get(i).rank = coin.rank;</span>
-<span class="fc" id="L711">            webData.portfolio.get(nr).get(i).price = coin.price;</span>
+<span class="nc" id="L710">            webData.portfolio.get(nr).get(i).rank = coin.rank;</span>
+<span class="nc" id="L711">            webData.portfolio.get(nr).get(i).price = coin.price;</span>
             //webData.portfolio.get(nr).get(i).price_btc = coin.price_btc;
-<span class="fc" id="L713">            webData.portfolio.get(nr).get(i)._24h_volume = coin._24h_volume;</span>
-<span class="fc" id="L714">            webData.portfolio.get(nr).get(i).market_cap = coin.market_cap;</span>
-<span class="fc" id="L715">            webData.portfolio.get(nr).get(i).available_supply = coin.available_supply;</span>
-<span class="fc" id="L716">            webData.portfolio.get(nr).get(i).total_supply = coin.total_supply;</span>
-<span class="fc" id="L717">            webData.portfolio.get(nr).get(i).max_supply = coin.max_supply;</span>
-<span class="fc" id="L718">            webData.portfolio.get(nr).get(i).percent_change_1h = coin.percent_change_1h;</span>
-<span class="fc" id="L719">            webData.portfolio.get(nr).get(i).percent_change_24h = coin.percent_change_24h;</span>
-<span class="fc" id="L720">            webData.portfolio.get(nr).get(i).percent_change_7d = coin.percent_change_7d;</span>
-<span class="fc" id="L721">            webData.portfolio.get(nr).get(i).last_updated = coin.last_updated;</span>
+<span class="nc" id="L713">            webData.portfolio.get(nr).get(i)._24h_volume = coin._24h_volume;</span>
+<span class="nc" id="L714">            webData.portfolio.get(nr).get(i).market_cap = coin.market_cap;</span>
+<span class="nc" id="L715">            webData.portfolio.get(nr).get(i).available_supply = coin.available_supply;</span>
+<span class="nc" id="L716">            webData.portfolio.get(nr).get(i).total_supply = coin.total_supply;</span>
+<span class="nc" id="L717">            webData.portfolio.get(nr).get(i).max_supply = coin.max_supply;</span>
+<span class="nc" id="L718">            webData.portfolio.get(nr).get(i).percent_change_1h = coin.percent_change_1h;</span>
+<span class="nc" id="L719">            webData.portfolio.get(nr).get(i).percent_change_24h = coin.percent_change_24h;</span>
+<span class="nc" id="L720">            webData.portfolio.get(nr).get(i).percent_change_7d = coin.percent_change_7d;</span>
+<span class="nc" id="L721">            webData.portfolio.get(nr).get(i).last_updated = coin.last_updated;</span>
         }
-<span class="fc" id="L723">    }</span>
+<span class="nc" id="L723">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
