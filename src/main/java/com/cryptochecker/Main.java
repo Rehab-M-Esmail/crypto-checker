@@ -38,7 +38,7 @@ public class Main {
     public static String dataSerLocation = folderLocation+"data.ser";
     public static final String portfolioSerLocation = folderLocation+"portfolio.ser";
     public static final String settingsSerLocation = folderLocation+"settings.ser";
-    public static final String converterSerLocation = folderLocation+"converter.ser";
+    public static String converterSerLocation = folderLocation+"converter.ser";
     public static final String imageLocation = folderLocation+"icon.png";
     public static final String logLocation = folderLocation+"log.txt";
 

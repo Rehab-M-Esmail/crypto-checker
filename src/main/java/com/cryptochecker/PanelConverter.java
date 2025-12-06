@@ -21,23 +21,23 @@ public class PanelConverter {
     private JPanel contentBottom;
     private JPanel middleBottom;
 
-    private JButton buttonCurrency1;
-    private JButton buttonCurrency2;
+    public JButton buttonCurrency1;
+    public JButton buttonCurrency2;
 
-    private double priceCurrency1;
-    private double priceCurrency2;
+    public double priceCurrency1;
+    public double priceCurrency2;
 
-    private JTextField fieldCurrency1;
-    private JTextField fieldCurrency2;
+    public JTextField fieldCurrency1;
+    public JTextField fieldCurrency2;
 
-    private String infoCurrency1;
-    private String infoCurrency2;
+    public String infoCurrency1;
+    public String infoCurrency2;
 
     private JPanel overview;
     private JEditorPane overviewText;
 
-    private JEditorPane textBox1;
-    private JEditorPane textBox2;
+    public JEditorPane textBox1;
+    public JEditorPane textBox2;
     private final Font textBoxFont = new Font("Helvetica", Font.PLAIN, 14);
 
     private DecimalFormat df1 = new DecimalFormat("#.##");
@@ -306,7 +306,7 @@ public class PanelConverter {
         Main.frame.getContentPane().repaint();
     }
 
-    private void retrieveText(int box, String info) {
+    public void retrieveText(int box, String info) {
         //Debug.log("Retrieving Box "+box);
 
         switch (box) {
@@ -325,7 +325,7 @@ public class PanelConverter {
         }
     }
 
-    private String calculateCurrency(double x) {
+    public String calculateCurrency(double x) {
         Double returnValue = 0.0;
         String returnString = "";
 
@@ -547,7 +547,7 @@ public class PanelConverter {
         }
     }
 
-    private void serialize() {
+    public void serialize() {
         try {
             if ((priceCurrency1 == 0 || priceCurrency2 == 0) && (!buttonCurrency2.getText().equals(Main.currency))) return;
 
