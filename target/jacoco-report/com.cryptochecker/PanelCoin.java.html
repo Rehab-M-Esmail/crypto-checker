@@ -245,7 +245,7 @@ public class PanelCoin {
         }
     }
 
-<span class="nc" id="L248">    private class TableRenderer extends DefaultTableCellRenderer {</span>
+<span class="nc" id="L248">    public class TableRenderer extends DefaultTableCellRenderer {</span>
         private static final long serialVersionUID = 1L;
 <span class="nc" id="L250">        private NumberFormat nf = NumberFormat.getCurrencyInstance();</span>
 <span class="nc" id="L251">        private DecimalFormatSymbols decimalFormatSymbols = ((DecimalFormat) nf).getDecimalFormatSymbols();</span>
@@ -290,7 +290,7 @@ public class PanelCoin {
 <span class="nc" id="L290">        headerRenderer.setForeground(Main.theme.foreground);</span>
 <span class="nc" id="L291">    }</span>
 
-<span class="nc" id="L293">    private class bRefreshListener implements ActionListener {</span>
+<span class="nc" id="L293">    public class bRefreshListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L295">            Debug.log(&quot;Button Refresh Clicked&quot;);</span>
 <span class="nc" id="L296">            new WebData.RefreshCoins();</span>

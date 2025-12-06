@@ -164,18 +164,18 @@ public class WebData {
         @SerializedName(value=&quot;total_market_cap_usd&quot;, alternate={&quot;total_market_cap_sek&quot;, &quot;total_market_cap_eur&quot;, &quot;total_market_cap_aud&quot;, &quot;total_market_cap_brl&quot;, &quot;total_market_cap_cad&quot;, &quot;total_market_cap_chf&quot;, &quot;total_market_cap_clp&quot;, &quot;total_market_cap_cny&quot;, &quot;total_market_cap_czk&quot;,
         &quot;total_market_cap_dkk&quot;, &quot;total_market_cap_gbp&quot;, &quot;total_market_cap_hkd&quot;, &quot;total_market_cap_huf&quot;, &quot;total_market_cap_idr&quot;, &quot;total_market_cap_ils&quot;, &quot;total_market_cap_inr&quot;, &quot;total_market_cap_jpy&quot;, &quot;total_market_cap_krw&quot;, &quot;total_market_cap_mxn&quot;, &quot;total_market_cap_myr&quot;,
         &quot;total_market_cap_nok&quot;, &quot;total_market_cap_nzd&quot;, &quot;total_market_cap_php&quot;, &quot;total_market_cap_pkr&quot;, &quot;total_market_cap_pln&quot;, &quot;total_market_cap_rub&quot;, &quot;total_market_cap_sgd&quot;, &quot;total_market_cap_thb&quot;, &quot;total_market_cap_try&quot;, &quot;total_market_cap_twd&quot;, &quot;total_market_cap_zar&quot;})
-        long total_market_cap;
+        public long total_market_cap;
         
         @SerializedName(value=&quot;total_24h_volume_usd&quot;, alternate={&quot;total_24h_volume_sek&quot;, &quot;total_24h_volume_eur&quot;, &quot;total_24h_volume_aud&quot;, &quot;total_24h_volume_brl&quot;, &quot;total_24h_volume_cad&quot;, &quot;total_24h_volume_chf&quot;, &quot;total_24h_volume_clp&quot;, &quot;total_24h_volume_cny&quot;, &quot;total_24h_volume_czk&quot;,
         &quot;total_24h_volume_dkk&quot;, &quot;total_24h_volume_gbp&quot;, &quot;total_24h_volume_hkd&quot;, &quot;total_24h_volume_huf&quot;, &quot;total_24h_volume_idr&quot;, &quot;total_24h_volume_ils&quot;, &quot;total_24h_volume_inr&quot;, &quot;total_24h_volume_jpy&quot;, &quot;total_24h_volume_krw&quot;, &quot;total_24h_volume_mxn&quot;, &quot;total_24h_volume_myr&quot;,
         &quot;total_24h_volume_nok&quot;, &quot;total_24h_volume_nzd&quot;, &quot;total_24h_volume_php&quot;, &quot;total_24h_volume_pkr&quot;, &quot;total_24h_volume_pln&quot;, &quot;total_24h_volume_rub&quot;, &quot;total_24h_volume_sgd&quot;, &quot;total_24h_volume_thb&quot;, &quot;total_24h_volume_try&quot;, &quot;total_24h_volume_twd&quot;, &quot;total_24h_volume_zar&quot;})
-        long total_24h_volume;
+        public long total_24h_volume;
         
-        double bitcoin_percentage_of_market_cap;
-        int active_currencies;
-        int active_assets;
-        int active_markets;
-        long last_updated;
+        public double bitcoin_percentage_of_market_cap;
+        public int active_currencies;
+        public int active_assets;
+        public int active_markets;
+        public long last_updated;
 
         public String toString() { // for global data button
 <span class="nc" id="L181">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
@@ -193,21 +193,21 @@ public class WebData {
 <span class="nc" id="L193">        return new Coin();</span>
     }
 
-<span class="fc" id="L196">    public class Coin implements Serializable, Cloneable {</span>
+<span class="nc" id="L196">    public class Coin implements Serializable, Cloneable {</span>
         private static final long serialVersionUID = 1L;
 
         String id;
-        String name;
+        public String name;
         String symbol;
 
         @SerializedName(&quot;market_cap_rank&quot;)
-        int rank;
+        public int rank;
 
         @SerializedName(&quot;current_price&quot;)
-        double price;
+        public double price;
 
         @SerializedName(&quot;market_cap&quot;)
-        double market_cap;
+        public double market_cap;
 
         @SerializedName(&quot;total_volume&quot;)
         double _24h_volume;
@@ -222,33 +222,33 @@ public class WebData {
         double max_supply;
 
         @SerializedName(&quot;price_change_percentage_1h_in_currency&quot;)
-        double percent_change_1h;
+        public double percent_change_1h;
 
         @SerializedName(&quot;price_change_percentage_24h&quot;)
-        double percent_change_24h;
+        public double percent_change_24h;
 
         @SerializedName(&quot;price_change_percentage_7d_in_currency&quot;)
-        double percent_change_7d;
+        public double percent_change_7d;
 
         String last_updated;
 
         // portfolio data
-        double portfolio_amount;
+        public double portfolio_amount;
         double portfolio_price;
-        double portfolio_value;
-        double portfolio_gains;
-        String portfolio_currency;
-        double portfolio_price_start;
-        double portfolio_value_start;
+        public double portfolio_value;
+        public double portfolio_gains;
+        public String portfolio_currency;
+        public double portfolio_price_start;
+        public double portfolio_value_start;
 
         @Override
-        protected Object clone() throws CloneNotSupportedException {
-<span class="fc" id="L246">            return super.clone();</span>
+        public Object clone() throws CloneNotSupportedException {
+<span class="nc" id="L246">            return super.clone();</span>
         }
 
         public Object copy() {
             try {
-<span class="fc" id="L251">                return clone();</span>
+<span class="nc" id="L251">                return clone();</span>
 <span class="nc" id="L252">            } catch (Exception ex) {</span>
 <span class="nc" id="L253">                ex.printStackTrace();</span>
             }
@@ -257,27 +257,27 @@ public class WebData {
 
         public String trimPrice(double trimPrice) {
             DecimalFormat df;
-<span class="pc bpc" id="L260" title="1 of 2 branches missed.">            if (trimPrice &gt; 1) df = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="nc bnc" id="L260" title="All 2 branches missed.">            if (trimPrice &gt; 1) df = new DecimalFormat(&quot;#.##&quot;);</span>
 <span class="nc bnc" id="L261" title="All 2 branches missed.">            else if (trimPrice &gt; 0.1) df = new DecimalFormat(&quot;#.###&quot;);</span>
 <span class="nc bnc" id="L262" title="All 2 branches missed.">            else if (trimPrice &gt; 0.01) df = new DecimalFormat(&quot;#.####&quot;);</span>
 <span class="nc bnc" id="L263" title="All 2 branches missed.">            else if (trimPrice &gt; 0.001) df = new DecimalFormat(&quot;#.#####&quot;);</span>
 <span class="nc bnc" id="L264" title="All 2 branches missed.">            else if (trimPrice &gt; 0.0001) df = new DecimalFormat(&quot;#.######&quot;);</span>
 <span class="nc" id="L265">            else df = new DecimalFormat(&quot;#.############&quot;);</span>
-<span class="fc" id="L266">            return df.format(trimPrice);</span>
+<span class="nc" id="L266">            return df.format(trimPrice);</span>
         }
 
         public String getInfo() {
-<span class="fc" id="L270">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
-<span class="fc" id="L271">            return &quot;Rank: &quot; + rank</span>
+<span class="nc" id="L270">            DecimalFormat df = new DecimalFormat(&quot;###,###&quot;);</span>
+<span class="nc" id="L271">            return &quot;Rank: &quot; + rank</span>
                     + &quot;\nID: &quot; + id
                     + &quot;\nName: &quot; + name
                     + &quot;\nSymbol: &quot; + symbol
-<span class="fc" id="L275">                    + &quot;\nPrice &quot; + Main.currency + &quot;: &quot; + trimPrice(price)</span>
-<span class="fc" id="L276">                    + &quot;\nMarket Cap: &quot; + df.format(market_cap)</span>
-<span class="fc" id="L277">                    + &quot;\n24 Hour Volume: &quot; + df.format(_24h_volume)</span>
-<span class="fc" id="L278">                    + &quot;\nAvailable Supply: &quot; + df.format(available_supply)</span>
-<span class="fc" id="L279">                    + &quot;\nTotal Supply: &quot; + df.format(total_supply)</span>
-<span class="fc" id="L280">                    + &quot;\nMax Supply: &quot; + df.format(max_supply)</span>
+<span class="nc" id="L275">                    + &quot;\nPrice &quot; + Main.currency + &quot;: &quot; + trimPrice(price)</span>
+<span class="nc" id="L276">                    + &quot;\nMarket Cap: &quot; + df.format(market_cap)</span>
+<span class="nc" id="L277">                    + &quot;\n24 Hour Volume: &quot; + df.format(_24h_volume)</span>
+<span class="nc" id="L278">                    + &quot;\nAvailable Supply: &quot; + df.format(available_supply)</span>
+<span class="nc" id="L279">                    + &quot;\nTotal Supply: &quot; + df.format(total_supply)</span>
+<span class="nc" id="L280">                    + &quot;\nMax Supply: &quot; + df.format(max_supply)</span>
                     + &quot;\nPercent 1 Hour: &quot; + percent_change_1h + &quot;%&quot;
                     + &quot;\nPercent 24 Hour: &quot; + percent_change_24h + &quot;%&quot;
                     + &quot;\nPercent 7 Days: &quot; + percent_change_7d + &quot;%&quot;
@@ -297,7 +297,7 @@ public class WebData {
 
         @Override
         public String toString() {
-<span class="fc" id="L300">            return name;</span>
+<span class="nc" id="L300">            return name;</span>
         }
     }
 }
