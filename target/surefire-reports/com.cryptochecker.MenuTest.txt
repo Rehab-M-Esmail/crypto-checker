@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.cryptochecker.MenuTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.294 s <<< FAILURE! -- in com.cryptochecker.MenuTest
+com.cryptochecker.MenuTest.testSettingsButtonShowsSettingsPanel -- Time elapsed: 0.225 s <<< ERROR!
+java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+
+com.cryptochecker.MenuTest.testConverterButtonShowsConverterPanel -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+
+com.cryptochecker.MenuTest.testPortfolioButtonShowsPortfolioPanel -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+
+com.cryptochecker.MenuTest.testExitButtonCallsSystemExit -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+

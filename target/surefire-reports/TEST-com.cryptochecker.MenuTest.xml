@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cryptocheckertest.PanelSettingsTest" time="0.223" tests="22" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cryptochecker.MenuTest" time="0.294" tests="4" errors="4" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,26 +60,32 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testThemeChangeLightToDark" classname="com.cryptocheckertest.PanelSettingsTest" time="0.002"/>
-  <testcase name="testThemeChangeDarkToCustom" classname="com.cryptocheckertest.PanelSettingsTest" time="0.002"/>
-  <testcase name="testThemeChangeCustomToLight" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
-  <testcase name="testCurrencySelectionUSD" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
-  <testcase name="testCurrencySelectionEUR" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
-  <testcase name="testCurrencySelectionGBP" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
-  <testcase name="testCurrencySelectionNoSymbol" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
-  <testcase name="testDebugModeEnable" classname="com.cryptocheckertest.PanelSettingsTest" time="0.078"/>
-  <testcase name="testDebugModeDisable" classname="com.cryptocheckertest.PanelSettingsTest" time="0.013"/>
-  <testcase name="testCustomThemeSetColors" classname="com.cryptocheckertest.PanelSettingsTest" time="0.002"/>
-  <testcase name="testCustomThemeReset" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testSettingsPersistenceSave" classname="com.cryptocheckertest.PanelSettingsTest" time="0.027"/>
-  <testcase name="testSettingsPersistenceLoad" classname="com.cryptocheckertest.PanelSettingsTest" time="0.03"/>
-  <testcase name="testColorBoundaryMinimum" classname="com.cryptocheckertest.PanelSettingsTest" time="0.004"/>
-  <testcase name="testColorBoundaryMaximum" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testThemeUpdate" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testThemeCycle" classname="com.cryptocheckertest.PanelSettingsTest" time="0.004"/>
-  <testcase name="testAllCustomColors" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testColorBelowMinimum_InvalidBoundary" classname="com.cryptocheckertest.PanelSettingsTest" time="0.004"/>
-  <testcase name="testColorAboveMaximum_InvalidBoundary" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testInvalidCurrency_InvalidClass" classname="com.cryptocheckertest.PanelSettingsTest" time="0.003"/>
-  <testcase name="testNullTheme_InvalidBoundary" classname="com.cryptocheckertest.PanelSettingsTest" time="0.001"/>
+  <testcase name="testSettingsButtonShowsSettingsPanel" classname="com.cryptochecker.MenuTest" time="0.225">
+    <error message="Cannot read field &quot;coin&quot; because &quot;com.cryptochecker.Main.gui.webData&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+]]></error>
+  </testcase>
+  <testcase name="testConverterButtonShowsConverterPanel" classname="com.cryptochecker.MenuTest" time="0.012">
+    <error message="Cannot read field &quot;coin&quot; because &quot;com.cryptochecker.Main.gui.webData&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+]]></error>
+  </testcase>
+  <testcase name="testPortfolioButtonShowsPortfolioPanel" classname="com.cryptochecker.MenuTest" time="0.003">
+    <error message="Cannot read field &quot;coin&quot; because &quot;com.cryptochecker.Main.gui.webData&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+]]></error>
+  </testcase>
+  <testcase name="testExitButtonCallsSystemExit" classname="com.cryptochecker.MenuTest" time="0.004">
+    <error message="Cannot read field &quot;coin&quot; because &quot;com.cryptochecker.Main.gui.webData&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot read field "coin" because "com.cryptochecker.Main.gui.webData" is null
+	at com.cryptochecker.PanelCoin$TableModel.<init>(PanelCoin.java:184)
+	at com.cryptochecker.PanelCoin.<init>(PanelCoin.java:37)
+	at com.cryptochecker.MenuTest.setup(MenuTest.java:17)
+]]></error>
+  </testcase>
 </testsuite>

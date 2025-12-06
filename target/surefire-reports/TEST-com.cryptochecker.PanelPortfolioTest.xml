@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cryptochecker.PanelPortfolioTest" time="0.923" tests="19" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.cryptochecker.PanelPortfolioTest" time="1.154" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\Shahd\.jdks\openjdk-23.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Shahd\AppData\Local\Temp\surefire3538590528317390898\surefirebooter-20251206155929095_3.jar C:\Users\Shahd\AppData\Local\Temp\surefire3538590528317390898 2025-12-06T15-59-28_939-jvmRun1 surefire-20251206155929095_1tmp surefire_0-20251206155929095_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Shahd\AppData\Local\Temp\surefire13493473551837927799\surefirebooter-20251206183211676_3.jar C:\Users\Shahd\AppData\Local\Temp\surefire13493473551837927799 2025-12-06T18-32-11_086-jvmRun1 surefire-20251206183211676_1tmp surefire_0-20251206183211676_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="F:\cryptochecker-testingproj\target\test-classes;F:\cryptochecker-testingproj\target\classes;C:\Users\Shahd\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar;C:\Users\Shahd\.m2\repository\org\junit\jupiter\junit-jupiter\6.0.1\junit-jupiter-6.0.1.jar;C:\Users\Shahd\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.0.1\junit-jupiter-api-6.0.1.jar;C:\Users\Shahd\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Shahd\.m2\repository\org\junit\platform\junit-platform-commons\6.0.1\junit-platform-commons-6.0.1.jar;C:\Users\Shahd\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Shahd\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Shahd\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.0.1\junit-jupiter-params-6.0.1.jar;C:\Users\Shahd\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.0.1\junit-jupiter-engine-6.0.1.jar;C:\Users\Shahd\.m2\repository\org\junit\platform\junit-platform-engine\6.0.1\junit-platform-engine-6.0.1.jar;C:\Users\Shahd\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Shahd\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Shahd\.m2\repository\org\mockito\mockito-core\5.20.0\mockito-core-5.20.0.jar;C:\Users\Shahd\.m2\repository\net\bytebuddy\byte-buddy\1.17.7\byte-buddy-1.17.7.jar;C:\Users\Shahd\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.7\byte-buddy-agent-1.17.7.jar;C:\Users\Shahd\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Shahd\AppData\Local\Temp\surefire3538590528317390898\surefirebooter-20251206155929095_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Shahd\AppData\Local\Temp\surefire13493473551837927799\surefirebooter-20251206183211676_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="23.0.1+11-39"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="testPortfolioEmpty" classname="com.cryptochecker.PanelPortfolioTest" time="0.223">
+  <testcase name="testPortfolioEmpty" classname="com.cryptochecker.PanelPortfolioTest" time="0.673">
     <system-err><![CDATA[java.lang.NullPointerException: Cannot invoke "javax.swing.JScrollPane.getVerticalScrollBar()" because "com.cryptochecker.Debug.contentPane" is null
 	at com.cryptochecker.Debug.log(Debug.java:48)
 	at com.cryptochecker.WebData.deserialize(WebData.java:150)
@@ -278,9 +278,9 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	... 128 more
 ]]></system-err>
   </testcase>
-  <testcase name="testPortfolioSingle" classname="com.cryptochecker.PanelPortfolioTest" time="0.032"/>
-  <testcase name="testPortfolioMultiple" classname="com.cryptochecker.PanelPortfolioTest" time="0.034"/>
-  <testcase name="testSerialization" classname="com.cryptochecker.PanelPortfolioTest" time="0.044">
+  <testcase name="testPortfolioSingle" classname="com.cryptochecker.PanelPortfolioTest" time="0.019"/>
+  <testcase name="testPortfolioMultiple" classname="com.cryptochecker.PanelPortfolioTest" time="0.026"/>
+  <testcase name="testSerialization" classname="com.cryptochecker.PanelPortfolioTest" time="0.039">
     <system-err><![CDATA[java.lang.NullPointerException: Cannot invoke "javax.swing.JScrollPane.getVerticalScrollBar()" because "com.cryptochecker.Debug.contentPane" is null
 	at com.cryptochecker.Debug.log(Debug.java:48)
 	at com.cryptochecker.PanelPortfolio.serializePortfolio(PanelPortfolio.java:668)
@@ -369,14 +369,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="testZeroGains" classname="com.cryptochecker.PanelPortfolioTest" time="0.033"/>
-  <testcase name="testRefresh" classname="com.cryptochecker.PanelPortfolioTest" time="0.015"/>
-  <testcase name="testCreatePortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.014"/>
-  <testcase name="testSwitchPortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.015"/>
+  <testcase name="testZeroGains" classname="com.cryptochecker.PanelPortfolioTest" time="0.03"/>
+  <testcase name="testRefresh" classname="com.cryptochecker.PanelPortfolioTest" time="0.012"/>
+  <testcase name="testCreatePortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.012"/>
+  <testcase name="testSwitchPortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.01"/>
   <testcase name="testDeletePortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.011"/>
-  <testcase name="testDeleteLast" classname="com.cryptochecker.PanelPortfolioTest" time="0.013"/>
-  <testcase name="testPanelRecreate" classname="com.cryptochecker.PanelPortfolioTest" time="0.008"/>
-  <testcase name="testThemeSwitch" classname="com.cryptochecker.PanelPortfolioTest" time="0.013"/>
+  <testcase name="testDeleteLast" classname="com.cryptochecker.PanelPortfolioTest" time="0.011"/>
+  <testcase name="testPanelRecreate" classname="com.cryptochecker.PanelPortfolioTest" time="0.012"/>
+  <testcase name="testThemeSwitch" classname="com.cryptochecker.PanelPortfolioTest" time="0.022"/>
   <testcase name="testEmptySerialization" classname="com.cryptochecker.PanelPortfolioTest" time="0.014">
     <system-err><![CDATA[java.lang.NullPointerException: Cannot invoke "javax.swing.JScrollPane.getVerticalScrollBar()" because "com.cryptochecker.Debug.contentPane" is null
 	at com.cryptochecker.Debug.log(Debug.java:48)
@@ -466,10 +466,10 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="testLargePortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.025"/>
-  <testcase name="testVisibility" classname="com.cryptochecker.PanelPortfolioTest" time="0.012"/>
-  <testcase name="testNegativeAmount" classname="com.cryptochecker.PanelPortfolioTest" time="0.012"/>
+  <testcase name="testLargePortfolio" classname="com.cryptochecker.PanelPortfolioTest" time="0.014"/>
+  <testcase name="testVisibility" classname="com.cryptochecker.PanelPortfolioTest" time="0.011"/>
+  <testcase name="testNegativeAmount" classname="com.cryptochecker.PanelPortfolioTest" time="0.011"/>
   <testcase name="testInvalidIndex" classname="com.cryptochecker.PanelPortfolioTest" time="0.01"/>
-  <testcase name="testZeroPrice" classname="com.cryptochecker.PanelPortfolioTest" time="0.013"/>
-  <testcase name="testEmptyName" classname="com.cryptochecker.PanelPortfolioTest" time="0.014"/>
+  <testcase name="testZeroPrice" classname="com.cryptochecker.PanelPortfolioTest" time="0.017"/>
+  <testcase name="testEmptyName" classname="com.cryptochecker.PanelPortfolioTest" time="0.01"/>
 </testsuite>

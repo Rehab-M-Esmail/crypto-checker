@@ -513,7 +513,7 @@ public class PanelConverter {
     }
 
     //@SuppressWarnings("unchecked")
-    private void deserialize() {
+    public void deserialize() {
         try {
             if (!(new File(Main.converterSerLocation).canRead())) {
                 Debug.log("ERROR: Couldn't find "+Main.converterSerLocation+".. skipping");

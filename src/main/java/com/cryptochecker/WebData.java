@@ -201,13 +201,13 @@ public class WebData {
         String symbol;
 
         @SerializedName("market_cap_rank")
-        int rank;
+        public int rank;
 
         @SerializedName("current_price")
         public double price;
 
         @SerializedName("market_cap")
-        double market_cap;
+        public double market_cap;
 
         @SerializedName("total_volume")
         double _24h_volume;
@@ -222,13 +222,13 @@ public class WebData {
         double max_supply;
 
         @SerializedName("price_change_percentage_1h_in_currency")
-        double percent_change_1h;
+        public double percent_change_1h;
 
         @SerializedName("price_change_percentage_24h")
-        double percent_change_24h;
+        public double percent_change_24h;
 
         @SerializedName("price_change_percentage_7d_in_currency")
-        double percent_change_7d;
+        public double percent_change_7d;
 
         String last_updated;
 
