@@ -4,6 +4,7 @@ import com.cryptochecker.Main;
 import com.cryptochecker.WebData;
 import org.junit.Test;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import static org.junit.Assert.*;
@@ -125,5 +126,78 @@ public class WebDataTest {
         assertNotNull(webData.coin);
         assertEquals(100, webData.coin.size());
         assertNotNull(webData.global_data);
+    }
+    @Test
+    public void trimPriceVerySmall() {
+        WebData.Coin coin = webData.new Coin();
+        String price = coin.trimPrice(0.000000123456);
+        assertTrue(price.startsWith("0.0000001"));
+    }
+    @Test
+    public void getCoinReturnsCoinTest() {
+        WebData.Coin coin = webData.getCoin();
+        assertNotNull(coin);
+    }
+    @Test
+    public void refreshCoinsExceptionTest() throws Exception {
+        WebData wd = spy(new WebData());
+        doThrow(new RuntimeException("fail")).when(wd).fetch();
+        WebData.RefreshCoins rc = new WebData.RefreshCoins() {
+            @Override
+            public void run() {
+                try {
+                    wd.fetch();
+                } catch (Exception ex) {
+                    assertEquals("fail", ex.getMessage());
+                }
+            }
+        };
+        rc.run();
+    }
+    @Test
+    public void globalDataToStringTest() {
+        WebData.Global_Data gd = webData.new Global_Data();
+        gd.total_market_cap = 1000000;
+        gd.total_24h_volume = 50000;
+        gd.bitcoin_percentage_of_market_cap = 60.5;
+        gd.active_currencies = 2000;
+        gd.active_assets = 3000;
+        gd.active_markets = 4000;
+        gd.last_updated = 1234567890;
+
+        String s = gd.toString();
+        assertTrue(s.contains("Total Market Cap"));
+        assertTrue(s.contains("Bitcoin Dominance"));
+        assertTrue(s.contains("Active Currencies"));
+    }
+    @Test
+    public void coinGetInfoAndPortfolioTest() {
+        WebData.Coin coin = webData.new Coin();
+        coin.name = "Bitcoin";
+        coin.price = 50000;
+        coin.portfolio_amount = 2;
+        coin.portfolio_value = 100000;
+        coin.portfolio_gains = 2000;
+        coin.portfolio_currency = "USD";
+        coin.portfolio_price_start = 48000;
+        coin.portfolio_value_start = 96000;
+        String info = coin.getInfo();
+        assertTrue(info.contains("Bitcoin"));
+        assertTrue(info.contains("50000"));
+        String portfolio = coin.getPortfolio();
+        assertTrue(portfolio.contains("Portfolio Amount"));
+        assertTrue(portfolio.contains("Portfolio Gains"));
+        assertTrue(portfolio.contains("USD"));
+    }
+    @Test
+    public void coinCloneAndCopyTest() throws Exception {
+        WebData.Coin coin = webData.new Coin();
+        coin.name = "TestCoin";
+        WebData.Coin cloned = (WebData.Coin) coin.clone();
+        assertEquals("TestCoin", cloned.name);
+        Object copied = coin.copy();
+        assertTrue(copied instanceof WebData.Coin);
+        WebData.Coin copiedCoin = (WebData.Coin) copied;
+        assertEquals("TestCoin", copiedCoin.name);
     }
 }

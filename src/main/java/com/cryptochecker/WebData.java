@@ -164,18 +164,18 @@ public class WebData {
         @SerializedName(value="total_market_cap_usd", alternate={"total_market_cap_sek", "total_market_cap_eur", "total_market_cap_aud", "total_market_cap_brl", "total_market_cap_cad", "total_market_cap_chf", "total_market_cap_clp", "total_market_cap_cny", "total_market_cap_czk",
         "total_market_cap_dkk", "total_market_cap_gbp", "total_market_cap_hkd", "total_market_cap_huf", "total_market_cap_idr", "total_market_cap_ils", "total_market_cap_inr", "total_market_cap_jpy", "total_market_cap_krw", "total_market_cap_mxn", "total_market_cap_myr",
         "total_market_cap_nok", "total_market_cap_nzd", "total_market_cap_php", "total_market_cap_pkr", "total_market_cap_pln", "total_market_cap_rub", "total_market_cap_sgd", "total_market_cap_thb", "total_market_cap_try", "total_market_cap_twd", "total_market_cap_zar"})
-        long total_market_cap;
+        public long total_market_cap;
         
         @SerializedName(value="total_24h_volume_usd", alternate={"total_24h_volume_sek", "total_24h_volume_eur", "total_24h_volume_aud", "total_24h_volume_brl", "total_24h_volume_cad", "total_24h_volume_chf", "total_24h_volume_clp", "total_24h_volume_cny", "total_24h_volume_czk",
         "total_24h_volume_dkk", "total_24h_volume_gbp", "total_24h_volume_hkd", "total_24h_volume_huf", "total_24h_volume_idr", "total_24h_volume_ils", "total_24h_volume_inr", "total_24h_volume_jpy", "total_24h_volume_krw", "total_24h_volume_mxn", "total_24h_volume_myr",
         "total_24h_volume_nok", "total_24h_volume_nzd", "total_24h_volume_php", "total_24h_volume_pkr", "total_24h_volume_pln", "total_24h_volume_rub", "total_24h_volume_sgd", "total_24h_volume_thb", "total_24h_volume_try", "total_24h_volume_twd", "total_24h_volume_zar"})
-        long total_24h_volume;
+        public long total_24h_volume;
         
-        double bitcoin_percentage_of_market_cap;
-        int active_currencies;
-        int active_assets;
-        int active_markets;
-        long last_updated;
+        public double bitcoin_percentage_of_market_cap;
+        public int active_currencies;
+        public int active_assets;
+        public int active_markets;
+        public long last_updated;
 
         public String toString() { // for global data button
             DecimalFormat df = new DecimalFormat("###,###");
@@ -197,14 +197,14 @@ public class WebData {
         private static final long serialVersionUID = 1L;
 
         String id;
-        String name;
+        public String name;
         String symbol;
 
         @SerializedName("market_cap_rank")
         int rank;
 
         @SerializedName("current_price")
-        double price;
+        public double price;
 
         @SerializedName("market_cap")
         double market_cap;
@@ -233,16 +233,16 @@ public class WebData {
         String last_updated;
 
         // portfolio data
-        double portfolio_amount;
+        public double portfolio_amount;
         double portfolio_price;
-        double portfolio_value;
-        double portfolio_gains;
-        String portfolio_currency;
-        double portfolio_price_start;
-        double portfolio_value_start;
+        public double portfolio_value;
+        public double portfolio_gains;
+        public String portfolio_currency;
+        public double portfolio_price_start;
+        public double portfolio_value_start;
 
         @Override
-        protected Object clone() throws CloneNotSupportedException {
+        public Object clone() throws CloneNotSupportedException {
             return super.clone();
         }
 
