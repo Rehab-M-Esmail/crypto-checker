@@ -1,9 +1,12 @@
-package com.cryptochecker;
+package com.cryptocheckertest;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.*;
 import java.util.ArrayList;
+import com.cryptochecker.Main;
+import com.cryptochecker.PanelPortfolio;
+import com.cryptochecker.WebData;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class PanelPortfolioTest {
