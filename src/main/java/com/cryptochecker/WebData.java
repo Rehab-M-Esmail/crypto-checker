@@ -196,9 +196,9 @@ public class WebData {
     public class Coin implements Serializable, Cloneable {
         private static final long serialVersionUID = 1L;
 
-        String id;
+        public String id;
         public String name;
-        String symbol;
+        public String symbol;
 
         @SerializedName("market_cap_rank")
         public int rank;
@@ -210,7 +210,7 @@ public class WebData {
         public double market_cap;
 
         @SerializedName("total_volume")
-        double _24h_volume;
+        public double _24h_volume;
 
         @SerializedName("circulating_supply")
         double available_supply;

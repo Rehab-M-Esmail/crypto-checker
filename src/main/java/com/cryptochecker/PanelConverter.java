@@ -33,8 +33,8 @@ public class PanelConverter {
     public String infoCurrency1;
     public String infoCurrency2;
 
-    private JPanel overview;
-    private JEditorPane overviewText;
+    public JPanel overview;
+    public JEditorPane overviewText;
 
     public JEditorPane textBox1;
     public JEditorPane textBox2;
