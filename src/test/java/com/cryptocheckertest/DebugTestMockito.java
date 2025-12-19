@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class DebugTestMockito {
 
     @TempDir
-    static Path tempDir;
+    Path tempDir;
 
     private static Path testLogLocation;
     private static Main testMain;
@@ -34,17 +34,17 @@ public class DebugTestMockito {
     @Mock
     private JFrame mockFrame;
 
-    @BeforeAll
-    static void setUpBeforeAll() throws Exception {
-        Path logFile = tempDir.resolve("log.txt");
-        Main.logLocation = logFile.toString();
-        Main.folderLocation = tempDir.toString();
-        testLogLocation = logFile;
-        new File(Main.folderLocation).mkdirs();
-    }
-
     @BeforeEach
     void setUp() {
+        // Initialize on first run
+        if (testLogLocation == null) {
+            Path logFile = tempDir.resolve("log.txt");
+            Main.logLocation = logFile.toString();
+            Main.folderLocation = tempDir.toString();
+            testLogLocation = logFile;
+            new File(Main.folderLocation).mkdirs();
+        }
+        
         testMain = new Main();
         Main.gui = testMain;
     }

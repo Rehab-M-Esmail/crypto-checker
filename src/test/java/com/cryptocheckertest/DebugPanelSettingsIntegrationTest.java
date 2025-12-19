@@ -562,4 +562,3 @@ public class DebugPanelSettingsIntegrationTest {
         assertTrue(lines.size() > 1, "Multiple operations should be logged");
     }
 }
-
