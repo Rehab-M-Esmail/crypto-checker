@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cryptocheckertest.WebDataCoinTrimPricePitTest
+-------------------------------------------------------------------------------
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.527 s -- in com.cryptocheckertest.WebDataCoinTrimPricePitTest

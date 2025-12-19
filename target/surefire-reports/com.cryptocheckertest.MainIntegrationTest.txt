@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.cryptocheckertest.MainIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! -- in com.cryptocheckertest.MainIntegrationTest
+com.cryptocheckertest.MainIntegrationTest -- Time elapsed: 0.027 s <<< ERROR!
+java.io.FileNotFoundException: C:\Users\ahmed\AppData\Local\Temp\junit12581353013117017043\log.txt (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:155)
+	at java.base/java.io.FileWriter.<init>(FileWriter.java:82)
+	at com.cryptochecker.Debug.<init>(Debug.java:17)
+	at com.cryptochecker.Main.setupGUI(Main.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at com.cryptocheckertest.MainIntegrationTest.setupEnvironment(MainIntegrationTest.java:30)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

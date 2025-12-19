@@ -1,8 +1,10 @@
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\DebugPanelSettingsIntegrationTest.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\DebugPitTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\DebugTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\DebugTest_WhiteBox.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\DebugTestMockito.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\MainIntegrationTest.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\MainThemePitTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\MenuTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelCoinTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelCoinUnitTestsUsingMockito.java
@@ -10,10 +12,14 @@ D:\down\crypto-checker\src\test\java\com\cryptocheckertest\panelConverterMockTes
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelConverterTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelConverterTest_whiteBox.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelConverterWebDataIntegrationTest.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelPortfolioMockito.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelPortfolioTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelPortfolioTest_whiteBox.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelPortfolioWebDataMainIntegrationTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelSettingsTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelSettingsTest_WhiteBox.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\PanelSettingsTestMockito.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\WebDataCoinInfoPitTest.java
+D:\down\crypto-checker\src\test\java\com\cryptocheckertest\WebDataCoinTrimPricePitTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\WebDataTest.java
 D:\down\crypto-checker\src\test\java\com\cryptocheckertest\WebDataUnitTestsUsingMockito.java

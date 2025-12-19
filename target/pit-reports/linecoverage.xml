@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='com.cryptochecker.Debug' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='com.cryptocheckertest.DebugPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.DebugPitTest]/[method:testDebugModeLogicalAndModeFalse()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Debug' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='com.cryptocheckertest.DebugPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.DebugPitTest]/[method:testDebugModeLogicalAndModeFalse()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='0'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='1'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='2'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='resetCustom()V' number='0'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='0'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='1'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='2'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='7'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='8'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='3'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='9'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='4'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='5'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='11'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='6'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='7'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='8'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='&lt;init&gt;(Lcom/cryptochecker/Main$themes;)V' number='9'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:darkThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='3'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='4'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='5'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='6'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:lightThemeSetsExpectedColors()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='update()V' number='10'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:customThemeUsesCustomFields()]'/>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:resetCustomRestoresDefaults()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='change(Lcom/cryptochecker/Main$themes;)V' number='0'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.Main$Theme' method='change(Lcom/cryptochecker/Main$themes;)V' number='1'><tests>
+<test name='com.cryptocheckertest.MainThemePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.MainThemePitTest]/[method:changeUpdatesCurrentTheme()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='18'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='3'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='4'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='1'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='2'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='0'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='17'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='7'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='5'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getInfo()Ljava/lang/String;' number='6'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='2'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='&lt;init&gt;(Lcom/cryptochecker/WebData;)V' number='0'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='0'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='&lt;init&gt;(Lcom/cryptochecker/WebData;)V' number='1'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='1'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoContainsKeyFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getInfoUsesTrimPriceForPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testBitcoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testEthereumPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFirstIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingDownForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingUpForLargeValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVeryLargeValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='7'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='2'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='1'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='0'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='6'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='5'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='4'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='getPortfolio()Ljava/lang/String;' number='3'><tests>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioContainsPortfolioFields()]'/>
+<test name='com.cryptocheckertest.WebDataCoinInfoPitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinInfoPitTest]/[method:getPortfolioFormatsNumbers()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='12'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='6'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='9'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='3'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='15'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='16'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testElseBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueLarge()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testNegativeValueSmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testShibaInuPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceLessThanOrEqual0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceVerySmall()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceZero()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testVerySmallPositiveValue()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='7'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='8'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDogecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForSmallValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testThirdIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point01()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='13'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='14'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFifthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testLargerValueHasFewerDecimals()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point0001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point0001()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='4'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='5'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testRoundingForMediumValue()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testSecondIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testStablecoinPrice()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point1()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point1()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='10'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+</tests>
+</block>
+<block classname='com.cryptochecker.WebData$Coin' method='trimPrice(D)Ljava/lang/String;' number='11'><tests>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testDifferentBranchesProduceDifferentFormats()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testFourthIfBranchExecutes()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceExactly0Point01()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceGreaterThan0Point001()]'/>
+<test name='com.cryptocheckertest.WebDataCoinTrimPricePitTest.[engine:junit-jupiter]/[class:com.cryptocheckertest.WebDataCoinTrimPricePitTest]/[method:testTrimPriceJustAbove0Point001()]'/>
+</tests>
+</block>
+</coverage>
