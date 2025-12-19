@@ -8,7 +8,6 @@ com\cryptochecker\PanelPortfolio$bManagePortfolioListener.class
 com\cryptochecker\PanelConverter$bSwitchListener.class
 com\cryptochecker\PanelCoin$1.class
 com\cryptochecker\PanelPortfolio$TableMouseListener.class
-com\cryptochecker\Main$1.class
 com\cryptochecker\PanelSettings$colorListener.class
 com\cryptochecker\PanelSettings$bDeleteListener.class
 com\cryptochecker\PanelPortfolio$TableModel.class

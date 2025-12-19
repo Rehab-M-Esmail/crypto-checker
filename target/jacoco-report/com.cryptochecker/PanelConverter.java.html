@@ -11,9 +11,9 @@ import javax.swing.event.DocumentListener;
 public class PanelConverter {
     public JPanel panel;
 
-<span class="nc" id="L14">    private final int amountHeaderButtons = 2;</span>
-<span class="nc" id="L15">    private final int contentWidth = 250;</span>
-<span class="nc" id="L16">    private final int contentHeight = 45;</span>
+<span class="fc" id="L14">    private final int amountHeaderButtons = 2;</span>
+<span class="fc" id="L15">    private final int contentWidth = 250;</span>
+<span class="fc" id="L16">    private final int contentHeight = 45;</span>
 
     private JPanel contentFilling1;
     private JPanel contentFilling2;
@@ -38,152 +38,152 @@ public class PanelConverter {
 
     public JEditorPane textBox1;
     public JEditorPane textBox2;
-<span class="nc" id="L41">    private final Font textBoxFont = new Font(&quot;Helvetica&quot;, Font.PLAIN, 14);</span>
+<span class="fc" id="L41">    private final Font textBoxFont = new Font(&quot;Helvetica&quot;, Font.PLAIN, 14);</span>
 
-<span class="nc" id="L43">    private DecimalFormat df1 = new DecimalFormat(&quot;#.##&quot;);</span>
-<span class="nc" id="L44">    private DecimalFormat df2 = new DecimalFormat(&quot;#.###&quot;);</span>
-<span class="nc" id="L45">    private DecimalFormat df3 = new DecimalFormat(&quot;#.####&quot;);</span>
-<span class="nc" id="L46">    private DecimalFormat df4 = new DecimalFormat(&quot;#.#####&quot;);</span>
-<span class="nc" id="L47">    private DecimalFormat df5 = new DecimalFormat(&quot;#.######&quot;);</span>
-<span class="nc" id="L48">    private DecimalFormat df6 = new DecimalFormat(&quot;#.############&quot;);</span>
+<span class="fc" id="L43">    private DecimalFormat df1 = new DecimalFormat(&quot;#.##&quot;);</span>
+<span class="fc" id="L44">    private DecimalFormat df2 = new DecimalFormat(&quot;#.###&quot;);</span>
+<span class="fc" id="L45">    private DecimalFormat df3 = new DecimalFormat(&quot;#.####&quot;);</span>
+<span class="fc" id="L46">    private DecimalFormat df4 = new DecimalFormat(&quot;#.#####&quot;);</span>
+<span class="fc" id="L47">    private DecimalFormat df5 = new DecimalFormat(&quot;#.######&quot;);</span>
+<span class="fc" id="L48">    private DecimalFormat df6 = new DecimalFormat(&quot;#.############&quot;);</span>
 
-<span class="nc" id="L50">    public PanelConverter() {</span>
-<span class="nc" id="L51">        panel = new JPanel();</span>
-<span class="nc" id="L52">        panel.setVisible(false);</span>
-<span class="nc" id="L53">        panel.setBackground(Color.WHITE);</span>
-<span class="nc" id="L54">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L50">    public PanelConverter() {</span>
+<span class="fc" id="L51">        panel = new JPanel();</span>
+<span class="fc" id="L52">        panel.setVisible(false);</span>
+<span class="fc" id="L53">        panel.setBackground(Color.WHITE);</span>
+<span class="fc" id="L54">        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));</span>
 
         // overview data
-<span class="nc" id="L57">        overview = new JPanel();</span>
-<span class="nc" id="L58">        overview.setLayout(new FlowLayout());</span>
-<span class="nc" id="L59">        overview.setBackground(Color.WHITE);</span>
-<span class="nc" id="L60">        overview.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));</span>
-<span class="nc" id="L61">        calculateGlobal();</span>
-<span class="nc" id="L62">        overview.add(overviewText);</span>
+<span class="fc" id="L57">        overview = new JPanel();</span>
+<span class="fc" id="L58">        overview.setLayout(new FlowLayout());</span>
+<span class="fc" id="L59">        overview.setBackground(Color.WHITE);</span>
+<span class="fc" id="L60">        overview.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));</span>
+<span class="fc" id="L61">        calculateGlobal();</span>
+<span class="fc" id="L62">        overview.add(overviewText);</span>
 
         // overview-content filling
-<span class="nc" id="L65">        contentFilling1 = new JPanel();</span>
-<span class="nc" id="L66">        contentFilling1.setLayout(new BorderLayout());</span>
-<span class="nc" id="L67">        contentFilling1.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
+<span class="fc" id="L65">        contentFilling1 = new JPanel();</span>
+<span class="fc" id="L66">        contentFilling1.setLayout(new BorderLayout());</span>
+<span class="fc" id="L67">        contentFilling1.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
 
-<span class="nc" id="L69">        contentFilling2 = new JPanel();</span>
-<span class="nc" id="L70">        contentFilling2.setLayout(new BorderLayout());</span>
-<span class="nc" id="L71">        contentFilling2.setBorder(BorderFactory.createMatteBorder(0, 1, 1, 1, Color.GRAY));</span>
+<span class="fc" id="L69">        contentFilling2 = new JPanel();</span>
+<span class="fc" id="L70">        contentFilling2.setLayout(new BorderLayout());</span>
+<span class="fc" id="L71">        contentFilling2.setBorder(BorderFactory.createMatteBorder(0, 1, 1, 1, Color.GRAY));</span>
 
         // CONTENT
-<span class="nc" id="L74">        contentTop = new JPanel();</span>
-<span class="nc" id="L75">        contentTop.setLayout(new FlowLayout());</span>
-<span class="nc" id="L76">        contentTop.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
+<span class="fc" id="L74">        contentTop = new JPanel();</span>
+<span class="fc" id="L75">        contentTop.setLayout(new FlowLayout());</span>
+<span class="fc" id="L76">        contentTop.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
 
-<span class="nc" id="L78">        contentBottom = new JPanel();</span>
-<span class="nc" id="L79">        contentBottom.setLayout(new FlowLayout());</span>
-<span class="nc" id="L80">        contentBottom.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
+<span class="fc" id="L78">        contentBottom = new JPanel();</span>
+<span class="fc" id="L79">        contentBottom.setLayout(new FlowLayout());</span>
+<span class="fc" id="L80">        contentBottom.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.GRAY));</span>
 
         // CONTENT TOP - LEFT
-<span class="nc" id="L83">        JPanel topLeft = new JPanel();</span>
-<span class="nc" id="L84">        topLeft.setLayout(new BoxLayout(topLeft, BoxLayout.Y_AXIS));</span>
-<span class="nc" id="L85">        topLeft.setPreferredSize(new Dimension(contentWidth, contentHeight));</span>
-<span class="nc" id="L86">        topLeft.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L83">        JPanel topLeft = new JPanel();</span>
+<span class="fc" id="L84">        topLeft.setLayout(new BoxLayout(topLeft, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L85">        topLeft.setPreferredSize(new Dimension(contentWidth, contentHeight));</span>
+<span class="fc" id="L86">        topLeft.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
 
-<span class="nc" id="L88">        JPanel topLeft1 = new JPanel();</span>
-<span class="nc" id="L89">        topLeft1.setLayout(new BorderLayout());</span>
+<span class="fc" id="L88">        JPanel topLeft1 = new JPanel();</span>
+<span class="fc" id="L89">        topLeft1.setLayout(new BorderLayout());</span>
 
-<span class="nc" id="L91">        buttonCurrency1 = Main.gui.getButtonTemplate(&quot;&quot;);</span>
-<span class="nc" id="L92">        buttonCurrency1.addActionListener(new buttonCurrencyListener(1));</span>
-<span class="nc" id="L93">        buttonCurrency1.setBorder(BorderFactory.createEmptyBorder());</span>
+<span class="fc" id="L91">        buttonCurrency1 = Main.gui.getButtonTemplate(&quot;&quot;);</span>
+<span class="fc" id="L92">        buttonCurrency1.addActionListener(new buttonCurrencyListener(1));</span>
+<span class="fc" id="L93">        buttonCurrency1.setBorder(BorderFactory.createEmptyBorder());</span>
 
-<span class="nc" id="L95">        topLeft1.add(buttonCurrency1);</span>
+<span class="fc" id="L95">        topLeft1.add(buttonCurrency1);</span>
 
-<span class="nc" id="L97">        JPanel topLeft2 = new JPanel();</span>
-<span class="nc" id="L98">        topLeft2.setLayout(new BoxLayout(topLeft2, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L97">        JPanel topLeft2 = new JPanel();</span>
+<span class="fc" id="L98">        topLeft2.setLayout(new BoxLayout(topLeft2, BoxLayout.Y_AXIS));</span>
 
-<span class="nc" id="L100">        fieldCurrency1 = new JTextField(&quot;&quot;);</span>
-<span class="nc" id="L101">        fieldCurrency1.setHorizontalAlignment(JTextField.CENTER);</span>
-<span class="nc" id="L102">        fieldCurrency1.setMinimumSize(new Dimension(contentWidth, contentHeight/2));</span>
-<span class="nc" id="L103">        fieldCurrency1.setMaximumSize(new Dimension(contentWidth, contentHeight/2));</span>
-<span class="nc" id="L104">        fieldCurrency1.setBorder(BorderFactory.createEmptyBorder());</span>
+<span class="fc" id="L100">        fieldCurrency1 = new JTextField(&quot;&quot;);</span>
+<span class="fc" id="L101">        fieldCurrency1.setHorizontalAlignment(JTextField.CENTER);</span>
+<span class="fc" id="L102">        fieldCurrency1.setMinimumSize(new Dimension(contentWidth, contentHeight/2));</span>
+<span class="fc" id="L103">        fieldCurrency1.setMaximumSize(new Dimension(contentWidth, contentHeight/2));</span>
+<span class="fc" id="L104">        fieldCurrency1.setBorder(BorderFactory.createEmptyBorder());</span>
 
-<span class="nc" id="L106">        topLeft2.add(fieldCurrency1);</span>
+<span class="fc" id="L106">        topLeft2.add(fieldCurrency1);</span>
 
-<span class="nc" id="L108">        topLeft.add(topLeft1);</span>
-<span class="nc" id="L109">        topLeft.add(topLeft2);</span>
+<span class="fc" id="L108">        topLeft.add(topLeft1);</span>
+<span class="fc" id="L109">        topLeft.add(topLeft2);</span>
 
         // CONTENT TOP - MIDDLE
-<span class="nc" id="L112">        JButton bSwitch = Main.gui.getButtonTemplate(&quot;Switch&quot;);</span>
-<span class="nc" id="L113">        bSwitch.addActionListener(new bSwitchListener());</span>
-<span class="nc" id="L114">        bSwitch.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
-<span class="nc" id="L115">        bSwitch.setPreferredSize(new Dimension(contentWidth/2,contentHeight));</span>
+<span class="fc" id="L112">        JButton bSwitch = Main.gui.getButtonTemplate(&quot;Switch&quot;);</span>
+<span class="fc" id="L113">        bSwitch.addActionListener(new bSwitchListener());</span>
+<span class="fc" id="L114">        bSwitch.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L115">        bSwitch.setPreferredSize(new Dimension(contentWidth/2,contentHeight));</span>
 
         // CONTENT TOP - RIGHT
-<span class="nc" id="L118">        JPanel topRight = new JPanel();</span>
-<span class="nc" id="L119">        topRight.setLayout(new BoxLayout(topRight, BoxLayout.Y_AXIS));</span>
-<span class="nc" id="L120">        topRight.setPreferredSize(new Dimension(contentWidth, contentHeight));</span>
-<span class="nc" id="L121">        topRight.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L118">        JPanel topRight = new JPanel();</span>
+<span class="fc" id="L119">        topRight.setLayout(new BoxLayout(topRight, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L120">        topRight.setPreferredSize(new Dimension(contentWidth, contentHeight));</span>
+<span class="fc" id="L121">        topRight.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
 
-<span class="nc" id="L123">        JPanel topRight1 = new JPanel();</span>
-<span class="nc" id="L124">        topRight1.setLayout(new BorderLayout());</span>
+<span class="fc" id="L123">        JPanel topRight1 = new JPanel();</span>
+<span class="fc" id="L124">        topRight1.setLayout(new BorderLayout());</span>
 
-<span class="nc" id="L126">        buttonCurrency2 = Main.gui.getButtonTemplate(&quot;&quot;);</span>
-<span class="nc" id="L127">        buttonCurrency2.addActionListener(new buttonCurrencyListener(2));</span>
-<span class="nc" id="L128">        buttonCurrency2.setBorder(BorderFactory.createEmptyBorder());</span>
+<span class="fc" id="L126">        buttonCurrency2 = Main.gui.getButtonTemplate(&quot;&quot;);</span>
+<span class="fc" id="L127">        buttonCurrency2.addActionListener(new buttonCurrencyListener(2));</span>
+<span class="fc" id="L128">        buttonCurrency2.setBorder(BorderFactory.createEmptyBorder());</span>
 
-<span class="nc" id="L130">        topRight1.add(buttonCurrency2);</span>
+<span class="fc" id="L130">        topRight1.add(buttonCurrency2);</span>
 
-<span class="nc" id="L132">        JPanel topRight2 = new JPanel();</span>
-<span class="nc" id="L133">        topRight2.setLayout(new BoxLayout(topRight2, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L132">        JPanel topRight2 = new JPanel();</span>
+<span class="fc" id="L133">        topRight2.setLayout(new BoxLayout(topRight2, BoxLayout.Y_AXIS));</span>
 
-<span class="nc" id="L135">        fieldCurrency2 = new JTextField(&quot;&quot;);</span>
-<span class="nc" id="L136">        fieldCurrency2.setHorizontalAlignment(JTextField.CENTER);</span>
-<span class="nc" id="L137">        fieldCurrency2.setMinimumSize(new Dimension(contentWidth, contentHeight/2));</span>
-<span class="nc" id="L138">        fieldCurrency2.setMaximumSize(new Dimension(contentWidth, contentHeight/2));</span>
-<span class="nc" id="L139">        fieldCurrency2.setBorder(BorderFactory.createEmptyBorder());</span>
-<span class="nc" id="L140">        fieldCurrency2.setBackground(Color.WHITE);</span>
-<span class="nc" id="L141">        fieldCurrency2.setEditable(false);</span>
+<span class="fc" id="L135">        fieldCurrency2 = new JTextField(&quot;&quot;);</span>
+<span class="fc" id="L136">        fieldCurrency2.setHorizontalAlignment(JTextField.CENTER);</span>
+<span class="fc" id="L137">        fieldCurrency2.setMinimumSize(new Dimension(contentWidth, contentHeight/2));</span>
+<span class="fc" id="L138">        fieldCurrency2.setMaximumSize(new Dimension(contentWidth, contentHeight/2));</span>
+<span class="fc" id="L139">        fieldCurrency2.setBorder(BorderFactory.createEmptyBorder());</span>
+<span class="fc" id="L140">        fieldCurrency2.setBackground(Color.WHITE);</span>
+<span class="fc" id="L141">        fieldCurrency2.setEditable(false);</span>
 
-<span class="nc" id="L143">        topRight2.add(fieldCurrency2);</span>
+<span class="fc" id="L143">        topRight2.add(fieldCurrency2);</span>
 
-<span class="nc" id="L145">        topRight.add(topRight1);</span>
-<span class="nc" id="L146">        topRight.add(topRight2);</span>
+<span class="fc" id="L145">        topRight.add(topRight1);</span>
+<span class="fc" id="L146">        topRight.add(topRight2);</span>
 
-<span class="nc" id="L148">        contentTop.add(topLeft);</span>
-<span class="nc" id="L149">        contentTop.add(bSwitch);</span>
-<span class="nc" id="L150">        contentTop.add(topRight);</span>
+<span class="fc" id="L148">        contentTop.add(topLeft);</span>
+<span class="fc" id="L149">        contentTop.add(bSwitch);</span>
+<span class="fc" id="L150">        contentTop.add(topRight);</span>
 
         // CONTENT BOTTOM - LEFT
-<span class="nc" id="L153">        JPanel leftBottom = new JPanel();</span>
-<span class="nc" id="L154">        leftBottom.setLayout(new BoxLayout(leftBottom, BoxLayout.Y_AXIS));</span>
-<span class="nc" id="L155">        leftBottom.setPreferredSize(new Dimension(contentWidth, contentHeight*6));</span>
-<span class="nc" id="L156">        leftBottom.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L153">        JPanel leftBottom = new JPanel();</span>
+<span class="fc" id="L154">        leftBottom.setLayout(new BoxLayout(leftBottom, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L155">        leftBottom.setPreferredSize(new Dimension(contentWidth, contentHeight*6));</span>
+<span class="fc" id="L156">        leftBottom.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
 
-<span class="nc" id="L158">        textBox1 = new JEditorPane();</span>
-<span class="nc" id="L159">        textBox1.setFont(textBoxFont);</span>
-<span class="nc" id="L160">        textBox1.setEditable(false);</span>
+<span class="fc" id="L158">        textBox1 = new JEditorPane();</span>
+<span class="fc" id="L159">        textBox1.setFont(textBoxFont);</span>
+<span class="fc" id="L160">        textBox1.setEditable(false);</span>
         
-<span class="nc" id="L162">        leftBottom.add(textBox1);</span>
+<span class="fc" id="L162">        leftBottom.add(textBox1);</span>
 
         // CONTENT BOTTOM - MIDDLE
-<span class="nc" id="L165">        middleBottom = new JPanel();</span>
-<span class="nc" id="L166">        middleBottom.setLayout(new BorderLayout());</span>
-<span class="nc" id="L167">        middleBottom.setPreferredSize(bSwitch.getPreferredSize());</span>
+<span class="fc" id="L165">        middleBottom = new JPanel();</span>
+<span class="fc" id="L166">        middleBottom.setLayout(new BorderLayout());</span>
+<span class="fc" id="L167">        middleBottom.setPreferredSize(bSwitch.getPreferredSize());</span>
 
         // CONTENT BOTTOM - RIGHT
-<span class="nc" id="L170">        JPanel rightBottom = new JPanel();</span>
-<span class="nc" id="L171">        rightBottom.setLayout(new BoxLayout(rightBottom, BoxLayout.Y_AXIS));</span>
-<span class="nc" id="L172">        rightBottom.setPreferredSize(new Dimension(contentWidth, contentHeight*6));</span>
-<span class="nc" id="L173">        rightBottom.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L170">        JPanel rightBottom = new JPanel();</span>
+<span class="fc" id="L171">        rightBottom.setLayout(new BoxLayout(rightBottom, BoxLayout.Y_AXIS));</span>
+<span class="fc" id="L172">        rightBottom.setPreferredSize(new Dimension(contentWidth, contentHeight*6));</span>
+<span class="fc" id="L173">        rightBottom.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.LIGHT_GRAY));</span>
 
-<span class="nc" id="L175">        textBox2 = new JEditorPane();</span>
-<span class="nc" id="L176">        textBox2.setFont(textBoxFont);</span>
-<span class="nc" id="L177">        textBox2.setEditable(false);</span>
+<span class="fc" id="L175">        textBox2 = new JEditorPane();</span>
+<span class="fc" id="L176">        textBox2.setFont(textBoxFont);</span>
+<span class="fc" id="L177">        textBox2.setEditable(false);</span>
 
-<span class="nc" id="L179">        rightBottom.add(textBox2);</span>
+<span class="fc" id="L179">        rightBottom.add(textBox2);</span>
 
-<span class="nc" id="L181">        contentBottom.add(leftBottom);</span>
-<span class="nc" id="L182">        contentBottom.add(middleBottom);</span>
-<span class="nc" id="L183">        contentBottom.add(rightBottom);</span>
+<span class="fc" id="L181">        contentBottom.add(leftBottom);</span>
+<span class="fc" id="L182">        contentBottom.add(middleBottom);</span>
+<span class="fc" id="L183">        contentBottom.add(rightBottom);</span>
 
         // currencyField1
-<span class="nc" id="L186">        fieldCurrency1.getDocument().addDocumentListener(new DocumentListener() {</span>
+<span class="fc" id="L186">        fieldCurrency1.getDocument().addDocumentListener(new DocumentListener() {</span>
             public void insertUpdate(DocumentEvent e) {
                 Double docText;
                 try { 
@@ -224,50 +224,50 @@ public class PanelConverter {
         });
 
         // TOP HEADER
-<span class="nc" id="L227">        JPanel headerTop = new JPanel();</span>
-<span class="nc" id="L228">        headerTop.setBackground(Color.GRAY);</span>
-<span class="nc" id="L229">        headerTop.setLayout(new BoxLayout(headerTop, BoxLayout.X_AXIS));</span>
+<span class="fc" id="L227">        JPanel headerTop = new JPanel();</span>
+<span class="fc" id="L228">        headerTop.setBackground(Color.GRAY);</span>
+<span class="fc" id="L229">        headerTop.setLayout(new BoxLayout(headerTop, BoxLayout.X_AXIS));</span>
 
         // BUTTONS HEADER
-<span class="nc" id="L232">        JPanel headerButtons = new JPanel();</span>
-<span class="nc" id="L233">        headerButtons.setLayout(new BoxLayout(headerButtons, BoxLayout.X_AXIS));</span>
-<span class="nc" id="L234">        headerButtons.setPreferredSize(new Dimension(Main.panelWidth*amountHeaderButtons, Main.panelHeight-1));</span>
+<span class="fc" id="L232">        JPanel headerButtons = new JPanel();</span>
+<span class="fc" id="L233">        headerButtons.setLayout(new BoxLayout(headerButtons, BoxLayout.X_AXIS));</span>
+<span class="fc" id="L234">        headerButtons.setPreferredSize(new Dimension(Main.panelWidth*amountHeaderButtons, Main.panelHeight-1));</span>
 
-<span class="nc" id="L236">        JButton bRefresh = Main.gui.getButtonTemplate(&quot;Refresh&quot;);</span>
-<span class="nc" id="L237">        bRefresh.addActionListener(new bRefreshListener());</span>
-<span class="nc" id="L238">        bRefresh.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.LIGHT_GRAY));</span>
-<span class="nc" id="L239">        bRefresh.setMaximumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="fc" id="L236">        JButton bRefresh = Main.gui.getButtonTemplate(&quot;Refresh&quot;);</span>
+<span class="fc" id="L237">        bRefresh.addActionListener(new bRefreshListener());</span>
+<span class="fc" id="L238">        bRefresh.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L239">        bRefresh.setMaximumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="nc" id="L241">        JButton bGlobal = Main.gui.getButtonTemplate(&quot;Global Data&quot;);</span>
-<span class="nc" id="L242">        bGlobal.addActionListener(new bGlobalListener());</span>
-<span class="nc" id="L243">        bGlobal.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
-<span class="nc" id="L244">        bGlobal.setMaximumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
+<span class="fc" id="L241">        JButton bGlobal = Main.gui.getButtonTemplate(&quot;Global Data&quot;);</span>
+<span class="fc" id="L242">        bGlobal.addActionListener(new bGlobalListener());</span>
+<span class="fc" id="L243">        bGlobal.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.LIGHT_GRAY));</span>
+<span class="fc" id="L244">        bGlobal.setMaximumSize(new Dimension(Main.panelWidth, Main.panelHeight+1));</span>
 
-<span class="nc" id="L246">        headerButtons.add(bRefresh);</span>
-<span class="nc" id="L247">        headerButtons.add(bGlobal);</span>
+<span class="fc" id="L246">        headerButtons.add(bRefresh);</span>
+<span class="fc" id="L247">        headerButtons.add(bGlobal);</span>
 
         // HEADER FILLING
-<span class="nc" id="L250">        JPanel headerFilling = new JPanel();</span>
-<span class="nc" id="L251">        headerFilling.setLayout(new BorderLayout());</span>
-<span class="nc" id="L252">        headerFilling.setMaximumSize(new Dimension((int) Main.screenResolution.getWidth(), Main.panelHeight-1));</span>
-<span class="nc" id="L253">        headerFilling.setBackground(Color.GRAY);</span>
+<span class="fc" id="L250">        JPanel headerFilling = new JPanel();</span>
+<span class="fc" id="L251">        headerFilling.setLayout(new BorderLayout());</span>
+<span class="fc" id="L252">        headerFilling.setMaximumSize(new Dimension((int) Main.screenResolution.getWidth(), Main.panelHeight-1));</span>
+<span class="fc" id="L253">        headerFilling.setBackground(Color.GRAY);</span>
 
-<span class="nc" id="L255">        themeSwitch(); // select theme color</span>
+<span class="fc" id="L255">        themeSwitch(); // select theme color</span>
 
-<span class="nc" id="L257">        headerTop.add(headerButtons);</span>
-<span class="nc" id="L258">        headerTop.add(headerFilling);</span>
+<span class="fc" id="L257">        headerTop.add(headerButtons);</span>
+<span class="fc" id="L258">        headerTop.add(headerFilling);</span>
 
-<span class="nc" id="L260">        panel.add(headerTop);</span>
-<span class="nc" id="L261">        panel.add(overview);</span>
-<span class="nc" id="L262">        panel.add(contentFilling1);</span>
-<span class="nc" id="L263">        panel.add(contentTop);</span>
-<span class="nc" id="L264">        panel.add(contentBottom);</span>
-<span class="nc" id="L265">        panel.add(contentFilling2);</span>
+<span class="fc" id="L260">        panel.add(headerTop);</span>
+<span class="fc" id="L261">        panel.add(overview);</span>
+<span class="fc" id="L262">        panel.add(contentFilling1);</span>
+<span class="fc" id="L263">        panel.add(contentTop);</span>
+<span class="fc" id="L264">        panel.add(contentBottom);</span>
+<span class="fc" id="L265">        panel.add(contentFilling2);</span>
 
-<span class="nc" id="L267">        deserialize();</span>
-<span class="nc" id="L268">        retrieveText(1, infoCurrency1);</span>
-<span class="nc" id="L269">        retrieveText(2, infoCurrency2);</span>
-<span class="nc" id="L270">    }</span>
+<span class="fc" id="L267">        deserialize();</span>
+<span class="fc" id="L268">        retrieveText(1, infoCurrency1);</span>
+<span class="fc" id="L269">        retrieveText(2, infoCurrency2);</span>
+<span class="fc" id="L270">    }</span>
 
     public JTextField get_fieldCurrency1()
     {
@@ -309,102 +309,102 @@ public class PanelConverter {
     public void retrieveText(int box, String info) {
         //Debug.log(&quot;Retrieving Box &quot;+box);
 
-<span class="nc bnc" id="L312" title="All 3 branches missed.">        switch (box) {</span>
+<span class="pc bpc" id="L312" title="1 of 3 branches missed.">        switch (box) {</span>
             case 1:
-<span class="nc" id="L314">                infoCurrency1 = info;</span>
-<span class="nc" id="L315">                textBox1.setText(infoCurrency1);</span>
-<span class="nc" id="L316">                break;</span>
+<span class="fc" id="L314">                infoCurrency1 = info;</span>
+<span class="fc" id="L315">                textBox1.setText(infoCurrency1);</span>
+<span class="fc" id="L316">                break;</span>
             case 2:
-<span class="nc" id="L318">                infoCurrency2 = info;</span>
-<span class="nc" id="L319">                textBox2.setText(infoCurrency2);</span>
-<span class="nc" id="L320">                break;</span>
+<span class="fc" id="L318">                infoCurrency2 = info;</span>
+<span class="fc" id="L319">                textBox2.setText(infoCurrency2);</span>
+<span class="fc" id="L320">                break;</span>
             default:
 <span class="nc" id="L322">                Debug.log(&quot;incorrect case - PanelConverter.java retrieveText()&quot;);</span>
 <span class="nc" id="L323">                System.exit(0);</span>
                 break;
         }
-<span class="nc" id="L326">    }</span>
+<span class="fc" id="L326">    }</span>
 
     public String calculateCurrency(double x) {
-<span class="nc" id="L329">        Double returnValue = 0.0;</span>
-<span class="nc" id="L330">        String returnString = &quot;&quot;;</span>
+<span class="fc" id="L329">        Double returnValue = 0.0;</span>
+<span class="fc" id="L330">        String returnString = &quot;&quot;;</span>
 
-<span class="nc bnc" id="L332" title="All 4 branches missed.">        if (priceCurrency2 == 0.0 &amp;&amp; buttonCurrency2.getText().equals(Main.currency)) {</span>
-<span class="nc" id="L333">            returnValue = priceCurrency1*x;</span>
+<span class="pc bpc" id="L332" title="1 of 4 branches missed.">        if (priceCurrency2 == 0.0 &amp;&amp; buttonCurrency2.getText().equals(Main.currency)) {</span>
+<span class="fc" id="L333">            returnValue = priceCurrency1*x;</span>
         }
-<span class="nc bnc" id="L335" title="All 4 branches missed.">        else if (priceCurrency1 == 0 || priceCurrency2 == 0) {</span>
-<span class="nc" id="L336">            return String.valueOf(0);</span>
+<span class="pc bpc" id="L335" title="1 of 4 branches missed.">        else if (priceCurrency1 == 0 || priceCurrency2 == 0) {</span>
+<span class="fc" id="L336">            return String.valueOf(0);</span>
         }
         else {
-<span class="nc" id="L339">            returnValue = (priceCurrency1/priceCurrency2)*x;</span>
+<span class="fc" id="L339">            returnValue = (priceCurrency1/priceCurrency2)*x;</span>
         }
 
-<span class="nc bnc" id="L342" title="All 2 branches missed.">        if (returnValue &gt; 1) returnString = String.valueOf(df1.format(returnValue));</span>
+<span class="pc bpc" id="L342" title="1 of 2 branches missed.">        if (returnValue &gt; 1) returnString = String.valueOf(df1.format(returnValue));</span>
 <span class="nc bnc" id="L343" title="All 2 branches missed.">        else if (returnValue &gt; 0.1) returnString = String.valueOf(df2.format(returnValue));</span>
 <span class="nc bnc" id="L344" title="All 2 branches missed.">        else if (returnValue &gt; 0.01) returnString = String.valueOf(df3.format(returnValue));</span>
 <span class="nc bnc" id="L345" title="All 2 branches missed.">        else if (returnValue &gt; 0.001) returnString = String.valueOf(df4.format(returnValue));</span>
 <span class="nc bnc" id="L346" title="All 2 branches missed.">        else if (returnValue &gt; 0.0001) returnString = String.valueOf(df5.format(returnValue));</span>
 <span class="nc" id="L347">        else returnString = String.valueOf(df6.format(returnValue));</span>
 
-<span class="nc" id="L349">        return returnString;</span>
+<span class="fc" id="L349">        return returnString;</span>
     }
 
     private void calculateGlobal() {
-<span class="nc" id="L353">        double total_market_cap = Main.gui.webData.global_data.total_market_cap;</span>
-<span class="nc" id="L354">        double total_24h_volume = Main.gui.webData.global_data.total_24h_volume;</span>
-<span class="nc" id="L355">        double bitcoin_percentage = Main.gui.webData.global_data.bitcoin_percentage_of_market_cap;</span>
+<span class="fc" id="L353">        double total_market_cap = Main.gui.webData.global_data.total_market_cap;</span>
+<span class="fc" id="L354">        double total_24h_volume = Main.gui.webData.global_data.total_24h_volume;</span>
+<span class="fc" id="L355">        double bitcoin_percentage = Main.gui.webData.global_data.bitcoin_percentage_of_market_cap;</span>
         
-<span class="nc" id="L357">        DecimalFormat htmlFormat = new DecimalFormat(&quot;#,###.##&quot;);</span>
+<span class="fc" id="L357">        DecimalFormat htmlFormat = new DecimalFormat(&quot;#,###.##&quot;);</span>
 
-<span class="nc" id="L359">        String htmlFont = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.foreground.getRed()+&quot;, &quot;+Main.theme.foreground.getGreen()+&quot;, &quot;+Main.theme.foreground.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
-<span class="nc" id="L360">        String htmlGreen = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.green.getRed()+&quot;, &quot;+Main.theme.green.getGreen()+&quot;, &quot;+Main.theme.green.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
+<span class="fc" id="L359">        String htmlFont = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.foreground.getRed()+&quot;, &quot;+Main.theme.foreground.getGreen()+&quot;, &quot;+Main.theme.foreground.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
+<span class="fc" id="L360">        String htmlGreen = &quot;&lt;font color=\&quot;rgb(&quot;+Main.theme.green.getRed()+&quot;, &quot;+Main.theme.green.getGreen()+&quot;, &quot;+Main.theme.green.getBlue()+&quot;)\&quot;&gt;&quot;;</span>
 
-<span class="nc" id="L362">        String htmlOverview = htmlFont+&quot;&lt;font size=\&quot;6\&quot;&gt;&lt;font face=\&quot;helvetica\&quot;&gt;&quot;+&quot;&lt;center&gt;&quot;</span>
-<span class="nc" id="L363">        +&quot;{ &quot;+htmlFormat.format(total_market_cap)+&quot; }&lt;br&gt;&quot;</span>
-<span class="nc" id="L364">        +&quot;&lt;font size=\&quot;4\&quot;&gt;&lt;b&gt;24 Hour Volume: &quot;+htmlGreen+htmlFormat.format(total_24h_volume)+htmlFont+&quot;&lt;br&gt;&quot;</span>
+<span class="fc" id="L362">        String htmlOverview = htmlFont+&quot;&lt;font size=\&quot;6\&quot;&gt;&lt;font face=\&quot;helvetica\&quot;&gt;&quot;+&quot;&lt;center&gt;&quot;</span>
+<span class="fc" id="L363">        +&quot;{ &quot;+htmlFormat.format(total_market_cap)+&quot; }&lt;br&gt;&quot;</span>
+<span class="fc" id="L364">        +&quot;&lt;font size=\&quot;4\&quot;&gt;&lt;b&gt;24 Hour Volume: &quot;+htmlGreen+htmlFormat.format(total_24h_volume)+htmlFont+&quot;&lt;br&gt;&quot;</span>
         +&quot;Bitcoin Dominance: &quot;+htmlGreen+bitcoin_percentage+&quot;%&quot;+htmlFont+&quot;&lt;/b&gt;&lt;/center&gt;&quot;;
 
         // set text
-<span class="nc bnc" id="L368" title="All 2 branches missed.">        if (overviewText != null) {</span>
-<span class="nc" id="L369">            overviewText.setText(htmlOverview);</span>
+<span class="fc bfc" id="L368" title="All 2 branches covered.">        if (overviewText != null) {</span>
+<span class="fc" id="L369">            overviewText.setText(htmlOverview);</span>
         } else {
-<span class="nc" id="L371">            overviewText = new JEditorPane(&quot;text/html&quot;, htmlOverview);</span>
-<span class="nc" id="L372">            overviewText.setEditable(false);</span>
+<span class="fc" id="L371">            overviewText = new JEditorPane(&quot;text/html&quot;, htmlOverview);</span>
+<span class="fc" id="L372">            overviewText.setEditable(false);</span>
         }
-<span class="nc" id="L374">    }</span>
+<span class="fc" id="L374">    }</span>
 
     public void themeSwitch() {
-<span class="nc" id="L377">        overview.setBackground(Main.theme.background);</span>
-<span class="nc" id="L378">        overviewText.setBackground(Main.theme.background);</span>
-<span class="nc" id="L379">        overviewText.setForeground(Main.theme.foreground);</span>
+<span class="fc" id="L377">        overview.setBackground(Main.theme.background);</span>
+<span class="fc" id="L378">        overviewText.setBackground(Main.theme.background);</span>
+<span class="fc" id="L379">        overviewText.setForeground(Main.theme.foreground);</span>
 
-<span class="nc" id="L381">        fieldCurrency1.setBackground(Main.theme.background);</span>
-<span class="nc" id="L382">        fieldCurrency1.setForeground(Main.theme.foreground);</span>
-<span class="nc" id="L383">        fieldCurrency2.setBackground(Main.theme.background);</span>
-<span class="nc" id="L384">        fieldCurrency2.setForeground(Main.theme.foreground);</span>
+<span class="fc" id="L381">        fieldCurrency1.setBackground(Main.theme.background);</span>
+<span class="fc" id="L382">        fieldCurrency1.setForeground(Main.theme.foreground);</span>
+<span class="fc" id="L383">        fieldCurrency2.setBackground(Main.theme.background);</span>
+<span class="fc" id="L384">        fieldCurrency2.setForeground(Main.theme.foreground);</span>
 
-<span class="nc" id="L386">        textBox1.setBackground(Main.theme.background);</span>
-<span class="nc" id="L387">        textBox1.setForeground(Main.theme.foreground);</span>
-<span class="nc" id="L388">        textBox2.setBackground(Main.theme.background);</span>
-<span class="nc" id="L389">        textBox2.setForeground(Main.theme.foreground);</span>
+<span class="fc" id="L386">        textBox1.setBackground(Main.theme.background);</span>
+<span class="fc" id="L387">        textBox1.setForeground(Main.theme.foreground);</span>
+<span class="fc" id="L388">        textBox2.setBackground(Main.theme.background);</span>
+<span class="fc" id="L389">        textBox2.setForeground(Main.theme.foreground);</span>
 
-<span class="nc" id="L391">        contentFilling1.setBackground(Main.theme.emptyBackground);</span>
-<span class="nc" id="L392">        contentFilling2.setBackground(Main.theme.emptyBackground);</span>
-<span class="nc" id="L393">        contentTop.setBackground(Main.theme.emptyBackground);</span>
-<span class="nc" id="L394">        contentBottom.setBackground(Main.theme.emptyBackground);</span>
-<span class="nc" id="L395">        middleBottom.setBackground(Main.theme.emptyBackground);</span>
+<span class="fc" id="L391">        contentFilling1.setBackground(Main.theme.emptyBackground);</span>
+<span class="fc" id="L392">        contentFilling2.setBackground(Main.theme.emptyBackground);</span>
+<span class="fc" id="L393">        contentTop.setBackground(Main.theme.emptyBackground);</span>
+<span class="fc" id="L394">        contentBottom.setBackground(Main.theme.emptyBackground);</span>
+<span class="fc" id="L395">        middleBottom.setBackground(Main.theme.emptyBackground);</span>
 
-<span class="nc" id="L397">        calculateGlobal();</span>
-<span class="nc" id="L398">    }</span>
+<span class="fc" id="L397">        calculateGlobal();</span>
+<span class="fc" id="L398">    }</span>
 
-<span class="nc" id="L400">    private class bRefreshListener implements ActionListener {</span>
+<span class="fc" id="L400">    private class bRefreshListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L402">            Debug.log(&quot;Button Refresh Clicked&quot;);</span>
 <span class="nc" id="L403">            new WebData.RefreshCoins();</span>
 <span class="nc" id="L404">        }</span>
     }
 
-<span class="nc" id="L407">    private class bGlobalListener implements ActionListener {</span>
+<span class="fc" id="L407">    private class bGlobalListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L409">            Debug.log(&quot;Button Global Clicked&quot;);</span>
 <span class="nc" id="L410">            JOptionPane.showMessageDialog(Main.frame, Main.gui.webData.global_data.toString(), &quot;Global&quot;, JOptionPane.PLAIN_MESSAGE);</span>
@@ -414,9 +414,9 @@ public class PanelConverter {
     private class buttonCurrencyListener implements ActionListener {
         private int nr;
 
-<span class="nc" id="L417">        public buttonCurrencyListener(int nr) {</span>
-<span class="nc" id="L418">            this.nr = nr;</span>
-<span class="nc" id="L419">        }</span>
+<span class="fc" id="L417">        public buttonCurrencyListener(int nr) {</span>
+<span class="fc" id="L418">            this.nr = nr;</span>
+<span class="fc" id="L419">        }</span>
 
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L422">            Debug.log(&quot;Button Convert Currency &quot;+nr+&quot; Clicked&quot;);</span>
@@ -481,7 +481,7 @@ public class PanelConverter {
 <span class="nc" id="L481">        }</span>
     }
 
-<span class="nc" id="L484">    private class bSwitchListener implements ActionListener {</span>
+<span class="fc" id="L484">    private class bSwitchListener implements ActionListener {</span>
         public void actionPerformed(ActionEvent e) {
 <span class="nc" id="L486">            Debug.log(&quot;Button Switch Clicked&quot;);</span>
 
@@ -515,16 +515,16 @@ public class PanelConverter {
     //@SuppressWarnings(&quot;unchecked&quot;)
     public void deserialize() {
         try {
-<span class="nc bnc" id="L518" title="All 2 branches missed.">            if (!(new File(Main.converterSerLocation).canRead())) {</span>
-<span class="nc" id="L519">                Debug.log(&quot;ERROR: Couldn't find &quot;+Main.converterSerLocation+&quot;.. skipping&quot;);</span>
+<span class="pc bpc" id="L518" title="1 of 2 branches missed.">            if (!(new File(Main.converterSerLocation).canRead())) {</span>
+<span class="fc" id="L519">                Debug.log(&quot;ERROR: Couldn't find &quot;+Main.converterSerLocation+&quot;.. skipping&quot;);</span>
                 // default settings if none exists
-<span class="nc" id="L521">                priceCurrency1 = Main.gui.webData.coin.get(0).price;</span>
-<span class="nc" id="L522">                priceCurrency2 = Main.gui.webData.coin.get(1).price;</span>
-<span class="nc" id="L523">                buttonCurrency1.setText(Main.gui.webData.coin.get(0).toString());</span>
-<span class="nc" id="L524">                buttonCurrency2.setText(Main.gui.webData.coin.get(1).toString());</span>
-<span class="nc" id="L525">                retrieveText(1, Main.gui.webData.coin.get(0).getInfo());</span>
-<span class="nc" id="L526">                retrieveText(2, Main.gui.webData.coin.get(1).getInfo());</span>
-<span class="nc" id="L527">                return;</span>
+<span class="fc" id="L521">                priceCurrency1 = Main.gui.webData.coin.get(0).price;</span>
+<span class="fc" id="L522">                priceCurrency2 = Main.gui.webData.coin.get(1).price;</span>
+<span class="fc" id="L523">                buttonCurrency1.setText(Main.gui.webData.coin.get(0).toString());</span>
+<span class="fc" id="L524">                buttonCurrency2.setText(Main.gui.webData.coin.get(1).toString());</span>
+<span class="fc" id="L525">                retrieveText(1, Main.gui.webData.coin.get(0).getInfo());</span>
+<span class="fc" id="L526">                retrieveText(2, Main.gui.webData.coin.get(1).getInfo());</span>
+<span class="fc" id="L527">                return;</span>
             }
 <span class="nc" id="L529">            FileInputStream file = new FileInputStream(Main.converterSerLocation);</span>
 <span class="nc" id="L530">            BufferedInputStream buffer = new BufferedInputStream(file);</span>
@@ -549,25 +549,25 @@ public class PanelConverter {
 
     public void serialize() {
         try {
-<span class="nc bnc" id="L552" title="All 6 branches missed.">            if ((priceCurrency1 == 0 || priceCurrency2 == 0) &amp;&amp; (!buttonCurrency2.getText().equals(Main.currency))) return;</span>
+<span class="pc bpc" id="L552" title="4 of 6 branches missed.">            if ((priceCurrency1 == 0 || priceCurrency2 == 0) &amp;&amp; (!buttonCurrency2.getText().equals(Main.currency))) return;</span>
 
-<span class="nc" id="L554">            FileOutputStream file = new FileOutputStream(Main.converterSerLocation);</span>
-<span class="nc" id="L555">            BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
-<span class="nc" id="L556">            ObjectOutputStream out = new ObjectOutputStream(buffer);</span>
-<span class="nc" id="L557">            out.writeObject(buttonCurrency1.getText());</span>
-<span class="nc" id="L558">            out.writeObject(buttonCurrency2.getText());</span>
-<span class="nc" id="L559">            out.writeObject(fieldCurrency1.getText());</span>
-<span class="nc" id="L560">            out.writeObject(fieldCurrency2.getText());</span>
-<span class="nc" id="L561">            out.writeObject(priceCurrency1);</span>
-<span class="nc" id="L562">            out.writeObject(priceCurrency2);</span>
-<span class="nc" id="L563">            out.writeObject(infoCurrency1);</span>
-<span class="nc" id="L564">            out.writeObject(infoCurrency2);</span>
-<span class="nc" id="L565">            out.close();</span>
+<span class="fc" id="L554">            FileOutputStream file = new FileOutputStream(Main.converterSerLocation);</span>
+<span class="fc" id="L555">            BufferedOutputStream buffer = new BufferedOutputStream(file);</span>
+<span class="fc" id="L556">            ObjectOutputStream out = new ObjectOutputStream(buffer);</span>
+<span class="fc" id="L557">            out.writeObject(buttonCurrency1.getText());</span>
+<span class="fc" id="L558">            out.writeObject(buttonCurrency2.getText());</span>
+<span class="fc" id="L559">            out.writeObject(fieldCurrency1.getText());</span>
+<span class="fc" id="L560">            out.writeObject(fieldCurrency2.getText());</span>
+<span class="fc" id="L561">            out.writeObject(priceCurrency1);</span>
+<span class="fc" id="L562">            out.writeObject(priceCurrency2);</span>
+<span class="fc" id="L563">            out.writeObject(infoCurrency1);</span>
+<span class="fc" id="L564">            out.writeObject(infoCurrency2);</span>
+<span class="fc" id="L565">            out.close();</span>
             //Debug.log(&quot;Serialized Converter To &quot; + Main.converterSerLocation); // too noisy
 <span class="nc" id="L567">        } catch(Exception ex) {</span>
 <span class="nc" id="L568">            Debug.log(&quot;EXCEPTION: PanelConverter.java - serialize()&quot;);</span>
 <span class="nc" id="L569">            ex.printStackTrace();</span>
-<span class="nc" id="L570">        }</span>
-<span class="nc" id="L571">    }</span>
+<span class="fc" id="L570">        }</span>
+<span class="fc" id="L571">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
