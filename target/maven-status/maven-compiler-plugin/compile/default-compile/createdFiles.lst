@@ -3,11 +3,10 @@ com\cryptochecker\PanelPortfolio$bRemoveCoinListener.class
 com\cryptochecker\PanelConverter.class
 com\cryptochecker\PanelSettings$bViewListener.class
 com\cryptochecker\WebData.class
-com\cryptochecker\PanelPortfolio$1.class
 com\cryptochecker\PanelPortfolio$bManagePortfolioListener.class
 com\cryptochecker\PanelConverter$bSwitchListener.class
-com\cryptochecker\PanelCoin$1.class
 com\cryptochecker\PanelPortfolio$TableMouseListener.class
+com\cryptochecker\Main$1.class
 com\cryptochecker\PanelSettings$colorListener.class
 com\cryptochecker\PanelSettings$bDeleteListener.class
 com\cryptochecker\PanelPortfolio$TableModel.class
@@ -35,7 +34,6 @@ com\cryptochecker\WebData$1.class
 com\cryptochecker\PanelConverter$1.class
 com\cryptochecker\Menu$bPortfolioListener.class
 com\cryptochecker\PanelSettings$colorChangeListener.class
-com\cryptochecker\Menu$1.class
 com\cryptochecker\PanelConverter$bRefreshListener.class
 com\cryptochecker\PanelPortfolio$bSwitchPortfolioListener.class
 com\cryptochecker\PanelPortfolio$contentPaneScroll.class
