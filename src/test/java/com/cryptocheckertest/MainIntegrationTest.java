@@ -1,4 +1,5 @@
-package com.cryptochecker;
+package com.cryptocheckertest;
+import com.cryptochecker.*;
 
 import org.junit.jupiter.api.*;
 import javax.swing.*;

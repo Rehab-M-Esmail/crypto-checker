@@ -1,5 +1,5 @@
-package com.cryptochecker;
-
+package com.cryptocheckertest;
+import com.cryptochecker.*;
 import org.junit.jupiter.api.*;
 import javax.swing.*;
 import java.awt.*;
@@ -58,11 +58,11 @@ class PanelCoinUnitTestsUsingMockito {
         Main.frame = new JFrame();
         Main.currency = "USD";
         Main.currencyChar = "$";
-        Main.panelWidth = 150;
-        Main.panelHeight = 30;
-        Main.tableHeaderSize = new Dimension(150, 30);
-        Main.tableFont = new Font("Arial", Font.PLAIN, 12);
-        Main.tableIntercellSpacing = new Dimension(5, 5);
+//        Main.panelWidth = 150;
+//        Main.panelHeight = 30;
+//        Main.tableHeaderSize = new Dimension(150, 30);
+//        Main.tableFont = new Font("Arial", Font.PLAIN, 12);
+//        Main.tableIntercellSpacing = new Dimension(5, 5);
         Main.screenResolution = Toolkit.getDefaultToolkit().getScreenSize();
 
         // Setup theme
