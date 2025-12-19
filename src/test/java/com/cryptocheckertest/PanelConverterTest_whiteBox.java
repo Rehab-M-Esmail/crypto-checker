@@ -22,8 +22,6 @@ class PanelConverterTest_whiteBox {
 
     @BeforeEach
     void setup() throws Exception {
-        Debug.contentPane = new JScrollPane();
-
         Main.currency = "USD";
         Main.converterSerLocation = tempDir.resolve("converter_whitebox.ser").toString();
         Main.dataSerLocation = tempDir.resolve("data_whitebox.ser").toString();

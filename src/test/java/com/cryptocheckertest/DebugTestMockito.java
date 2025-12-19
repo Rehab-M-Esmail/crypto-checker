@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class DebugTestMockito {
 
     @TempDir
-    Path tempDir;
+    static Path tempDir;
 
     private static Path testLogLocation;
     private static Main testMain;
@@ -34,27 +34,38 @@ public class DebugTestMockito {
     @Mock
     private JFrame mockFrame;
 
+    @BeforeAll
+    static void setUpBeforeAll() {
+        // Initialize paths once for all tests
+        Path logFile = tempDir.resolve("log.txt");
+        Main.logLocation = logFile.toString();
+        Main.folderLocation = tempDir.toString();
+        testLogLocation = logFile;
+        
+        // Ensure directory exists
+        new File(Main.folderLocation).mkdirs();
+    }
+
     @BeforeEach
     void setUp() {
-        // Initialize on first run
-        if (testLogLocation == null) {
-            Path logFile = tempDir.resolve("log.txt");
-            Main.logLocation = logFile.toString();
-            Main.folderLocation = tempDir.toString();
-            testLogLocation = logFile;
-            new File(Main.folderLocation).mkdirs();
-        }
-        
         testMain = new Main();
         Main.gui = testMain;
     }
 
     @AfterEach
-    void tearDown() {
+    void tearDown() throws Exception {
         if (Debug.frame != null) {
             try { Debug.frame.dispose(); } catch (Exception ignored) {}
         }
         Debug.mode = false;
+        // Small delay to ensure file handles are released on Windows
+        Thread.sleep(50);
+    }
+
+    @AfterAll
+    static void tearDownAfterAll() throws Exception {
+        // Wait for all file handles to be released
+        Thread.sleep(200);
     }
 
     // ===== UNIT TESTS =====

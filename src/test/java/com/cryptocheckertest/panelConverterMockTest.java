@@ -25,7 +25,6 @@ class PanelConverterMockTest {
 
     @BeforeEach
     void setup() throws Exception {
-        Debug.contentPane = new JScrollPane();
         Main.currency = "USD";
         Main.converterSerLocation = tempDir.resolve("converter_mock.ser").toString();
         Main.theme = new Main.Theme(Main.themes.LIGHT);
